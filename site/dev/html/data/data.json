@@ -1,0 +1,96 @@
+{
+    "parcours": [
+    {
+        "icone":"about__icon--left",
+        "iconeClass":"fa-graduation-cap",
+        "class":"about__wrapper--left",
+        "texte":"J'obtiens mon baccalauréat en sciences sociales en 2008, année lors de laquelle je viens m'installer à Strasbourg afin d'y poursuivre des études supérieures. J'opte pour une licence de «langues littératures et civilisations étrangères», en japonais. S'ensuivent quatre années de licence, dont l'une d'elles au Japon, à l'université d'Ôsaka, dans le cadre d'un échange inter-universitaire avec l'université de Strasbourg."
+    },
+    {
+        "icone":"about__icon--right",
+        "iconeClass":"fa-language",
+        "class":"about__wrapper--right",
+        "texte":"Je rentre du Japon après une année d'études, et obtiens ma licence. Après quatre ans de japonais, j'ai envie de changer d'air, d'élargir mes horizons en quelque sorte. C'est alors que je découvre sur le master CAWEB, qui forme à la création de sites web multilingues sous toutes ses coutures. De la traduction technique à la localisation en passant par la gestion de projet sans oublier les fondamentaux : HTML, CSS, Javascript et bien d'autres ... "
+
+    },
+    {
+        "icone":"about__icon--left",
+        "iconeClass":"fa-laptop",
+        "class":"about__wrapper--left",
+        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
+    },
+    {
+        "icone":"about__icon--right",
+        "iconeClass":"fa-laptop",
+        "class":"about__wrapper--right",
+        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
+    }
+
+
+    ],
+    "competences": [
+    {
+    "competenceIconType": "fa-html5",
+    "competenceTitleText":"HTML5, CSS3",
+    "competenceText":"J'ai acquis de très bonnes compétences en HTML5 ainsi qu'en CSS3, que j'utilise au mieux dans mes réalisations. Je tire pleinement parti de ces nouvelles technologies tout en gardant la compatibilité et la performance à l'esprit. J'ai également des bases en JavaScript et en PHP grâces auxquelles je sais me repérer lorsque j'y suis confronté."
+    },
+    {
+    "competenceIconType" : "fa-code",
+    "competenceTitleText":"GULP, SASS",
+    "competenceText":"Lors de mes pérégrinations sur le net, j'ai découvert deux outils qui m'ont été d'un secours immense, et m'ont fait gagner un temps précieux lors de mes projets. GULP est un exécuteur de tâches qui permet d'automatiser son workflow, alors que SASS est un préprocesseur CSS permettant d'allier langages de scripts au CSS et d'en changer drastiquement l'écriture."
+    },
+    {
+    "competenceIconType": "fa-wordpress",
+    "competenceTitleText":"CMS",
+    "competenceText":"J'ai travaillé sur de nombreux projets requérant l'utilisation de systèmes de gestion de contenu. J'ai pu m'essayer à Wordpress, Joomla ainsi qu'à Drupal et me forger une certaine expérience dans leur manipulation. Wordpress est le CMS avec lequel je suis le plus familier: c'est d'ailleurs sous Wordpress que j'ai créé mon projet de première année de master. "
+    },
+    {
+    "competenceIconType": "fa-file-image-o",
+    "competenceTitleText":"Photoshop, Illustrator",
+    "competenceText":"Étant amené à réaliser divers contenus graphiques tels que des maquettes, des logos ou encore des mock-ups, j'ai recours à des logiciels tels qu'adobe Photoshop ou adobe Illustrator. J'ai également quelques expériences d'utilisation d'adobe Premiere Pro et InDesign. "
+    },
+    {
+    "competenceIconType": "fa-comments-o",
+    "competenceTitleText":"Langues",
+    "competenceText":"J'ai cinq langues à mon actif: le français et le luxembourgeois comme langues maternelles, l'allemand ainsi que l'anglais que je parle couramment. Vient s'y ajouter le japonais que j'ai étudié intensivement pendant quatre années, suivies de deux années au sein du master CAWEB. J'ai pu mettre à profit ces compétences lors de projets nécessitant des traductions de contenus vers plus d'une langue cible."
+    },
+    {
+    "competenceIconType": "fa-google",
+    "competenceTitleText":"Gestion de projet, SEO",
+    "competenceText":"Initié au domaine de la gestion de projet, j'ai pleinement conscience des différentes étapes par lesquelles passe la réalisation d'un site web et des contraintes pouvant survenir lors de la réalisation d'un projet. Le référencement ne m'est pas inconnu; je suis capable de rédiger des textes optimisés pour les moteurs de recherche."
+    }
+  ],
+
+  "projets": [
+
+    {   
+        "lien":"single-project.html",
+        "nom": "Emmaüs Strasbourg",
+        "objet":"Refonte site Emmaus Strasbourg",
+        "image":"emmaus"
+    },
+    {
+        "nom": "Mini Projet M2",
+        "objet":"Projet universitaire Master 2",
+        "image":"mini-project"
+    },
+    {
+        "nom": "ViJump",
+        "objet":"Refonte site et application ViJump",
+        "image":"vijump"
+    }
+
+    ],
+
+    "projet1":
+    {
+            "image":"/dist/img/emmaus-optim.jpg",
+            "poste" : "Intégrateur",
+            "langages" : "HTML5, CSS3, PHP",
+            "outils" : "Wordpress",
+            "date" : "2013-2014",
+            "duree" : "4 mois",
+            "lien" : "linkuu"
+    }
+
+}

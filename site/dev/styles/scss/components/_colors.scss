@@ -1,0 +1,7 @@
+/*Colors various backgrounds*/
+
+$bigSlice--about: #FFECDB;
+$bigSlice--skills: #587CA0;
+$bigSlice--skills--light : lighten($bigSlice--skills, 15%);
+$bigSlice--projects: $bigSlice--about;
+$bigSlice--contact: #2C3E50;

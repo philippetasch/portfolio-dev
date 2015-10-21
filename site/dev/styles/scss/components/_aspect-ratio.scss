@@ -1,0 +1,51 @@
+.ratio--rel{
+
+	position: relative;
+	display: block;
+	height: 0;
+	overflow: hidden;
+
+	&__16-9{
+
+		padding-bottom: 56.25%;
+	}
+
+	&__4-3{
+
+		padding-bottom: 75%;
+	}
+
+	&__80{
+		padding-bottom: 83%;
+	}
+
+	&__full{
+
+		padding-bottom: 100%;
+	}
+
+	.lt-ie9 &{
+
+		width: 600px;
+		height: 600px;
+		padding: 0;
+		margin: auto;
+	}
+
+}
+
+.ratio--abs{
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+
+	.lt-ie9 &{ 
+
+		position: static;
+	}
+
+}
+

@@ -1,0 +1,75 @@
+.bigSlice--header{
+
+    @include rem2px(padding-left, 0);
+    	@include rem2px(padding-right, 0);
+
+    @include snap(large){
+		
+		@include rem2px(padding-left, 1);
+    	@include rem2px(padding-right, 1);
+
+    }
+}
+/*uncss:ignore*/
+.barreLangues{
+	display: none;
+}
+
+.header, .headroom{
+
+	position: static;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 150;
+	transition: all .35s ease-in;
+	@include snap(medium){
+
+		background-color: transparent;
+
+	}
+
+	@include snap(large){
+
+		position: absolute;
+		@include rem2px(padding-top, 1.5);
+	}
+
+	.js &{
+
+		position: fixed;
+		background-color: transparent;
+	}
+
+	.lt-ie10 &{
+
+		position: absolute;
+	}
+}
+
+
+.headroom--pinned {
+
+	transform: translateY(0%);
+ }
+
+
+.headroom--unpinned{
+
+	transform: translateY(-100%);
+}
+
+@include snap(large){
+	
+	.headroom--not-top {
+			
+			padding-top: 0;
+
+			& .navigation__link{
+
+				@include rem2px(padding-top, 3)
+			}
+	}
+}
+
+@import 'navigation/navigation';

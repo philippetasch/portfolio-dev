@@ -1,0 +1,153 @@
+.bigSlice{
+
+    display: block;
+}
+
+.maxWrapper{
+
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+
+    .lt-ie9 &{
+
+        @include rem2px(width, 40);
+    }
+
+}
+
+.gridClear{
+
+    &:after,&:before{
+
+        content:"";
+        display: block;
+        clear: both;
+    }
+
+}
+
+.grids{
+    
+    float: left;
+   // border: 1px solid #000;
+    margin-left: 0;
+
+    @include snap(medium){
+
+        margin-left: $gridMargin;
+
+    }
+
+    &--zero{
+
+        float: left;
+        margin: 0;
+    }
+
+    &--clear{
+
+        float: left;
+        margin-left: 0;
+
+        @include snap(small-medium){
+
+        margin-left: $gridMargin;
+    }
+    }
+
+}
+/*
+.grids--inBl{
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+
+    margin-left: 0;
+
+    @include snap(small-medium){
+
+        margin-left: $gridMargin;
+        display: inline-block;
+        vertical-align: top;
+
+    }
+
+       &:nth-child(2n + 1){
+
+                margin-left: 0;
+
+                @include snap(large){
+
+                    margin-left: $gridMargin;
+                }
+            }
+
+            &:nth-child(3n + 1){
+
+                @include snap(large){
+
+                    margin-left: 0;
+                }
+            }
+
+}
+
+.maxWrapper{
+
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+
+    &--inBl{
+
+    letter-spacing: -0.25em; 
+    text-rendering: optimizespeed; 
+
+        &:not(*:root){
+
+             letter-spacing: -0.31em; 
+        }
+
+    }
+
+}
+
+.opera-only:-o-prefocus,
+.maxWrapper--inBl {
+    word-spacing: -0.43em;
+}
+*/
+.first{
+
+    margin-left: 0;
+}
+
+.push{
+
+    position: relative;
+
+    @include snap(small){
+    @include push(2)
+}
+@include snap(medium){
+    @include push(3);
+    }
+}
+
+
+.pull{
+
+    position: relative;
+
+    @include snap(small){
+    @include pull(2)
+}
+
+@include snap(medium){
+    @include pull(3);
+    }
+}
+
+

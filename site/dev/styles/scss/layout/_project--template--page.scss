@@ -1,0 +1,65 @@
+.project-info-wrapper{
+
+		background-color: darken($bigSlice--contact, 15%);
+		color: #fff;
+}
+
+.h1--project-info{
+
+	border-bottom: 4px solid #fff;
+}
+
+.projet-infos{
+
+	@include snap(small-medium){
+	
+		font-size: 110%;
+
+	}
+
+	@include snap(medium){
+
+		font-size: 115%;
+	}
+
+	@include snap(large){
+
+		font-size: 150%;
+	}
+}
+
+.projet-infos__info{
+
+	font-family: Roboto Slab;
+	overflow: hidden;
+	@include rem2px(padding, 1, 0)
+}
+
+.project-infos__fill{
+
+	background-color: darken($bigSlice--contact, 15%);
+
+}
+
+.project-infos__fill--left{
+
+		padding-right: 10px;
+
+&:after{
+
+		content:"................................................................................................................................................................................................................................................";
+		float: left;
+		width: 0px;
+		white-space: nowrap;
+		color: #fff;
+	}
+
+}
+
+
+.project-infos__fill--right{
+		
+		float: right;
+		padding-left: 10px;
+
+}

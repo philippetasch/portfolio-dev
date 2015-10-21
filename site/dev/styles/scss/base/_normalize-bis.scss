@@ -1,0 +1,93 @@
+@import "../components/colors";
+
+@-webkit-viewport{
+    width: device-width;
+}
+@-moz-viewport{
+    width: device-width;
+}
+@-ms-viewport{
+    width: device-width;
+}
+@-o-viewport{
+    width: device-width;
+}
+@viewport{
+    width: device-width;
+}
+
+*,
+*:after,
+*:before{
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+.disable-hover,
+.disable-hover * {
+pointer-events: none !important;
+}
+
+@import '../typography/remToPx-mixin';
+
+html {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	 font-size: 62.5%;
+
+}
+
+html,body{
+
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+  	line-height: 1.68;
+	font-family: 'Roboto', sans-serif;
+    background-color: $bigSlice--contact;
+}
+
+body{
+
+	@include rem2px(font-size, 1.4);
+
+	@include snap(small-medium){
+
+		@include rem2px(font-size, 1.5)
+	}
+
+	@include snap(medium){
+
+		@include rem2px(font-size, 1.6)
+	}
+
+
+	@include snap(large){
+
+		@include rem2px(font-size, 1.7)
+	}
+
+}
+
+ul,li{
+
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+@mixin h-f-a(){
+
+	&:hover,
+	&:focus,
+	&:active{
+		@content;
+	}
+}

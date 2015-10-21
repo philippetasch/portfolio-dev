@@ -1,0 +1,113 @@
+.bigSlice--skills{
+
+	background-color: $bigSlice--skills;
+}
+
+.h1--bigSlice--skills{
+	
+	//text-shadow: 3px 3px 0px $bigSlice--skills, 6px 6px 0px rgba($nav__link--2--bgc, .5);
+	color: $nav__link--2--bgc;
+
+	&:after{
+
+		background-color: $nav__link--2--bgc;
+
+	}
+}
+
+.grids--clear.g-3:hover .skills__icon--container{
+	
+	@include snap(large){
+		
+		transform: translateY(-10%);
+	}
+
+}
+
+.skills__icon--container{
+
+	display: block;
+	text-align: center;
+	@include rem2px(margin-bottom, 2);
+
+	@include snap(medium){
+		
+		transition: all .35s ease-in-out;
+		float: left;
+		@include rem2px(margin-right, 2);
+		@include rem2px(margin-bottom, 0);
+
+	}
+}
+
+.skills__icon.fa{
+
+	color:$nav__link--2--bgc;
+	display: inline-block;
+	vertical-align: middle;
+		text-shadow: 2px 2px 0px #000, 9px 8px 0px rgba(0, 0, 0, 0.15);
+
+	@include rem2px(font-size, 5);
+	@include snap(small-medium){
+
+			@include rem2px(font-size, 5.5);
+
+	}
+	@include snap(medium){
+
+			@include rem2px(font-size, 6);
+
+	}
+
+	@include snap(large){
+
+			@include rem2px(font-size, 7);
+
+	}
+
+}
+
+.maxWrapper--skills{
+
+		@include rem2px(padding-bottom, 3);
+
+	@include snap(medium){
+
+		@include rem2px(padding-bottom, 4);
+
+	}
+
+	@include snap(large){
+
+		@include rem2px(padding-bottom, 5);
+
+	}
+}
+
+.h3--skills{
+
+	text-align: center;
+	font-weight: 200;
+	color: $nav__link--2--bgc;
+
+	@include snap(medium){
+
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+}
+
+.skills__text{
+
+	color: #fff;
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+
+	@include snap(medium){
+		
+		margin: 0;
+		text-align: left;
+	}
+}

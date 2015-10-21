@@ -1,0 +1,296 @@
+/*regular grid  +  ratio version*/
+.g-1{
+
+    @include lay-out(1)
+}
+
+.g-2{
+
+    @include lay-out(1);
+
+    @include snap(medium){
+
+        @include lay-out(2);
+
+    }
+}
+
+.g-3{
+
+        @include lay-out(1);
+
+        &.grids--clear {
+            @include snap(small-medium){
+
+                @include lay-out(2);
+            }
+
+            @include snap(large){
+
+            @include lay-out(3);
+        }
+
+            &:nth-of-type(2n + 1){
+
+                margin-left: 0;
+
+                @include snap(small-medium){
+
+                    clear: left;
+
+                }
+
+                @include snap(large){
+
+                    margin-left: $gridMargin;
+                    clear: none;
+                }
+            }
+
+            &:nth-of-type(3n + 1){
+
+                @include snap(large){
+
+                    margin-left: 0;
+                    clear:left;
+
+                }
+            }
+
+        }
+
+        @include snap(medium){
+
+            @include lay-out(3);
+        }
+
+        
+
+&--ratio{
+
+            position: relative;
+            height: 0;
+
+            @include lay-out(1);
+            @include ratio(1);
+
+            @include snap(small){
+
+                @include lay-out(2);
+                @include ratio(2);
+            }
+
+            @include snap(medium){
+
+                @include lay-out(3);
+                @include ratio(3);
+            }
+
+
+                &:nth-child(2n + 2){
+
+                    @include snap(small){
+
+                        margin-left: $gridMargin;
+                    }
+                }
+
+        }
+
+}
+
+.g-4{
+
+    @include lay-out(1);
+
+    @include snap(medium){
+        @include lay-out(2);
+    }
+
+    @include snap(large){
+
+        @include lay-out(4);
+    }
+
+    &:nth-child(2n + 3){
+
+        @include snap(medium){
+
+            margin-left: 0;
+        }
+    }
+
+    &:nth-child(n + 2){
+
+        @include snap(large){
+
+            margin-left: $gridMargin;
+        }
+
+    }
+
+        &--ratio{
+
+            position: relative;
+            height: 0;
+
+            @include lay-out(1);
+            @include ratio(1);
+
+            @include snap(small){
+
+                @include lay-out(2);
+                @include ratio(2);
+            }
+
+            @include snap(medium){
+
+                @include lay-out(4);
+                @include ratio(4);
+            }
+
+
+                &:nth-child(2n + 2){
+
+                    @include snap(small){
+
+                        margin-left: $gridMargin;
+                    }
+                }
+
+        }
+
+}
+.g-5{
+
+    @include lay-out(5)
+}
+
+.g-6{
+
+    @include lay-out(1);
+
+    @include snap(small){
+    @include lay-out(6)
+    }
+}
+
+.g-7{
+
+    @include lay-out(7)
+}
+
+.g-8{
+
+    @include lay-out(8)
+}
+
+.g-9{
+
+    @include lay-out(9)
+}
+
+.g-10{
+
+    @include lay-out(10)
+}
+
+
+.g-3__23{
+
+    @include lay-out(1);
+    @include snap(medium){
+
+        @include twoThirds;
+    }
+     @include snap(large){
+
+        @include twoThirds;
+    }
+
+
+}
+
+.g-4__34{
+
+    @include lay-out(1);
+    @include snap(medium){
+
+        @include threeFourths;
+    }
+
+}
+
+.g-5__56{
+
+    $colNumber:5;
+    width: $maxGridWidth - (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber) - $gridMargin;
+
+}
+/*No margin grid*/
+
+
+.g-1--zero{
+
+    @include lonm(1)
+}
+
+.g-2--zero{
+
+    @include lonm(2)
+}
+
+.g-3--zero{
+
+    @include lonm(1);
+
+    @include snap(small-medium){
+            @include lonm(2);
+    }
+        @include snap(large){
+
+    @include lonm(3);
+}
+}
+.g-4--zero{
+
+    @include lonm(1);
+
+    @include snap(small-medium){
+            @include lonm(2);
+    }
+        @include snap(large){
+
+    @include lonm(4);
+}
+}
+
+.g-5--zero{
+
+    @include lonm(5)
+}
+
+.g-6--zero{
+
+    @include lonm(6)
+}
+
+.g-7--zero{
+
+    @include lonm(7)
+}
+
+.g-8--zero{
+
+    @include lonm(8)
+}
+
+.g-9--zero{
+
+    @include lonm(9)
+}
+
+.g-10--zero{
+
+    @include lonm(10)
+}

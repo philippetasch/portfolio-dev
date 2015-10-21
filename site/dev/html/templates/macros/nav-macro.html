@@ -1,0 +1,6 @@
+{% macro active(activePage='index') %}
+<nav>
+  <a href="#" class="{% if activePage == 'index' %} active {% endif %}">Home</a>
+  <!-- Repeat for about and contact -->
+</nav>
+{% endmacro %}

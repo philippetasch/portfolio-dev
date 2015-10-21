@@ -1,0 +1,101 @@
+
+.bigSlice--contact{
+
+	background-color: $bigSlice--contact;
+	color: #fff;
+
+}
+
+.h1--bigSlice--contact{
+
+	&:after{
+
+		background-color: #fff;
+	}
+}
+
+.contact--input--group{
+
+	position: relative;
+}
+
+
+.label--contact{
+
+	display: block;
+
+}
+
+
+.input--contact{
+
+	background-color: #2C3E50;
+	border:none;
+	border-bottom: 2px solid #fff;
+	transition: background-color .35s ease-in-out;
+	@include rem2px(padding, 1.6, 1);
+	color: #fff;
+
+	@include h-f-a{
+
+		background-color: darken(#2C3E50, 15%);
+		outline:none;
+	}
+}
+
+.message--contact{
+
+	max-width: 100%;
+	min-width: 100%;
+	@include rem2px(margin-top, 1);
+	background-color: darken(#2C3E50, 15%);
+	border: none;
+	outline:none;
+	@include rem2px(padding, 1);
+
+}
+
+
+.btn--contact{
+
+	color: $bigSlice--contact;
+	border-color: #fff;
+	background-color: #fff;
+	transition: all .35s ease-in-out;
+	@include snap(small-medium){
+		
+		color: #fff;
+		border-color: #fff;
+		background-color: $bigSlice--contact;
+		
+		&:after{
+		
+			background-color: #fff;
+		}
+
+	}
+
+	
+
+	&:before{
+
+			content:"\f0e0";
+			color: $bigSlice--contact;
+
+		}
+
+	@include h-f-a{
+
+		color: $bigSlice--contact;
+		border-color: #fff;
+		background-color: #fff;
+
+		&:before{
+
+			content:"\f0e0";
+			color: $bigSlice--contact;
+
+		}
+
+	}
+}

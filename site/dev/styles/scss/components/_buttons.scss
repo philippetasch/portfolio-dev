@@ -1,0 +1,108 @@
+.btn{
+
+	@include rem2px(padding, 1.5, 2);
+	border: 4px solid;
+	display: block;
+	margin: auto;
+
+	@include snap(medium){
+
+		@include rem2px(padding, 1.5, 2);
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+
+	}
+
+}
+
+.btn--slice{
+
+	text-align: center;
+	text-decoration: none;
+	transition: all .35s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index:10;
+	font-weight: 900;
+	max-width: 500px;
+
+	@include snap(small-medium){
+
+		&:after{
+
+		content:"";
+		width: 0%;
+		height: 102%;
+		position: absolute;
+		left:-10%;
+		top:0%;
+		bottom:0%;
+		margin: auto;
+		transform: skew(-30deg);
+		transition: all .35s ease-in;
+		z-index:-1;
+
+	}
+
+	}
+
+	&:before{
+
+			font-family: FontAwesome;
+			font-weight: 200;
+			display: inline-block;
+			vertical-align: middle;
+			@include rem2px(font-size, 2.5);
+			@include rem2px(margin-right, 1);
+
+			@include snap(small-medium){
+
+				transform:translateX(300%);
+
+				position: absolute;
+				top:0;
+				bottom:0;
+				margin: auto;
+				@include rem2px(right, 1.6);
+				@include rem2px(font-size, 3);
+
+			}
+
+		}
+
+
+
+	@include h-f-a{
+
+		@include snap(small-medium){
+
+			@include rem2px(padding-right, 6);
+			@include rem2px(padding-left, 4);
+
+		}
+
+		&:after{
+
+			width: 120%;
+		}
+
+		&:before{
+
+			transform:translateX(0%);
+			transition: all .35s ease-in-out;
+			transition-delay: .25s;
+
+		}
+	}
+}
+
+.more{
+
+	position: absolute;
+	bottom: .7em;
+	right : .7em;
+	padding: .5em .8em;
+	background-color: #000;
+	color: #fff;
+}

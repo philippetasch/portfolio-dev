@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section class="wrapper stretch--v">
+        {% include "partials/nav.html" %}
+        <section id="top" class="bigSlice bigSlice--me bg-img slicePad--h">
+            <div class="maxWrapper maxWrapper--heading gridClear">
+                <div class="img--container center radius">
+                    <img class="img--resp img--resp--rounded" src="dist/img/cerclePhoto2.jpg" alt="Philippe Tasch"/>
+                </div>
+                <div class="first grids g-3__23 welcome--heading ">
+                    <h1 class="h1 h1--me slideInTop" >Bienvenue! Je suis Philippe,<br/> étudiant en webdesign à Strasbourg!</h1>
+                </div>
+            </div>
+            <a data-scroll href="#about" class="scroll-down"
+            data-0="opacity:1;" data-500="opacity:.0;"></a>
+        </section>
+        <section id="about" class="bigSlice bigSlice--about slope-bottom">
+            <h1 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h1>
+            <div class="maxWrapper maxWrapper--about gridClear">
+                {% for histoire in parcours %}
+                    <div class="c-both first {{histoire.class}} about__wrapper">
+                        <div class="about__icon--wrapper {{histoire.icone}}">
+                            <i class="fa {{histoire.iconeClass}} about__icon"></i>
+                        </div>
+                        <div class="about__text">
+                            <p>{{histoire.texte}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="maxWrapper maxWrapper--cv t-center slicePad--v slicePad--h">
+                <a href="#" class="btn btn--slice btn--cv" role="button">
+                    Téléchargez mon CV !
+                </a>
+            </div>
+        </section>
+        <section id="skills" class="bigSlice bigSlice--skills slicePad--h ">
+            <h1 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h1>
+            <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
+                {% for competence in competences %}
+                    <div  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
+                    <h3 class="h3 h3--skills">
+                    <span class="skills__icon--container">
+                        <i class="fa {{competence.competenceIconType}} skills__icon"></i>
+                    </span>
+                    {{ competence.competenceTitleText }}
+                    </h3>
+                    <p class="skills__text">{{competence.competenceText}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="projects" class="bigSlice bigSlice--projects gridClear slope-both">
+        <h1 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h1>
+        <div class="maxWrapper--projects gridClear">
+            {% for projet in projets %}
+                <div class="grids--zero g-4--zero tiles">
+                    <a href="{{projet.lien}}" class="ratio--abs tiles__overlay">
+                        <div class="tiles__title">
+                            <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
+                            <p class="h4 h4--overlay">{{projet.objet}}</p>
+                            <span class="tile__btn">Voir plus</span>
+                        </div>
+                    </a>
+                    <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="grids--zero g-4--zero tiles">
+                <div class="ratio--rel ratio--rel__80 wip bg-img bg-project">
+                </div>
+            </div>
+        </div>
+        <div class="maxWrapper slicePad--v gridClear t-center slicePad--h">
+            <a href="projets.html" class="btn btn--slice btn--projects" role="button">
+                Voir tous mes projets !
+            </a>
+        </div>
+    </section>
+    <section id="contact" class="bigSlice bigSlice--contact  slicePad--h" >
+        <h1 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h1>
+        <div class="maxWrapper gridClear gridsMar--v">
+            <div class="first grids g-1 t-center">Surtout, n'hésitez pas à prendre contact avec moi via le formulaire ci-dessous! Je vous répondrai dans les plus brefs délais !</div>
+            <form class="first grids g-1">
+                <div class="first grids g-2 contact--input--group">
+                    <label for="nom" class="label--contact">Nom</label>
+                    <input type="text" id="nom" class="input--contact g-1"/>
+                </div>
+                <div class="grids g-2 contact--input--group">
+                    <label for="prenom" class="label--contact">Prénom</label>
+                    <input type="text" id="prenom" class="input--contact g-1"/>
+                </div>
+                <div class="first grids g-2 contact--input--group">
+                    <label for="mail" class="label--contact">Adresse E-mail</label>
+                    <input type="text" id="mail" class="input--contact g-1"/>
+                </div>
+                <div class="grids g-2 contact--input--group">
+                    <label for="sujet" class="label--contact">Sujet</label>
+                    <input type="text" id="sujet" class="input--contact g-1"/>
+                </div>
+                <div class="first grids g-1">
+                    <label for="message" class="label--contact">Message</label>
+                    <textarea name="message" id="message" class="message--contact g-1" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="maxWrapper gridClear t-center slicePad--v">
+            <input type="submit" id="envoi" name="envoi" value="Envoyer" class="btn btn--contact" role="button"/>
+        </div>
+    </section>
+    {% include "partials/footer.html" %}
+</section>
+
+
+
+{% endblock %}

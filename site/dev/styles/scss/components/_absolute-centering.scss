@@ -1,0 +1,26 @@
+.abs-center{
+
+	&--xy{
+
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform:translateY(-50%) translateX(-50%);
+
+	}
+
+	&--x{
+
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+
+	}
+
+	&--y{
+
+		position: absolute;
+		top: 50%;
+		transform:translateY(-50%);
+	}
+}

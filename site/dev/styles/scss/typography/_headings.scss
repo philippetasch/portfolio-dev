@@ -1,0 +1,115 @@
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+
+	font-family: 'Roboto Slab', 'Roboto', serif;
+
+}
+
+.h1.h1--bigSlice{
+
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+
+	&:after{
+
+		content:"";
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		width: 40px;
+		height: 4px;
+		margin-left: -20px;
+
+			@include snap(medium){
+
+				width: 60px;
+				height: 3px;
+				margin-left: -30px;
+			}
+
+
+			@include snap(large){
+
+					width: 80px;
+					height: 3px;
+					margin-left: -40px;
+			}
+
+		}
+
+	@include snap(large){
+
+			@include rem2px(font-size, 4);
+	}
+
+
+}
+
+.h1{
+
+	@include rem2px(font-size, 2.4);
+
+	@include snap(small){
+
+			@include rem2px(font-size, 2.6);
+	}
+	@include snap(small-medium){
+
+			@include rem2px(font-size, 2.8);
+	}
+	@include snap(medium){
+
+			@include rem2px(font-size, 3.1);
+	}
+	@include snap(large){
+
+			@include rem2px(font-size, 3.4);
+	}
+
+}
+
+.h2{
+
+	@include rem2px(font-size, 2.1);
+
+	@include snap(small){
+
+			@include rem2px(font-size, 2.2);
+	}
+	@include snap(small-medium){
+
+			@include rem2px(font-size, 2.4);
+	}
+	@include snap(medium){
+
+			@include rem2px(font-size, 2.6);
+	}
+	@include snap(large){
+
+			@include rem2px(font-size, 2.8);
+	}
+}
+
+.h3{
+
+	@include rem2px(font-size, 1.8);
+
+	@include snap(small){
+
+			@include rem2px(font-size, 2.0);
+	}
+	@include snap(small-medium){
+
+			@include rem2px(font-size, 2.1);
+	}
+	@include snap(medium){
+
+			@include rem2px(font-size, 2.2);
+	}
+	@include snap(large){
+
+			@include rem2px(font-size, 2.4);
+	}
+}

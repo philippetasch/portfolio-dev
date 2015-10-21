@@ -1,0 +1,33 @@
+{
+  "name": "phil_site",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "smooth-scroll": "cferdinandi/smooth-scroll#~7.1.1",
+    "headroom.js": "WickyNilliams/headroom.js#~0.7.0",
+    "font-awesome": "FortAwesome/Font-Awesome#~4.4.0"
+  },
+  "install": {
+    "path": {
+
+        "js":"./site/dev/scripts/js",
+        "scss":"./site/dev/styles/scss"
+
+      },
+    "sources": {
+      "smooth-scroll": "bower_components/smooth-scroll/dist/js/smooth-scroll.js",
+      "headroom.js": "bower_components/headroom.js/dist/headroom.js",
+      "font-awesome": "bower_components/font-awesome/scss/*.scss"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+.bigSlice--me{
+
+	@include rem2px(padding-top, 10);
+	@include rem2px(padding-bottom, 4);
+	position: relative;
+	background-color:$bigSlice--skills;
+	background-image: linear-gradient(135deg, rgb(52, 73, 94) 50%, rgb(34, 47, 61) 50%);
+
+	@include snap(medium){
+		background-image: url('../img/bg-img-compressor.jpg');
+		background-position: 80% 40%;
+		height: auto;
+
+			
+	}
+
+	@include snap(large){
+
+		background-position: 80% 40%;
+		background-attachment: fixed;
+		height: 100%;
+			
+	}
+
+}
+
+.img--container{
+
+	overflow: hidden;
+	@include rem2px(margin-bottom, 5);
+	@include lay-out(2);
+	border: 7px solid #fff;
+	
+	@include snap(medium){
+
+		display: none;
+	}
+
+}
+
+.maxWrapper--heading{
+
+	position: relative;
+	
+	@include snap(medium){
+
+		height: 100%;
+	}
+}
+
+.welcome--heading{
+	
+	text-align: center;
+	color:white;
+
+	@include rem2px(margin-bottom, 5);
+	
+	@include snap(medium){
+		
+		@include rem2px(padding-top, 10);
+		@include rem2px(padding-bottom, 10);
+		text-align: right;
+
+	}
+	
+	@include snap(large){
+
+		@include rem2px(padding-top, 0);
+		@include rem2px(padding-bottom, 0);
+		position: absolute;
+		top:32%;
+		left:0;
+
+	}
+}
+
+.h1.h1--me{
+		
+	@include snap(medium){
+
+		@include rem2px(padding-right, 4)
+	
+	}
+
+	@include snap(large){
+
+		@include rem2px(font-size, 4.2);
+
+			font-weight: 700;
+
+		}
+}
+
+.slideInTop{
+
+	animation: slideInTop 1s ease-in;
+
+}
+
+@keyframes slideInTop{
+
+	0%{
+
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+
+	100%{
+
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.scroll-down{
+
+	display: block;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 15px;
+	margin: auto;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #fff;
+	transition: all .35s ease-in;
+	border: 2px solid #fff;
+
+	&:hover{
+
+		transform: scale(1.5);
+
+	}
+
+	&:before{
+
+		content:"\f107";
+		position: absolute;
+		top:50%;
+		right:0;
+		left: 0;
+		margin: auto;
+		font-family: FontAwesome;
+		@include rem2px(font-size, 6);
+		@include rem2px(margin-top, -5);
+		@include rem2px(width, 4);
+		@include rem2px(height, 4);
+
+	}
+
+	animation: bounce 4s alternate;
+}
+
+@keyframes bounce{
+
+	0%{
+
+		transform:translateY(0%);
+	}
+
+		10%{
+
+		transform:translateY(-40%);
+	}
+
+
+		30%{
+
+		transform:translateY(30%);
+	}
+
+		50%{
+
+		transform:translateY(-40%);
+		border-radius: 50%;
+
+	}
+
+
+		70%{
+
+		transform:translateY(30%);
+
+	}
+
+
+		90%{
+
+		transform:translateY(-40%);
+				border-radius: 50%;
+
+	}
+
+	100%{
+
+		transform:translateY(0%);
+	}
+
+}
+
+
