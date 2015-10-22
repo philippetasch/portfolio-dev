@@ -28,14 +28,15 @@
 	&:before{
 
 	content: "";
-    height: 103%;
+	background-color: $nav__link--1--bgc;
     width: 4px;
+    height: 99%;
     position: absolute;
-    background-color: $nav__link--1--bgc;
     left: 50%;
-    top:0%;
-    bottom:0;
+    top:4%;
+    bottom:0%;
     margin-left: -2px;
+	
 	}
     @media screen and (min-width: 1200px){
 

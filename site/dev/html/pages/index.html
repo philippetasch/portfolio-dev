@@ -11,12 +11,11 @@
                     <h1 class="h1 h1--me slideInTop" >Bienvenue! Je suis Philippe,<br/> étudiant en webdesign à Strasbourg!</h1>
                 </div>
             </div>
-            <a data-scroll href="#about" class="scroll-down"
-            data-0="opacity:1;" data-500="opacity:.0;"></a>
+            <a data-scroll href="#about" class="scroll-down"></a>
         </section>
         <section id="about" class="bigSlice bigSlice--about slope-bottom">
             <h1 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h1>
-            <div class="maxWrapper maxWrapper--about gridClear">
+            <div class="maxWrapper maxWrapper--about gridClear slicePad--v--top">
                 {% for histoire in parcours %}
                     <div class="c-both first {{histoire.class}} about__wrapper">
                         <div class="about__icon--wrapper {{histoire.icone}}">

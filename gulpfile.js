@@ -30,6 +30,8 @@ var paths = {
 
     root:'./site',
     templates: './site/dev/html/pages/*.html',
+      nunjucksLayout:'./site/dev/html/templates/layout.html',
+      nunjucksPartials: './site/dev/html/templates/partials/*.html',
     jsonData: './site/dev/html/data/data.json',
     scss: './site/dev/styles/scss/**/*.scss',
     css: './site/dist/css',
@@ -81,6 +83,7 @@ gulp.task('bs-reload', function () {
 gulp.task('nunjucks', function() {
     nunjucksRender.nunjucks.configure(['./site/dev/html/templates/'], {watch: false});
 return gulp.src(paths.templates)
+  .pipe(plumber())
   // Renders template with nunjucks
   .pipe(data(function() {
 
@@ -209,7 +212,7 @@ return gulp.src(paths.fontSrc)
 gulp.task('watch', ['nunjucks','styles','scripts','scriptsTwo','images','browser-sync'], function () {
 
     gulp.watch(paths.scss, ['styles']);
-    gulp.watch(paths.templates, ['nunjucks']);
+    gulp.watch([paths.templates, paths.nunjucksLayout, paths.nunjucksPartials], ['nunjucks']);
     gulp.watch(paths.root + '/*.html').on('change', reload);
     gulp.watch(paths.scriptsSrc, ['scripts', 'bs-reload']);
     gulp.watch(paths.imgSrc, ['images']);

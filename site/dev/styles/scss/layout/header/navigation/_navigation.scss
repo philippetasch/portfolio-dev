@@ -9,47 +9,13 @@
 	}
 }
 
-.navigation__wrapper{
-
-	@include lay-out(1);
-
-		@include snap(large){
-
-			@include twoThirds;
-			height: auto;
-			margin: 0;
-			background-color: transparent;
-
-		}
-
-
-			&:hover .navigation{
-
-					@include snap(large){
-
-						padding-top: 0;
-					}
-
-			}
-
-
-	@include snap(large){
-
-		@include twoThirds;
-		height: auto;
-		float: none;
-		margin: 0;
-
-	}
-
-}
-
 @import 'nav-toggle';
 /* uncss:ignore */
 
 .navigation{
 
 	@include lay-out(1);
+	clear:both;
 
 	.js &{
 
@@ -64,6 +30,10 @@
 
 	@include snap(large){
 
+		float: right;
+		@include twoThirds;
+		clear: none;
+		
 		.js &{
 			position: static;
 			overflow: visible;
@@ -166,14 +136,16 @@
 	transition: all .35s linear;
 	text-transform: uppercase;
 	font-weight: 900;
-	border-right: 5px solid rgba(#000, 0.1);
-	border-bottom: 5px solid rgba(#000, 0.1);
+	border-right: 4px solid rgba(#000, 0.1);
+	border-bottom: 4px solid rgba(#000, 0.1);
 
 	@include snap(large){
 
 		@include rem2px(padding, 4, 1.2, 1, 0);
 		text-align: right;
 		@include rem2px(font-size, 1.4);
+		border-right: 6px solid rgba(#000, 0.1);
+		border-bottom: 6px solid rgba(#000, 0.1);
 
 	}
 
@@ -181,6 +153,8 @@
 
 		@include rem2px(font-size, 1.7);
 		@include rem2px(padding, 4, 1.2, 1, 0);
+		border-right: 7px solid rgba(#000, 0.1);
+		border-bottom: 7px solid rgba(#000, 0.1);
 
 	}
 
@@ -355,6 +329,43 @@
 	}
 }
 
+/////////////////////////////////////////////////////
+.navigation__wrapper{
+
+	@include lay-out(1);
+
+		@include snap(large){
+
+			@include twoThirds;
+			height: auto;
+			margin: 0;
+			background-color: transparent;
+
+		}
+
+
+			&:hover .navigation{
+
+					@include snap(large){
+
+						padding-top: 0;
+					}
+
+			}
+
+
+	@include snap(large){
+
+		@include twoThirds;
+		height: auto;
+		float: none;
+		margin: 0;
+
+	}
+
+}
+
+///////////////////////////////////////
 .navigation__wrapper{
 
 	@include lay-out(1);
