@@ -1,11 +1,10 @@
 .btn{
 
-	@include rem2px(padding, 1.5, 2);
+	@include rem2px(padding, 1, 2);
 	border: 4px solid;
 	display: block;
-	margin: auto;
 
-	@include snap(medium){
+	@include snap(small-medium){
 
 		@include rem2px(padding, 1.5, 2);
 		display: inline-block;
@@ -26,20 +25,28 @@
 	z-index:10;
 	font-weight: 900;
 	max-width: 500px;
+	@include rem2px(margin, 0, 1, 0, 1);
+
+	@media screen and(min-width: 540px){
+
+		margin: auto;
+
+	}
+
 
 	@include snap(small-medium){
 
 		&:after{
 
 		content:"";
-		width: 0%;
+		width: 130%;
 		height: 102%;
 		position: absolute;
-		left:-10%;
+		right:120%;
 		top:0%;
 		bottom:0%;
 		margin: auto;
-		transform: skew(-30deg);
+		transform: translateX(0%) skew(-30deg);
 		transition: all .35s ease-in;
 		z-index:-1;
 
@@ -84,7 +91,7 @@
 
 		&:after{
 
-			width: 120%;
+			transform: translateX(100%) skew(-30deg);
 		}
 
 		&:before{

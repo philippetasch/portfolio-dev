@@ -3,7 +3,7 @@
 
 	background-color: $bigSlice--contact;
 	color: #fff;
-
+	text-align: center;
 }
 
 .h1--bigSlice--contact{
@@ -23,7 +23,7 @@
 .label--contact{
 
 	display: block;
-
+	text-align: left;
 }
 
 
@@ -62,20 +62,34 @@
 	border-color: #fff;
 	background-color: #fff;
 	transition: all .35s ease-in-out;
+	display: inline-block;
+
+	@include rem2px(margin, 2, 0, 2, 0);
+
 	@include snap(small-medium){
-		
+
+		width: auto;
 		color: #fff;
 		border-color: #fff;
 		background-color: $bigSlice--contact;
-		
+
+
+			@include rem2px(margin, 3, 0, 3, 0);
+
 		&:after{
-		
+
 			background-color: #fff;
 		}
 
 	}
 
-	
+	@include snap(large){
+
+			@include rem2px(margin, 4, 0, 4, 0);
+
+	}
+
+
 
 	&:before{
 

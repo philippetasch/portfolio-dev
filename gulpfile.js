@@ -168,10 +168,10 @@ return gulp.src(paths.imgSrc)
 gulp.task('scripts', function() {
 
 return gulp.src(paths.scriptsSrc)
+       .pipe(plumber())
        .pipe(concat('main.js'))
        .pipe(lint())
        /*.pipe(lint.reporter('jshint-stylish'))*/
-       .pipe(plumber())
        .pipe(uglify())
        .pipe(rename({suffix : '.min'}))
        .pipe(gulp.dest(paths.scriptsDest))
@@ -185,8 +185,8 @@ return gulp.src(paths.scriptsSrc)
 gulp.task('scriptsTwo', function() {
 
 return gulp.src(paths.scriptsSrcTwo)
-       .pipe(lint())
        .pipe(plumber())
+       .pipe(lint())
        .pipe(uglify())
        .pipe(rename({suffix : '.min'}))
        .pipe(gulp.dest(paths.scriptsDestTwo))
@@ -211,9 +211,9 @@ return gulp.src(paths.fontSrc)
 
 gulp.task('watch', ['nunjucks','styles','scripts','scriptsTwo','images','browser-sync'], function () {
 
-    gulp.watch(paths.scss, ['styles']);
     gulp.watch([paths.templates, paths.nunjucksLayout, paths.nunjucksPartials], ['nunjucks']);
     gulp.watch(paths.root + '/*.html').on('change', reload);
+    gulp.watch(paths.scss, ['styles']);
     gulp.watch(paths.scriptsSrc, ['scripts', 'bs-reload']);
     gulp.watch(paths.imgSrc, ['images']);
 
