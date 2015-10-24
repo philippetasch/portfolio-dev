@@ -1,10 +1,13 @@
 
 var gulp                 = require('gulp');
+var plugins              = require('gulp-load-plugins')();
 
 var nunjucksRender       = require('gulp-nunjucks-render');
 var data                 = require('gulp-data');
+var fs                   = require('fs');
 
-var sass                 = require('gulp-sass');
+
+//var sass                 = require('gulp-sass');
 var sourcemaps           = require('gulp-sourcemaps');
 var minifyCss            = require('gulp-minify-css');
 var autoprefixer         = require('gulp-autoprefixer');
@@ -24,49 +27,17 @@ var uglify               = require('gulp-uglify');
 var size                 = require('gulp-size');
 var rename               = require('gulp-rename');
 
-/* Paths/to/files */
-
-var paths = {
-
-    root:'./site',
-    templates: './site/dev/html/pages/*.html',
-      nunjucksLayout:'./site/dev/html/templates/layout.html',
-      nunjucksPartials: './site/dev/html/templates/partials/*.html',
-    jsonData: './site/dev/html/data/data.json',
-    scss: './site/dev/styles/scss/**/*.scss',
-    css: './site/dist/css',
-    imgSrc:'./site/dev/img/*',
-    imgDest : './site/dist/img',
-    scriptsSrc : './site/dev/scripts/js/**/*.js',
-    scriptsDest : './site/dist/scripts',
-      scriptsSrcTwo : './site/dev/scripts/headJs/**/*.js',
-      scriptsDestTwo : './site/dist/scripts/head',
-    fontSrc : './site/dev/fonts/*',
-    fontDest : './site/dist/fonts',
-}
+var path                 = require('path');
+var config               = require('./config.json');
 
 /*Browser-Sync Configuration*/
 
 var browserSync   = require('browser-sync');
 
 var reload        = browserSync.reload;
-var bsConfig      = {
-
-      server: {
-            baseDir: paths.root,
-        },
-
-        ui: {
-            port: 8080
-        },
-
-        logPrefix:"nunjuck test",
-
-        browser: ["firefox"]
-};
 
 gulp.task('browser-sync', function() {
-    browserSync.init(bsConfig);
+    browserSync.init(config.tasks.browserSync);
 });
 
 gulp.task('bs-reload', function () {
@@ -78,20 +49,28 @@ gulp.task('bs-reload', function () {
 /*Browser-Sync Configuration -- END */
 
 /*Nunjucks Templates Task*/
+var htmlPaths = {
 
+  src: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.src),
+  templates: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.templates),
+  layout: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.layout),
+  partials: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.partials),
+  jsonData: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.jsonData),
+  dest: path.join(config.root)
+}
 
-gulp.task('nunjucks', function() {
-    nunjucksRender.nunjucks.configure(['./site/dev/html/templates/'], {watch: false});
-return gulp.src(paths.templates)
+gulp.task('html', function() {
+    nunjucksRender.nunjucks.configure([htmlPaths.src], {watch: false});
+return gulp.src(htmlPaths.templates)
   .pipe(plumber())
   // Renders template with nunjucks
   .pipe(data(function() {
 
-      return require(JSON.parse(JSON.stringify(paths.jsonData, 'utf8')))
+      return JSON.parse(fs.readFileSync(htmlPaths.jsonData, 'utf8'))
 
     }))
   .pipe(nunjucksRender())
-  .pipe(gulp.dest(paths.root))
+  .pipe(gulp.dest(config.root))
 
 });
 
@@ -99,11 +78,17 @@ return gulp.src(paths.templates)
 
 /*SCSS Task*/
 
+var cssPaths = {
+
+  src: path.join(config.root, config.base.src, config.stylesFolder.src, config.tasks.scss.src),
+  dest: path.join(config.root, config.base.dest, config.stylesFolder.dest)
+}
+
 gulp.task('styles', function () {
-   gulp.src(paths.scss)
+   gulp.src(cssPaths.src)
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(plugins.sass())
     .pipe(autoprefixer({
 
       browsers:['last 15 versions', 'safari 5', 'ie 8', 'ie 9','opera 12.1', 'ios 6', 'android 4'
@@ -112,7 +97,7 @@ gulp.task('styles', function () {
     .pipe(sourcemaps.write({includeContent: true}))
     .pipe(uncss({
 
-          html:[paths.root + '/*.html'],
+          html:[config.root + '/*.html'],
           ignore:
           [/^\.lt-/
           ,/^\.no-js/
@@ -125,7 +110,7 @@ gulp.task('styles', function () {
           ,/\.disable-hover/],
 
         }))
-            .pipe(gulp.dest(paths.css))
+            .pipe(gulp.dest(cssPaths.dest))
 
     .pipe(minifyCss({
 
@@ -135,7 +120,7 @@ gulp.task('styles', function () {
         }))
 
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(cssPaths.dest))
     .pipe(size({
                       showFiles : true
 
@@ -144,10 +129,16 @@ gulp.task('styles', function () {
     .pipe(browserSync.reload({stream:true}))
 });
 
+var imgPaths = {
+
+  src:  path.join(config.root, config.base.src, config.imgFolder.src, config.tasks.img.src),
+  dest:  path.join(config.root, config.base.dest, config.imgFolder.dest)
+}
+
 gulp.task('images', function(){
 
-return gulp.src(paths.imgSrc)
-        .pipe(newer(paths.imgDest))
+return gulp.src(imgPaths.src)
+        .pipe(newer(imgPaths.dest))
         .pipe(plumber())
         .pipe(imagemin({
 
@@ -155,7 +146,7 @@ return gulp.src(paths.imgSrc)
 
         }))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(paths.imgDest))
+        .pipe(gulp.dest(imgPaths.dest))
         .pipe(size({
 
             showFiles : true
@@ -165,16 +156,23 @@ return gulp.src(paths.imgSrc)
 
 });
 
+
+var scriptsPaths = {
+
+  src: path.join(config.root, config.base.src, config.scriptsFolder.src, config.tasks.js.src),
+  dest: path.join(config.root, config.base.dest, config.scriptsFolder.dest)
+}
+
 gulp.task('scripts', function() {
 
-return gulp.src(paths.scriptsSrc)
+return gulp.src(scriptsPaths.src)
        .pipe(plumber())
        .pipe(concat('main.js'))
        .pipe(lint())
        /*.pipe(lint.reporter('jshint-stylish'))*/
        .pipe(uglify())
        .pipe(rename({suffix : '.min'}))
-       .pipe(gulp.dest(paths.scriptsDest))
+       .pipe(gulp.dest(scriptsPaths.dest))
        .pipe(size({
                       showFiles : true,
                       title : 'mini-concat JS'
@@ -182,14 +180,22 @@ return gulp.src(paths.scriptsSrc)
        .pipe(notify({message: 'Scripts : OK!'}));
 });
 
+var scriptsPathsTwo = {
+
+  src: path.join(config.root, config.base.src, config.scriptsFolder.src, config.tasks.js.srcTwo),
+  dest: path.join(config.root, config.base.dest, config.scriptsFolder.destTwo)
+}
+
+var allScripts = [scriptsPaths.src, scriptsPathsTwo.src];
+
 gulp.task('scriptsTwo', function() {
 
-return gulp.src(paths.scriptsSrcTwo)
+return gulp.src(scriptsPathsTwo.src)
        .pipe(plumber())
        .pipe(lint())
        .pipe(uglify())
        .pipe(rename({suffix : '.min'}))
-       .pipe(gulp.dest(paths.scriptsDestTwo))
+       .pipe(gulp.dest(scriptsPathsTwo.dest))
        .pipe(size({
                       showFiles : true,
                       title : 'mini-concat JS'
@@ -199,23 +205,29 @@ return gulp.src(paths.scriptsSrcTwo)
 
 /*Fonts Task*/
 
+var fontsPaths = {
+
+  src: path.join(config.root, config.base.src, config.tasks.fonts.src),
+  dest: path.join(config.root, config.base.dest, config.tasks.fonts.dest)
+}
+
 gulp.task('fonts', function() {
 
-return gulp.src(paths.fontSrc)
-      .pipe(newer(paths.fontDest))
-      .pipe(gulp.dest(paths.fontDest))
+return gulp.src(fontsPaths.src)
+      .pipe(newer(fontsPaths.dest))
+      .pipe(gulp.dest(fontsPaths.dest))
       .pipe(notify({message: 'Fonts : OK!'}))
 });
 
 /*Watch Task */
 
-gulp.task('watch', ['nunjucks','styles','scripts','scriptsTwo','images','browser-sync'], function () {
+gulp.task('watch', ['html','styles','scripts','scriptsTwo','images','browser-sync'], function () {
 
-    gulp.watch([paths.templates, paths.nunjucksLayout, paths.nunjucksPartials], ['nunjucks']);
-    gulp.watch(paths.root + '/*.html').on('change', reload);
-    gulp.watch(paths.scss, ['styles']);
-    gulp.watch(paths.scriptsSrc, ['scripts', 'bs-reload']);
-    gulp.watch(paths.imgSrc, ['images']);
+    gulp.watch([htmlPaths.templates, htmlPaths.layout, htmlPaths.partials, htmlPaths.jsonData], ['html']);
+    gulp.watch(config.root + '/*.html').on('change', reload);
+    gulp.watch(cssPaths.src, ['styles']);
+    gulp.watch(allScripts, ['scripts', 'bs-reload']);
+    gulp.watch(imgPaths.src, ['images']);
 
 });
 

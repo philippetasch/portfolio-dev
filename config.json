@@ -1,0 +1,88 @@
+{
+
+      "root":"./site",
+
+      "base":{
+
+          "src":"/dev",
+          "dest":"/dist"
+        },
+
+      "htmlFolder": {
+
+        "src":"/html"
+      },
+
+      "stylesFolder": {
+
+        "src":"/styles",
+        "dest":"/css"
+      },
+
+      "imgFolder":{
+
+        "src":"/img",
+        "dest":"/img"
+      },
+
+      "scriptsFolder":{
+
+        "src":"/scripts",
+        "dest":"/scripts",
+        "destTwo" :"/head"
+
+      },
+
+      "tasks" :{
+
+        "browserSync": {
+
+            "server": {
+
+              "baseDir": "./site"
+            },
+
+            "ui": {
+
+              "port": "8080"
+            },
+
+            "logPrefix":"nunjuck test",
+
+            "browser": ["firefox"]
+
+        },
+
+        "html":{
+            "src":"/templates/",
+            "templates": "/pages/*.html",
+            "layout":"/templates/layout.html",
+            "partials": "/templates/partials/*.html",
+            "jsonData": "/data/data.json"
+        },
+
+        "scss":{
+
+            "src": "/**/*.scss"
+        },
+
+        "img":{
+
+            "src":"/*"
+        },
+
+        "js":{
+
+            "src" : "/js/**/*.js",
+            "srcTwo" : "/headJs/**/*.js"
+        },
+
+        "fonts":{
+
+            "src" : "fonts/*",
+            "dest" : "fonts"
+        }
+
+      }
+
+}
