@@ -21,7 +21,7 @@
     "path": {
 
         "js":"./site/dev/scripts/js",
-        "scss":"./site/dev/styles/scss"
+        "scss":"./site/dev/styles/"
 
       },
     "sources": {

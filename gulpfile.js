@@ -1,34 +1,11 @@
 
 var gulp                 = require('gulp');
 var plugins              = require('gulp-load-plugins')();
-/*
-var nunjucksRender       = require('gulp-nunjucks-render');
-var data                 = require('gulp-data');
-
-
-//var sass                 = require('gulp-sass');
-var sourcemaps           = require('gulp-sourcemaps');
-var minifyCss            = require('gulp-minify-css');
-var autoprefixer         = require('gulp-autoprefixer');
-var uncss                = require('gulp-uncss');
-
-var imagemin             = require('gulp-imagemin');
-/*var pngquant           = require('imagemin-pngquant');
-var jpegtran             = require('imagemin-jpegtran');
-
-var jsint                 = require('gulp-jshint');
-var concat               = require('gulp-concat');
-
-var newer                = require('gulp-newer');
-var notify               = require('gulp-notify');
-var plumber              = require('gulp-plumber');
-var uglify               = require('gulp-uglify');
-var size                 = require('gulp-size');
-var rename               = require('gulp-rename');
-*/
 
 var path                 = require('path');
 var fs                   = require('fs');
+var del                  = require('del');
+var vinylPaths           = require('vinyl-paths');
 var config               = require('./config.json');
 
 /*Browser-Sync Configuration*/
@@ -122,22 +99,23 @@ gulp.task('styles', function () {
 
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest(cssPaths.dest))
+    .pipe(browserSync.stream())
     .pipe(plugins.size({
                       showFiles : true
 
                   }))
     .pipe(plugins.notify({message: 'Styles : OK!'}))
-    .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('fontAwesome', function(){
+gulp.task('replaceAwesome', function(){
 
   return gulp.src(path.join(config.root, config.base.src, config.stylesFolder.src,'/font-awesome/font-awesome.scss'))
-      .pipe(plugins.rename(
+         .pipe(vinylPaths(del))
+         .pipe(plugins.rename(
 
               "_font-awesome.scss"
-      ))
-      .pipe(gulp.dest(path.join(config.root, config.base.src, config.stylesFolder.src, '/font-awesome/')))
+          ))
+         .pipe(gulp.dest(path.join(config.root, config.base.src, config.stylesFolder.src, '/font-awesome/')))
 
 });
 
@@ -208,12 +186,12 @@ return gulp.src(fontsPaths.src)
 
 /*Watch Task */
 
-gulp.task('watch', ['html','styles','scripts','images','browser-sync'], function () {
+gulp.task('watch', ['html','scripts','styles','images','fonts','browser-sync'], function () {
 
     gulp.watch([htmlPaths.templates, htmlPaths.layout, htmlPaths.partials, htmlPaths.jsonData], ['html']);
     gulp.watch(config.root + '/*.html').on('change', reload);
-    gulp.watch(cssPaths.src, ['styles']);
-    gulp.watch(scriptsPaths.src, ['scripts', 'bs-reload']);
+    gulp.watch(cssPaths.src, ['styles',]);
+    gulp.watch(scriptsPaths.src, ['scripts', reload]);
     gulp.watch(imgPaths.src, ['images']);
 
 });
