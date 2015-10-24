@@ -1,10 +1,9 @@
 
 var gulp                 = require('gulp');
 var plugins              = require('gulp-load-plugins')();
-
+/*
 var nunjucksRender       = require('gulp-nunjucks-render');
 var data                 = require('gulp-data');
-var fs                   = require('fs');
 
 
 //var sass                 = require('gulp-sass');
@@ -14,10 +13,10 @@ var autoprefixer         = require('gulp-autoprefixer');
 var uncss                = require('gulp-uncss');
 
 var imagemin             = require('gulp-imagemin');
-/*var pngquant             = require('imagemin-pngquant');
+/*var pngquant           = require('imagemin-pngquant');
 var jpegtran             = require('imagemin-jpegtran');
-*/
-var lint                 = require('gulp-jshint');
+
+var jsint                 = require('gulp-jshint');
 var concat               = require('gulp-concat');
 
 var newer                = require('gulp-newer');
@@ -26,8 +25,10 @@ var plumber              = require('gulp-plumber');
 var uglify               = require('gulp-uglify');
 var size                 = require('gulp-size');
 var rename               = require('gulp-rename');
+*/
 
 var path                 = require('path');
+var fs                   = require('fs');
 var config               = require('./config.json');
 
 /*Browser-Sync Configuration*/
@@ -60,16 +61,16 @@ var htmlPaths = {
 }
 
 gulp.task('html', function() {
-    nunjucksRender.nunjucks.configure([htmlPaths.src], {watch: false});
+    plugins.nunjucksRender.nunjucks.configure([htmlPaths.src], {watch: false});
 return gulp.src(htmlPaths.templates)
-  .pipe(plumber())
+  .pipe(plugins.plumber())
   // Renders template with nunjucks
-  .pipe(data(function() {
+  .pipe(plugins.data(function() {
 
       return JSON.parse(fs.readFileSync(htmlPaths.jsonData, 'utf8'))
 
     }))
-  .pipe(nunjucksRender())
+  .pipe(plugins.nunjucksRender())
   .pipe(gulp.dest(config.root))
 
 });
@@ -86,16 +87,16 @@ var cssPaths = {
 
 gulp.task('styles', function () {
    gulp.src(cssPaths.src)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
+    .pipe(plugins.plumber())
+    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass())
-    .pipe(autoprefixer({
+    .pipe(plugins.autoprefixer({
 
       browsers:['last 15 versions', 'safari 5', 'ie 8', 'ie 9','opera 12.1', 'ios 6', 'android 4'
         ]}))
 
-    .pipe(sourcemaps.write({includeContent: true}))
-    .pipe(uncss({
+    .pipe(plugins.sourcemaps.write({includeContent: true}))
+    .pipe(plugins.uncss({
 
           html:[config.root + '/*.html'],
           ignore:
@@ -112,21 +113,32 @@ gulp.task('styles', function () {
         }))
             .pipe(gulp.dest(cssPaths.dest))
 
-    .pipe(minifyCss({
+    .pipe(plugins.minifyCss({
 
           keepBreaks:false,
           keepSpecialComments:false,
 
         }))
 
-    .pipe(rename({suffix: '.min'}))
+    .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest(cssPaths.dest))
-    .pipe(size({
+    .pipe(plugins.size({
                       showFiles : true
 
                   }))
-    .pipe(notify({message: 'Styles : OK!'}))
+    .pipe(plugins.notify({message: 'Styles : OK!'}))
     .pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('fontAwesome', function(){
+
+  return gulp.src(path.join(config.root, config.base.src, config.stylesFolder.src,'/font-awesome/font-awesome.scss'))
+      .pipe(plugins.rename(
+
+              "_font-awesome.scss"
+      ))
+      .pipe(gulp.dest(path.join(config.root, config.base.src, config.stylesFolder.src, '/font-awesome/')))
+
 });
 
 var imgPaths = {
@@ -138,24 +150,23 @@ var imgPaths = {
 gulp.task('images', function(){
 
 return gulp.src(imgPaths.src)
-        .pipe(newer(imgPaths.dest))
-        .pipe(plumber())
-        .pipe(imagemin({
+        .pipe(plugins.newer(imgPaths.dest))
+        .pipe(plugins.plumber())
+        .pipe(plugins.imagemin({
 
           progressive: true,
 
         }))
-        .pipe(plumber.stop())
+        .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(imgPaths.dest))
-        .pipe(size({
+        .pipe(plugins.size({
 
             showFiles : true
 
         }))
-        .pipe(notify({message : 'Images : OK!'}));
+        .pipe(plugins.notify({message : 'Images : OK!'}));
 
 });
-
 
 var scriptsPaths = {
 
@@ -166,41 +177,17 @@ var scriptsPaths = {
 gulp.task('scripts', function() {
 
 return gulp.src(scriptsPaths.src)
-       .pipe(plumber())
-       .pipe(concat('main.js'))
-       .pipe(lint())
-       /*.pipe(lint.reporter('jshint-stylish'))*/
-       .pipe(uglify())
-       .pipe(rename({suffix : '.min'}))
+       .pipe(plugins.plumber())
+       .pipe(plugins.concat('main.js'))
+       .pipe(plugins.jshint())
+       .pipe(plugins.uglify())
+       .pipe(plugins.rename({suffix : '.min'}))
        .pipe(gulp.dest(scriptsPaths.dest))
-       .pipe(size({
+       .pipe(plugins.size({
                       showFiles : true,
                       title : 'mini-concat JS'
                   }))
-       .pipe(notify({message: 'Scripts : OK!'}));
-});
-
-var scriptsPathsTwo = {
-
-  src: path.join(config.root, config.base.src, config.scriptsFolder.src, config.tasks.js.srcTwo),
-  dest: path.join(config.root, config.base.dest, config.scriptsFolder.destTwo)
-}
-
-var allScripts = [scriptsPaths.src, scriptsPathsTwo.src];
-
-gulp.task('scriptsTwo', function() {
-
-return gulp.src(scriptsPathsTwo.src)
-       .pipe(plumber())
-       .pipe(lint())
-       .pipe(uglify())
-       .pipe(rename({suffix : '.min'}))
-       .pipe(gulp.dest(scriptsPathsTwo.dest))
-       .pipe(size({
-                      showFiles : true,
-                      title : 'mini-concat JS'
-                  }))
-       .pipe(notify({message: 'Scripts Two: OK!'}));
+       .pipe(plugins.notify({message: 'Scripts : OK!'}));
 });
 
 /*Fonts Task*/
@@ -214,19 +201,19 @@ var fontsPaths = {
 gulp.task('fonts', function() {
 
 return gulp.src(fontsPaths.src)
-      .pipe(newer(fontsPaths.dest))
+      .pipe(plugins.newer(fontsPaths.dest))
       .pipe(gulp.dest(fontsPaths.dest))
-      .pipe(notify({message: 'Fonts : OK!'}))
+      .pipe(plugins.notify({message: 'Fonts : OK!'}))
 });
 
 /*Watch Task */
 
-gulp.task('watch', ['html','styles','scripts','scriptsTwo','images','browser-sync'], function () {
+gulp.task('watch', ['html','styles','scripts','images','browser-sync'], function () {
 
     gulp.watch([htmlPaths.templates, htmlPaths.layout, htmlPaths.partials, htmlPaths.jsonData], ['html']);
     gulp.watch(config.root + '/*.html').on('change', reload);
     gulp.watch(cssPaths.src, ['styles']);
-    gulp.watch(allScripts, ['scripts', 'bs-reload']);
+    gulp.watch(scriptsPaths.src, ['scripts', 'bs-reload']);
     gulp.watch(imgPaths.src, ['images']);
 
 });

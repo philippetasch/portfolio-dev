@@ -10,26 +10,25 @@
 
       "htmlFolder": {
 
-        "src":"/html"
+          "src":"/html"
       },
 
       "stylesFolder": {
 
-        "src":"/styles",
-        "dest":"/css"
+          "src":"/styles",
+          "dest":"/css"
       },
 
       "imgFolder":{
 
-        "src":"/img",
-        "dest":"/img"
+          "src":"/img",
+          "dest":"/img"
       },
 
       "scriptsFolder":{
 
-        "src":"/scripts",
-        "dest":"/scripts",
-        "destTwo" :"/head"
+          "src":"/scripts",
+          "dest":"/scripts"
 
       },
 
@@ -73,8 +72,7 @@
 
         "js":{
 
-            "src" : "/js/**/*.js",
-            "srcTwo" : "/headJs/**/*.js"
+            "src" : "/js/**/*.js"
         },
 
         "fonts":{
