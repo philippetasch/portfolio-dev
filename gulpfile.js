@@ -6,7 +6,7 @@ var path                 = require('path');
 var fs                   = require('fs');
 var del                  = require('del');
 var vinylPaths           = require('vinyl-paths');
-var config               = require('./config.json');
+var config               = require('./gulp-files/config.json');
 
 /*Browser-Sync Configuration*/
 
