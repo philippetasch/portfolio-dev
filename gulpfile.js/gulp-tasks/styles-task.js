@@ -36,7 +36,7 @@ module.exports = function (gulp, plugins) {
           ,/\.disable-hover/],
 
         }))
-            .pipe(gulp.dest(cssPaths.dest))
+    .pipe(gulp.dest(cssPaths.dest))
 
     .pipe(plugins.minifyCss({
 
