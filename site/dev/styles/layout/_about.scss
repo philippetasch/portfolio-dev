@@ -1,3 +1,8 @@
+.changeBgc{
+
+	background-color: $nav__link--2--bgc;
+}
+
 .bigSlice--about{
 
 	background-color: $bigSlice--about;
@@ -7,6 +12,7 @@
 	&:after{
 
 		background-color: $bigSlice--skills;
+		border-top: 7px solid darken($bigSlice--skills, 10%);
 	}
 }
 

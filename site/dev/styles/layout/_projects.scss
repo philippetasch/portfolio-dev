@@ -7,11 +7,15 @@
 	&:before{
 
 		background-color: $bigSlice--skills;
+		border-bottom: 7px solid darken($bigSlice--skills, 10%);
+
 	}
 
 	&:after{
 
 		background-color: $bigSlice--contact;
+		border-top: 7px solid darken($bigSlice--contact, 10%);
+
 	}
 
 }

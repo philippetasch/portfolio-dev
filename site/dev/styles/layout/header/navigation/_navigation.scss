@@ -33,7 +33,7 @@
 		float: right;
 		@include twoThirds;
 		clear: none;
-		
+
 		.js &{
 			position: static;
 			overflow: visible;
@@ -378,7 +378,7 @@
 		float: right;
 
 		@include snap(large){
-		
+
 			@include twoThirds;
 			height: auto;
 			margin: 0;
@@ -480,7 +480,7 @@
  		}
 
  		&.opened{
-		
+
 		.link--3:after{
 
  			 @extend .triangle--up;
@@ -571,7 +571,7 @@
 		font-family: FontAwesome;
 
 		@include snap(large){
-					
+
 					display: none;
 
 		}
@@ -616,7 +616,7 @@
 .navigation__subnav__item{
 
 	@include lay-out(1);
-	
+
 	@include snap(large){
 		@include rem2px(margin-top, .5)
 
@@ -647,7 +647,7 @@
 
 		content:"\f085";
 	}
-	
+
 	background-color: $nav__link--2--bgc;
 
 	@include h-f-a{
@@ -669,9 +669,9 @@
 }
 
 .link--3{
-	
 
-		
+
+
 		&:before{
 
 			content:"\f0c3";

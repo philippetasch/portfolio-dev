@@ -5,6 +5,11 @@
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang=""> <![endif]-->
 <!--[if gt IE 9]><!--> <html  class="no-js" lang=""> <!--<![endif]-->
 <head>
+<!-- prevent responsive nav flashing -->
+<script>
+   document.documentElement.className += " js";
+</script>
+<!-- -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,900' rel='stylesheet' type='text/css'>
        
     <meta charset="utf-8">
@@ -21,6 +26,8 @@
   {% block content %}
   {% endblock %}
   {% include "partials/footer.html" %}
+
+
   <script type="text/javascript" src="dist/scripts/main.min.js"></script>
     <script type="text/javascript">
         var myElement = document.querySelector(".headroom");
