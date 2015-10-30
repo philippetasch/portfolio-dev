@@ -36,20 +36,21 @@
 .slope-top{
 
 	padding-top: 200px;
-
-	overflow: hidden;
+	position: relative;
 
 
 	&:before{
 
 		content: "";
 		height: 230px;
-		right: -30px;
+		left: 0px;
+		right: 0px;
 		top: -100px;
 		position: absolute;
-		width: 120%;
+		width: 100%;
 		background-color: #587CA0;
-		transform: rotate(-5deg);
+		transform: skewY(-3deg);
+
 	}
 
 }
@@ -57,19 +58,19 @@
 .slope-bottom{
 
 	padding-bottom: 200px;
-
-	overflow: hidden;
-
+	position: relative;
 
 &:after{
 
 		content: "";
 		height: 230px;
-		right: -30px;
+		left: 0px;
+		right: 0px;
 		bottom: -150px;
 		position: absolute;
-		width: 120%;
-		transform: rotate(-5deg);
+		width: 100%;
+		transform: skewY(-3deg);
+
 	}
 
 }
@@ -78,29 +79,33 @@
 
 	padding-top: 200px;
 	padding-bottom: 200px;
+	position: relative;
 
-	overflow: hidden;
 
 	&:before{
 
 		content: "";
 		height: 230px;
-		right: -30px;
+		left: 0px;
+		right: 0px;
 		top: -100px;
 		position: absolute;
-		width: 120%;
-		transform: rotate(-5deg);
+		width: 100%;
+		transform: skewY(-3deg);
+
 	}
 
 	&:after{
 
 		content: "";
 		height: 230px;
-		right: -30px;
+		left: 0px;
+		right: 0px;
 		bottom: -150px;
 		position: absolute;
-		width: 120%;
-		transform: rotate(-5deg);
+		width: 100%;
+		transform: skewY(-3deg);
+
 	}
 
 }

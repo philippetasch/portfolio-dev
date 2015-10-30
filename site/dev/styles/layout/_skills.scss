@@ -1,11 +1,17 @@
 .bigSlice--skills{
 
 	background-color: $bigSlice--skills;
+
+	&:after{
+
+		background-color: $bigSlice--about;
+		border-top: 7px solid darken($bigSlice--skills, 10%);
+
+	}
 }
 
 .h1--bigSlice--skills{
-	
-	//text-shadow: 3px 3px 0px $bigSlice--skills, 6px 6px 0px rgba($nav__link--2--bgc, .5);
+
 	color: $nav__link--2--bgc;
 
 	&:after{

@@ -85,6 +85,7 @@
     "projet1":
     {
             "image":"/dist/img/emmaus-optim.jpg",
+            "imgAlt":"Projet Emmaus Strasbourg",
             "poste" : "Intégrateur",
             "langages" : "HTML5, CSS3, PHP",
             "outils" : "Wordpress",

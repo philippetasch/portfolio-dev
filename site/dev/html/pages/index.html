@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <section class="wrapper stretch--v">
+    <div class="wrapper stretch--v">
         {% include "partials/nav.html" %}
         <section id="top" class="bigSlice bigSlice--me bg-img slicePad--h">
             <div class="maxWrapper maxWrapper--heading gridClear">
@@ -8,16 +8,16 @@
                     <img class="img--resp img--resp--rounded" src="dist/img/cerclePhoto2.jpg" alt="Philippe Tasch"/>
                 </div>
                 <div class="first grids g-3__23 welcome--heading ">
-                    <h1 class="h1 h1--me slideInTop" >Bienvenue! Je suis Philippe,<br/> étudiant en webdesign à Strasbourg!</h1>
+                    <h1 class="h1 h1--me slideInTop" >Philippe Tasch / Webdesigner</h1>
                 </div>
             </div>
             <a data-scroll href="#about" class="scroll-down"></a>
         </section>
         <section id="about" class="bigSlice bigSlice--about slope-bottom">
-            <h1 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h1>
+            <h2 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h2>
             <div class="maxWrapper maxWrapper--about gridClear slicePad--v">
                 {% for histoire in parcours %}
-                    <div class="c-both first {{histoire.class}} about__wrapper">
+                    <div class="c-both {{histoire.class}} about__wrapper">
                         <div class="about__icon--wrapper {{histoire.icone}}">
                             <i class="fa {{histoire.iconeClass}} about__icon"></i>
                         </div>
@@ -31,8 +31,8 @@
                     Téléchargez mon CV !
                 </a>
         </section>
-        <section id="skills" class="bigSlice bigSlice--skills slicePad--h ">
-            <h1 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h1>
+        <section id="skills" class="bigSlice bigSlice--skills slicePad--h slope-bottom">
+            <h2 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h2>
             <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
                 {% for competence in competences %}
                     <div  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
@@ -47,8 +47,8 @@
             {% endfor %}
         </div>
     </section>
-    <section id="projects" class="bigSlice bigSlice--projects gridClear slope-both">
-        <h1 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h1>
+    <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
+        <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
         <div class="maxWrapper--projects gridClear slicePad--v--bottom">
             {% for projet in projets %}
                 <div class="grids--zero g-4--zero tiles">
@@ -73,7 +73,7 @@
             </a>
     </section>
     <section id="contact" class="bigSlice bigSlice--contact  slicePad--h" >
-        <h1 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h1>
+        <h2 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h2>
         <div class="maxWrapper gridClear gridsMar--v">
             <p>Surtout, n'hésitez pas à prendre contact avec moi via le formulaire ci-dessous! Je vous répondrai dans les plus brefs délais !</p>
             <form class="first grids g-1">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="first grids g-2 contact--input--group">
                     <label for="mail" class="label--contact">Adresse E-mail</label>
-                    <input type="text" id="mail" class="input--contact g-1"/>
+                    <input type="email" id="mail" class="input--contact g-1" required/>
                 </div>
                 <div class="grids g-2 contact--input--group">
                     <label for="sujet" class="label--contact">Sujet</label>
@@ -97,13 +97,13 @@
                     <label for="message" class="label--contact">Message</label>
                     <textarea name="message" id="message" class="message--contact g-1" rows="10"></textarea>
                 </div>
-                <button type="submit" id="envoi" name="envoi" class="btn btn--contact btn--slice" role="button">Envoyer</button>
+                <button type="submit" id="envoi" name="envoi" class="btn btn--contact btn--slice">Envoyer</button>
             </form>
         </div>
             
     </section>
     {% include "partials/footer.html" %}
-</section>
+</div>
 
 
 

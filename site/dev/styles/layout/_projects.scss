@@ -1,21 +1,12 @@
 .bigSlice--projects{
 
 	background-color: $bigSlice--projects;
-	position: relative;
 	text-align: center;
-
-	&:before{
-
-		background-color: $bigSlice--skills;
-		border-bottom: 7px solid darken($bigSlice--skills, 10%);
-
-	}
 
 	&:after{
 
 		background-color: $bigSlice--contact;
-		border-top: 7px solid darken($bigSlice--contact, 10%);
-
+		border-top: 7px solid darken($bigSlice--contact, 15%);
 	}
 
 }
@@ -24,7 +15,7 @@
 
 	width: 100%;
 	@include rem2px(padding-top, 1)
-	
+
 }
 
 .h1--bigSlice--project{
@@ -90,7 +81,7 @@
 		visibility: visible;
 		opacity: 1;
 		transform: scale(1);
-		
+
 	}
 }
 
@@ -102,12 +93,11 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: all .35s ease-in-out;
-	
 	text-decoration: none;
 	color:#fff;
 	transform: scale(3);
 
-	
+
 	&:before{
 
 		content: '';
@@ -155,7 +145,7 @@
 }
 
 .h4--overlay{
-	
+
 	@include rem2px(margin, 0, 0, 1, 0);
 
 }
@@ -173,7 +163,7 @@
 	color: $bigSlice--projects;
 	border-color: $nav__link--3--bgc;
 	background-color: $nav__link--3--bgc;
-	
+
 	@include snap(small-medium){
 
 		color: $nav__link--3--bgc;
@@ -181,7 +171,7 @@
 		background-color: $bigSlice--projects;
 
 		&:after{
-		
+
 			background-color:  $nav__link--3--bgc;
 		}
 

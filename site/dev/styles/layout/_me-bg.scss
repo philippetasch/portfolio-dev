@@ -11,7 +11,7 @@
 		background-position: 80% 40%;
 		height: auto;
 
-			
+
 	}
 
 	@include snap(large){
@@ -19,7 +19,7 @@
 		background-position: 80% 40%;
 		background-attachment: fixed;
 		height: 100%;
-			
+
 	}
 
 }
@@ -27,10 +27,14 @@
 .img--container{
 
 	overflow: hidden;
-	@include rem2px(margin-bottom, 5);
-	@include lay-out(2);
-	border: 7px solid #fff;
-	
+	@include rem2px(margin-bottom, 2);
+	width: 200px;
+
+	@include snap(small-medium){
+
+		width: 250px;
+	}
+
 	@include snap(medium){
 
 		display: none;
@@ -41,7 +45,7 @@
 .maxWrapper--heading{
 
 	position: relative;
-	
+
 	@include snap(medium){
 
 		height: 100%;
@@ -49,20 +53,19 @@
 }
 
 .welcome--heading{
-	
+
 	text-align: center;
 	color:white;
 
 	@include rem2px(margin-bottom, 5);
-	
+
 	@include snap(medium){
-		
+
 		@include rem2px(padding-top, 10);
 		@include rem2px(padding-bottom, 10);
-		text-align: right;
-
+		text-align: left;
 	}
-	
+
 	@include snap(large){
 
 		@include rem2px(padding-top, 0);
@@ -75,11 +78,11 @@
 }
 
 .h1.h1--me{
-		
+
 	@include snap(medium){
 
 		@include rem2px(padding-right, 4)
-	
+
 	}
 
 	@include snap(large){
