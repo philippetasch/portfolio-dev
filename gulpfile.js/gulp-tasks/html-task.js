@@ -25,6 +25,6 @@ return function () {
 
     }))
   .pipe(plugins.nunjucksRender())
-  .pipe(gulp.dest(config.root))
+  .pipe(gulp.dest(htmlPaths.dest))
   };
 };
