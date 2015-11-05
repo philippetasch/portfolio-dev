@@ -38,7 +38,7 @@
 
             "server": {
 
-              "baseDir": "./site"
+              "baseDir": "./site/dist"
             },
 
             "ui": {
@@ -46,7 +46,7 @@
               "port": "8080"
             },
 
-            "logPrefix":"nunjuck test",
+            "logPrefix":"Portfolio Site",
 
             "browser": ["firefox"],
 

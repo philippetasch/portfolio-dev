@@ -16,7 +16,7 @@ var htmlPaths = {
   layout: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.layout),
   partials: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.partials),
   jsonData: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.jsonData),
-  dest: path.join(config.root)
+  dest: path.join(config.root, config.base.dest)
 }
 
 var cssPaths = {
@@ -69,8 +69,8 @@ gulp.task('replaceAwesome', fetchTask('replaceAwesome-task'));
 gulp.task('watch', ['html','scripts','styles','images','fonts','browser-sync'], function () {
 
     gulp.watch([htmlPaths.templates, htmlPaths.layout, htmlPaths.partials, htmlPaths.jsonData], ['html']);
-    gulp.watch(config.root + '/*.html').on('change', reload);
-    gulp.watch(cssPaths.src, ['styles',]);
+    gulp.watch(path.join(htmlPaths.dest, '/*.html')).on('change', reload);
+    gulp.watch(cssPaths.src, ['styles']);
     gulp.watch(scriptsPaths.src, ['scripts', reload]);
     gulp.watch(imgPaths.src, ['images']);
 

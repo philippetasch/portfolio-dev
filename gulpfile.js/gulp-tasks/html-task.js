@@ -10,7 +10,7 @@ var htmlPaths = {
   layout: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.layout),
   partials: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.partials),
   jsonData: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.jsonData),
-  dest: path.join(config.root)
+  dest: path.join(config.root, config.base.dest)
 }
 
 module.exports = function (gulp, plugins){

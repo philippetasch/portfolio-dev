@@ -23,7 +23,7 @@ module.exports = function (gulp, plugins) {
     .pipe(plugins.sourcemaps.write({includeContent: true}))
     .pipe(plugins.uncss({
 
-          html:[config.root + '/*.html'],
+          html:[path.join(config.root, config.base.dest, '/*.html')],
           ignore:
           [/^\.lt-/
           ,/^\.no-js/
