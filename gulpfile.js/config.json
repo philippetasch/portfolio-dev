@@ -50,7 +50,7 @@
 
             "browser": ["firefox"],
 
-            "online": "true",
+            "online": "false",
 
             "host": "192.168.0.12"
 

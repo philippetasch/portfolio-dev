@@ -2,6 +2,12 @@
 
 	background-color: $bigSlice--about;
 	text-align: center;
+	overflow: hidden;
+
+	@include snap(large){
+		@include rem2px(padding-top, 4rem);
+	}
+
 
 	&:after{
 
@@ -39,6 +45,7 @@
     margin-left: -2px;
 
 	}
+
     @media screen and (min-width: 1200px){
 
 		&:before{
@@ -120,6 +127,7 @@
 .about__wrapper{
 
 	position: relative;
+	z-index: 1;
 	max-width: 500px;
 	margin: auto;
 
@@ -134,27 +142,29 @@
 			@include rem2px(margin-top, -3);
 
 		}
+
 		&--left,&--right{
 
 			&:after{
 
 				content:"";
-				width: 15%;
+				width: 4999px;
 				height: 4px;
 				background-color: $nav__link--1--bgc;
 				position: absolute;
 				top: 50%;
+				z-index: -1;
 				margin-top: -2px;
 			}
 		}
+
 		&--left{
 
 			float: left;
 
-
 			&:after{
 
-				left: 99%;
+				right: -10%;
 
 			}
 		}
@@ -165,7 +175,7 @@
 
 			&:after{
 
-				right: 99%;
+				left: -10%;
 
 			}
 		}

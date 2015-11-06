@@ -32,7 +32,7 @@
 	@include snap(large){
 
 		position: absolute;
-		@include rem2px(padding-top, 1.5);
+		@include rem2px(padding-top, 1);
 	}
 
 	.js &{
