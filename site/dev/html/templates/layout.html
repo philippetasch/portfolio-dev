@@ -19,66 +19,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.min.css">
     <!--[if lt IE 9]>
-    <script src="html5shiv/html5shiv.min.js"></script>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>    
     <![endif]-->
 </head>
 <body>
   {% block content %}
   {% endblock %}
 
-  <script type="text/javascript" src="scripts/main.min.js"></script>
-    <script type="text/javascript">
-        var myElement = document.querySelector(".headroom");
-                // construct an instance of Headroom, passing the element
-        var headroom  = new Headroom(myElement,
-
-            Headroom.options = {
-                tolerance : {
-                  up : 0,
-                  down : 0
-                },
-                offset : 180,
-                scroller: window,
-                classes : {
-                  pinned : 'headroom--pinned',
-                  unpinned : 'headroom--unpinned',
-                  top : 'headroom--top',
-                  notTop : 'headroom--not-top',
-                  initial : 'headroom'
-                }
-              });
-                // initialise
-        headroom.init();
-
-    </script>
-    <script type="text/javascript">
-    var nav = responsiveNav(".navigation", { // Selector
-    animate: true, // Boolean: Use CSS3 transitions, true or false
-    transition: 284, // Integer: Speed of the transition, in milliseconds
-    label: "", // String: Label for the navigation toggle
-    insert: "", // String: Insert the toggle before or after the navigation
-    customToggle: "trigger", // Selector: Specify the ID of a custom toggle
-    closeOnNavClick: true, // Boolean: Close the navigation when one of the links are clicked
-    openPos: "relative", // String: Position of the opened nav, relative or static
-    navClass: "navigation", // String: Default CSS class. If changed, you need to edit the CSS too!
-    navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
-        jsClass: "js", // String: 'JS enabled' class which is added to <html> element
-            init: function(){}, // Function: Init callback
-            open: function(){}, // Function: Open callback
-            close: function(){} // Function: Close callback
-            });
-    </script>
-
-    <script type="text/javascript">
-            smoothScroll.init({
-            speed: 800, // Integer. How fast to complete the scroll in milliseconds
-            easing: 'easeInOutCubic', // Easing pattern to use
-            updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
-            callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
-            });
-
-    </script>
 </body>
 </html>

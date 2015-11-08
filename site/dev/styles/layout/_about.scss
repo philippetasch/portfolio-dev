@@ -136,13 +136,6 @@
 
 		max-width: 42%;
 
-		&:not(:first-child){
-
-			margin: none;
-			@include rem2px(margin-top, -3);
-
-		}
-
 		&--left,&--right{
 
 			&:after{

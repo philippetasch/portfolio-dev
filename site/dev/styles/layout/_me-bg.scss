@@ -56,7 +56,7 @@
 
 	overflow: hidden;
 	@include rem2px(margin-bottom, 2);
-	width: 200px;
+	max-width: 200px;
 
 	@include snap(small-medium){
 

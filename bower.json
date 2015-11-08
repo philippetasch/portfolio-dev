@@ -16,7 +16,8 @@
     "smooth-scroll": "cferdinandi/smooth-scroll#~7.1.1",
     "headroom.js": "WickyNilliams/headroom.js#~0.7.0",
     "font-awesome": "FortAwesome/Font-Awesome#~4.4.0",
-    "scrollmagic": "ScrollMagic#~2.0.5"
+    "scrollmagic": "ScrollMagic#~2.0.5",
+    "html5shiv": "~3.7.3"
   },
   "install": {
     "path": {
@@ -28,5 +29,6 @@
       "headroom.js": "bower_components/headroom.js/dist/headroom.js",
       "font-awesome": "bower_components/font-awesome/scss/*.scss"
     }
-  }
+  },
+  "devDependencies": {}
 }

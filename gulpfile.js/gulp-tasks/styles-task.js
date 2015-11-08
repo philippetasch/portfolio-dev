@@ -2,7 +2,6 @@ var browserSync          = require('browser-sync');
 var path                 = require('path');
 var config               = require('../config.json');
 
-
 var cssPaths = {
 
   src: path.join(config.root, config.base.src, config.stylesFolder.src, config.tasks.scss.src),
@@ -17,7 +16,7 @@ module.exports = function (gulp, plugins) {
     .pipe(plugins.sass())
     .pipe(plugins.autoprefixer({
 
-      browsers:['last 15 versions', 'safari 5', 'ie 8', 'ie 9','opera 12.1', 'ios 6', 'android 4'
+      browsers:['last 5 versions', 'Firefox > 20', 'ie 8','opera 15', 'ios 6', 'android 4'
         ]}))
 
     .pipe(plugins.sourcemaps.write({includeContent: true}))
