@@ -1,22 +1,39 @@
 {% extends "layout.html" %}
 {% block content %}
-<section class="bigSlice slicePad--v gridClear">
-	<div class="project__nav project__nav--first">
-		<div class="backHome">Home</div>
-		<div class="backProjects">Projects</div>
-	</div>
-	<div class="project__nav project__nav--second">
-		<div class="previousWork">Previous</div>
-		<div class="nextWork">Next</div>
-	</div>
-</section>
-<section class="bigSlice slicePad--h">
-			<h1 class="t-center">Emmaüs Project</h1>
-			<div class="grids first g-2">
-				<img src="{{projet1.image}}" alt="{{projet1.imageAlt}}" class="img--resp"/>
+	<section class="bigSlice">
+		<div class="project-nav gridClear">
+			<a href="#" class="grids--zero project-nav__item slicePad--v slicePad--h backHome ">
+				<i class="fa fa-code project-nav__icon"></i>
+				<span class="project-nav__text">Home</span>
+			</a>
+			<a href="#" class="grids--zero project-nav__item slicePad--v slicePad--h backProjets">
+				<i class="fa fa-code project-nav__icon"></i>
+				<span class="project-nav__text">Projets</span>
+			</a>
+			<a href="#" class="grids--zero project-nav__item slicePad--v slicePad--h previousWork">
+				<i class="fa fa-code project-nav__icon"></i>
+				<span class="project-nav__text">Précédent</span>
+			</a>
+			<a href="#" class="grids--zero project-nav__item slicePad--v slicePad--h nextWork">
+				<i class="fa fa-code project-nav__icon"></i>
+				<span class="project-nav__text">Suivant</span>
+			</a>
+		</div>
+	</section>
+	<section class="bigSlice bigSlice--single-project slicePad--v">
+		<h1 class="t-center slicePad--v--bottom slicePad--h">{{projet1.titre}}</h1>
+		<div class="g-2 center slicePad--h">
+			<img src="{{projet1.image}}" alt="{{projet1.imageAlt}}" class="img--resp"/>
+		</div>
+		<section class="bigSlice project-info-wrapper slicePad--h">
+			<div class="maxWrapper slicePad--v t-center">
+					<h2 class="intro-title">{{projet1.sousTitre}}</h2>
+					<p class="intro-text center">{{projet1.texte}}</p>
 			</div>
-			<div class="grids g-2 slicePad--v" >
-				<div class="projet-infos gridClear">
+
+		</section>
+		<div class="grids g-2 slicePad--v" >
+			<div class="projet-infos gridClear">
 				<div class="projet-infos__info">
 					<span class="project-infos__fill project-infos__fill--left">Poste</span>
 					<span class="project-infos__fill project-infos__fill--right">{{projet1.poste}}</span>
@@ -42,28 +59,24 @@
 					<span class="project-infos__fill project-infos__fill--right">{{projet1.lien}}</span>
 				</div>
 			</div>
-			</div>
-	</section>
-	<section class="bigSlice project-info-wrapper slicePad--h">
-		<div class="maxWrapper slicePad--v gridClear">
-			
 		</div>
-	</section>
-	<section class="bigSlice">
-		<div class="maxWrapper">
-			<div class="text">
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
-				<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+		<section class="bigSlice">
+			<div class="maxWrapper">
+				<div class="text">
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+					<p>Lorem Ipsum skjfdh kswkhs illwt lwhluawjluauuhtlawj 9i585885</p>
+				</div>
 			</div>
-		</div>
+		</section>
 	</section>
+	
 {% endblock %}

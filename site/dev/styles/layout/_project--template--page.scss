@@ -1,7 +1,44 @@
-.project-info-wrapper{
+.bigSlice--single-project{
 
-		background-color: darken($bigSlice--skills, 15%);
-		color: #fff;
+	background-color: $bigSlice--about;
+}
+
+.project-nav{
+
+	text-align: center;
+
+}
+
+.project-nav__item{
+
+	@include lonm(4);
+	color: #fff;
+	background-color: #000;
+}
+
+.project-nav__text{
+
+	display: none;
+
+	@include snap(small-medium){
+
+		display: inline-block;
+	}
+}
+
+.intro-text{
+
+	max-width: 500px;
+}
+
+.fa.project-nav__icon{
+
+	font-size: 200%;
+}
+
+.project-nav__text,.fa.project-nav__icon{
+
+	vertical-align: middle;
 }
 
 .h1--project-info{
@@ -9,10 +46,16 @@
 	border-bottom: 4px solid #fff;
 }
 
+.project-info-wrapper{
+
+		background-color: $bigSlice--skills;
+		color: #fff;
+}
+
 .projet-infos{
 
 	@include snap(small-medium){
-	
+
 		font-size: 110%;
 
 	}

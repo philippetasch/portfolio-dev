@@ -84,8 +84,11 @@
 
     "projet1":
     {
-            "image":"/dist/img/emmaus-optim.jpg",
-            "imgAlt":"Projet Emmaus Strasbourg",
+            "titre":"Emmaüs Strasbourg",
+            "image":"img/emmaus-optim.jpg",
+            "imageAlt":"Projet Emmaus Strasbourg",
+            "sousTitre":"Projet de refonte du site Emmaüs Strasbourg",
+            "texte":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master Caweb. Afin de mener à bien la refonte, l'équipe au sein de laquelle j'occupais le poste d'intégrateur et de traducteur a opté pour Wordpress comme système de gestion de contenu.",
             "poste" : "Intégrateur",
             "langages" : "HTML5, CSS3, PHP",
             "outils" : "Wordpress",
