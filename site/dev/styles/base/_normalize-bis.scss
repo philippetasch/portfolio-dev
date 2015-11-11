@@ -91,3 +91,11 @@ ul,li{
 		@content;
 	}
 }
+
+@mixin f-a(){
+
+	&:focus,
+	&:active{
+		@content;
+	}
+}

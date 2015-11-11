@@ -9,21 +9,21 @@
     	@include rem2px(padding-right, 1);
 
     }
-    
+
 }
 /*uncss:ignore*/
 .barreLangues{
 	display: none;
 }
 
-.header, .headroom{
+.headroom{
 
-	position: static;
-	top:0;
-	left:0;
-	right:0;
-	z-index: 150;
-	transition: all .35s ease-in;
+	transition: transform .35s ease-in;
+
+}
+
+.headroom--home{
+
 	@include snap(medium){
 
 		background-color: transparent;
@@ -33,12 +33,20 @@
 	@include snap(large){
 
 		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		z-index: 150;
 		@include rem2px(padding-top, 1);
 	}
 
 	.js &{
 
 		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		z-index: 150;
 		background-color: transparent;
 	}
 

@@ -53,23 +53,7 @@
 	vertical-align: middle;
 		text-shadow: 2px 2px 0px #000, 9px 8px 0px rgba(0, 0, 0, 0.15);
 
-	@include rem2px(font-size, 5);
-	@include snap(small-medium){
-
-			@include rem2px(font-size, 5.5);
-
-	}
-	@include snap(medium){
-
-			@include rem2px(font-size, 6);
-
-	}
-
-	@include snap(large){
-
-			@include rem2px(font-size, 7);
-
-	}
+	@include rem2px(font-size, 6);
 
 }
 

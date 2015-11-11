@@ -1,8 +1,3 @@
-.bigSlice--single-project{
-
-	background-color: $bigSlice--about;
-}
-
 .project-nav{
 
 	text-align: center;
@@ -12,8 +7,39 @@
 .project-nav__item{
 
 	@include lonm(4);
-	color: #fff;
-	background-color: #000;
+
+	color: $bigSlice--skills;
+	background-color: $bigSlice--about;
+	@include rem2px(line-height, 7);
+	text-decoration: none;
+
+	transition: color .35s ease-in,
+				background-color .35s ease-in;
+
+	@include f-a{
+
+			color: $bigSlice--about;
+	}
+
+	@include snap(small-medium){
+
+		color: $bigSlice--skills;
+		background-color: $bigSlice--about;
+	}
+
+	@include snap(large){
+
+		@include rem2px(line-height, 11);
+
+		&:hover{
+
+			color: $bigSlice--about;
+			transition: color .35s ease-in,
+						background-color .35s ease-in;
+		}
+
+	}
+
 }
 
 .project-nav__text{
@@ -23,40 +49,9 @@
 	@include snap(small-medium){
 
 		display: inline-block;
-	}
-}
-
-.intro-text{
-
-	max-width: 500px;
-}
-
-.fa.project-nav__icon{
-
-	font-size: 200%;
-}
-
-.project-nav__text,.fa.project-nav__icon{
-
-	vertical-align: middle;
-}
-
-.h1--project-info{
-
-	border-bottom: 4px solid #fff;
-}
-
-.project-info-wrapper{
-
-		background-color: $bigSlice--skills;
-		color: #fff;
-}
-
-.projet-infos{
-
-	@include snap(small-medium){
-
-		font-size: 110%;
+		margin-left: 10px;
+		font-family: Roboto Slab;
+		font-size: 105%;
 
 	}
 
@@ -64,45 +59,343 @@
 
 		font-size: 115%;
 	}
+}
+
+.backHome{
+
+	color: $nav__link--1--bgc;
+	
+	@include f-a{
+
+			background-color: $nav__link--1--bgc;
+	}
 
 	@include snap(large){
 
-		font-size: 150%;
+		&:hover{
+
+			background-color: $nav__link--1--bgc;
+		}
+	}
+
+}
+
+.backProjects{
+
+	color: $nav__link--3--bgc;
+
+	@include f-a{
+
+			background-color: $nav__link--3--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--3--bgc;
+		}
+	}
+
+}
+
+.previousWork{
+
+	color: $nav__link--2--bgc;
+	
+	@include f-a{
+
+
+			background-color: $nav__link--2--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--2--bgc;
+		}
+	}
+
+}
+
+.nextWork{
+
+	color: $nav__link--4--bgc;
+
+	@include f-a{
+
+			background-color: $nav__link--4--bgc;
+			
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--4--bgc;
+		}
+	}
+
+}
+
+.project-nav__item:last-child{
+
+	@include snap(small-medium){
+
+			& .project-nav__text{
+
+				margin: 0 10px 0 0;
+			}
+
+			& .project-nav__icon{
+
+				margin: 0 0 0 10px;
+			}
 	}
 }
 
-.projet-infos__info{
+.fa.project-nav__icon{
+
+	font-size: 200%;
+
+	@include snap(small-medium){
+		margin-right: 10px;
+	}
+}
+
+.project-nav__text,
+.fa.project-nav__icon{
+
+	vertical-align: middle;
+}
+
+.bigSlice--single-project{
+
+	background-color: $bigSlice--about;
+
+}
+
+.img--projet{
+
+	@include snap(small){
+
+		max-width: 90%;
+	}
+
+	@include snap(small-medium){
+
+		max-width: 85%;
+	}
+
+}
+
+.intro-info{
+
+	display: inline-block;
+	background-color: darken($bigSlice--skills, 15%);
+	color: lighten($nav__link--2--bgc, 10%);
+
+	@include rem2px(padding, 1, 2);
+	@include rem2px(margin-bottom, 2);
+
+
+
+	@include snap(large){
+
+		display: block;
+
+		@include rem2px(padding, 0, 1.5);
+		@include rem2px(margin-bottom, 0);
+
+	}
+}
+
+.intro-title-wrapper{
+
+	text-align: center;
+	font-weight: 500;
+	@include rem2px(margin-bottom, 3);
+
+	@include snap(large){
+
+		text-align: right;
+		float: left;
+		@include lay-out(3);
+
+	}
+
+}
+
+	.intro-title{
+
+		margin: 0;
+	}
+
+
+.intro-text-wrapper{
+
+	margin: auto;
+	@include rem2px(margin-bottom, 4);
+	max-width: 500px;
+	text-align: left;
+
+	@media screen and (min-width: 450px){
+
+		text-align: center;
+	}
+
+	@include snap(medium){
+
+		width: auto;
+	}
+
+	@include snap(large){
+
+		float: left;
+		width: 38%;
+		@include rem2px(margin-bottom, 0);
+		margin-left: $gridMargin;
+		text-align: justify;
+	}
+
+}
+
+	.intro-text{
+
+		margin: 0;
+	}
+
+.bigSlice--project-info{
+
+		background-color: $bigSlice--skills;
+		color: #fff;
+		border-bottom: 7px solid darken($bigSlice--skills, 15%);
+		border-top: 7px solid darken($bigSlice--skills, 15%);
+}
+
+.project-info-wrapper{
+
+	@include rem2px(padding, 2, 0, 2, 0);
+	@include rem2px(margin, 0, 0, 3, 0);
+	overflow: hidden;
+	position: relative;
+
+	&:before,&:after{
+
+		content:"";
+		width: 80px;
+		height: 4px;
+		background-color: darken($bigSlice--skills, 15%);
+		position: absolute;
+		left: 50%;
+		margin-left: -40px;
+	}
+
+	&:before{
+
+		top:-0px;
+	}
+
+
+	&:after{
+
+	bottom:0px;
+	}
+
+	@include snap(large){
+
+		width: 26%;
+		float: right;
+		margin: 0;
+		margin-left: $gridMargin;
+		padding: 0;
+
+		&:before,&:after{
+
+			display: none;
+			margin: 0;
+		}
+
+	}
+
+}
+
+.project-info{
 
 	font-family: Roboto Slab;
-	overflow: hidden;
-	@include rem2px(padding, 1, 0)
-}
+	padding-bottom: 10px;
+	text-align: center;
+	@include rem2px(margin-top, 2);
 
-.project-infos__fill{
+	@media screen and (min-width: 450px){
 
-	background-color: darken($bigSlice--skills, 15%);
-
-}
-
-.project-infos__fill--left{
-
-		padding-right: 10px;
-
-&:after{
-
-		content:"................................................................................................................................................................................................................................................";
+		@include lonm(3);
 		float: left;
-		width: 0px;
-		white-space: nowrap;
-		color: #fff;
+	}
+
+	@include snap(large){
+
+		text-align: left;
+		width: 100%;
+		margin: 0;
 	}
 
 }
 
+.rond{
 
-.project-infos__fill--right{
-		
-		float: right;
-		padding-left: 10px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: lighten($nav__link--2--bgc, 10%);
+	@include rem2px(margin-bottom, 1);
 
+	@include snap(large){
+
+		float: left;
+		margin-right: 15px;
+	}
+
+	&:before{
+
+		font-size: 3.5rem;
+		font-family: FontAwesome;
+		color: darken($bigSlice--skills, 15%);
+
+	}
+
+}
+
+.poste:before{
+
+	content:"\f007";
+}
+
+.langages:before{
+
+	content:"\f121";
+}
+
+.outils:before{
+
+	content:"\f085";
+}
+.project-info__title,.project-info__text{
+
+	display: block;
+	margin: 0;
+}
+
+.project-info__title{
+
+	font-size: 105%;
+}
+
+.project-info__text{
+
+	font-size: 95%;
+	color: lightgray;
 }
