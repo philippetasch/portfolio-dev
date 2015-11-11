@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+{% for projet in projet1 %}
 	<section class="bigSlice headroom--projects">
 		<div class="project-nav gridClear">
 			<a href="index.html" class="grids--zero project-nav__item backHome">
@@ -22,35 +23,35 @@
 		</div>
 	</section>
 	<section class="bigSlice bigSlice--single-project slicePad--v">
-		<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet1.titre}}</h1>
+		<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
 		<div class="maxWrapper slicePad--h">
-			<img src="{{projet1.image}}" alt="{{projet1.imageAlt}}" class="img--resp img--projet center"/>
+			<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 		</div>
 		<section class="bigSlice bigSlice--project-info slicePad--h slicePad--v">
 			<div class="maxWrapper gridClear slicePad--v">
 				<div class="intro-title-wrapper">
-					<span class="intro-info">Date : {{projet1.date}} // Duree : {{projet1.duree}}</span>
-					<h2 class="h1 intro-title">{{projet1.sousTitre}}</h2>
+					<span class="intro-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
+					<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
 				</div>
 				<div class="project-info-wrapper">
 					<div class="project-info gridClear">
 						<span class="rond poste"></span>
 						<p class="project-info__title ">Poste</p>
-						<p class="project-info__text">{{projet1.poste}}</p>
+						<p class="project-info__text">{{projet.poste}}</p>
 					</div>
 					<div class="project-info gridClear">
 						<span class="rond langages"></span>
 						<p class="project-info__title ">Langages</p>
-						<p class="project-info__text">{{projet1.langages}}</p>
+						<p class="project-info__text">{{projet.langages}}</p>
 					</div>
 					<div class="project-info gridClear">
 						<span class="rond  outils"></span>
 						<p class="project-info__title">Outils</p>
-						<p class="project-info__text">{{projet1.outils}}</p>
+						<p class="project-info__text">{{projet.outils}}</p>
 					</div>
 				</div>
 				<div class="intro-text-wrapper">
-					<p class="intro-text">{{projet1.texte}}</p>
+					<p class="intro-text">{{projet.texte}}</p>
 				</div>
 			</div>
 		</section>
@@ -83,5 +84,5 @@
 			</div>
 		</div>
 	</section>
-
+{% endfor %}
 {% endblock %}

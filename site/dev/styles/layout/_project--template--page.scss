@@ -194,7 +194,7 @@
 
 	display: inline-block;
 	background-color: darken($bigSlice--skills, 15%);
-	color: lighten($nav__link--2--bgc, 10%);
+	color: $nav__link--2--bgc;
 
 	@include rem2px(padding, 1, 2);
 	@include rem2px(margin-bottom, 2);
@@ -350,7 +350,7 @@
 	text-align: center;
 	border-radius: 50%;
 	display: inline-block;
-	background-color: lighten($nav__link--2--bgc, 10%);
+	background-color: $nav__link--2--bgc;
 	@include rem2px(margin-bottom, 1);
 
 	@include snap(large){

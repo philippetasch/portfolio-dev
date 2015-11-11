@@ -51,6 +51,11 @@
 
 }
 
+.portfolio{
+
+	background-image: url('../img/portfolio-4.png');
+}
+
 .wip{
 
 	background-image: url('../img/wip.jpg');
@@ -83,11 +88,12 @@
 		transform: scale(1);
 
 	}
+
 }
 
 .tiles__overlay{
 
-	background-color: rgba(#000, .8);
+	background-color: rgba($nav__link--3--bgc, .8);
 	text-align: center;
 	z-index:10;
 	visibility: hidden;
@@ -141,21 +147,92 @@
 
 .h3--overlay {
 
-	@include rem2px(margin, 0, 0, .5, 0);
+	@include rem2px(margin, 0, 0, 0.5, 0);
 }
 
 .h4--overlay{
 
-	@include rem2px(margin, 0, 0, 1, 0);
+	@include rem2px(margin, 0, 0, 1.5, 0);
 
 }
 
-
-.tile__btn{
+.tiles__btn{
 
 	display: inline-block;
 	@include rem2px(padding, 1, 1.2);
 	border: 2px solid;
+	position: relative;
+
+	font-weight: 900;
+	letter-spacing: 1px;
+
+	@include snap(large){
+
+		&:after{
+
+				content:"";
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				right: 0%;
+				margin: auto;
+				width: 0%;
+				height: 100%;
+				background-color: #fff;
+				z-index: -1;
+
+			}
+
+			&:hover{
+
+				color: rgba($nav__link--3--bgc, .9);
+				border-color: transparent;
+				transition: color .25s ease-in;
+
+				&:after{
+
+					width: 100%;
+					transition: width .25s ease-in;
+
+				}
+			}
+
+
+		.tiles:hover &{
+
+			animation: slideInBottom .55s ease-in forwards;
+		}
+
+
+	}
+
+}
+
+@keyframes slideInBottom{
+
+	0%{
+		transform: translateY(300%)
+	}
+
+	70%{
+
+		transform: translateY(-40%);
+	}
+
+	80%{
+
+		transform: translateY(0%);
+	}
+
+	90%{
+
+		transform: translateY(-10%);
+
+	}
+
+	100%{
+		transform:translateY(0%);
+	}
 }
 
 .btn--projects{

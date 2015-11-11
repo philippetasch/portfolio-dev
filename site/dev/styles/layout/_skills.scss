@@ -22,9 +22,9 @@
 }
 
 .grids--clear.g-3:hover .skills__icon--container{
-	
+
 	@include snap(large){
-		
+
 		transform: translateY(-10%);
 	}
 
@@ -32,12 +32,16 @@
 
 .skills__icon--container{
 
+	width: 80px;
+	height: 80px;
+	background-color: $nav__link--2--bgc;
 	display: block;
+	margin: auto;
 	text-align: center;
 	@include rem2px(margin-bottom, 2);
 
 	@include snap(medium){
-		
+
 		transition: all .35s ease-in-out;
 		float: left;
 		@include rem2px(margin-right, 2);
@@ -48,12 +52,12 @@
 
 .skills__icon.fa{
 
-	color:$nav__link--2--bgc;
+	color:darken($bigSlice--skills, 15%);
 	display: inline-block;
 	vertical-align: middle;
-		text-shadow: 2px 2px 0px #000, 9px 8px 0px rgba(0, 0, 0, 0.15);
+	line-height: 80px;
 
-	@include rem2px(font-size, 6);
+	@include rem2px(font-size, 5);
 
 }
 

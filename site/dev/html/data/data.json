@@ -10,20 +10,20 @@
         "icone":"about__icon--right",
         "iconeClass":"fa-language",
         "class":"about__wrapper--right",
-        "texte":"Je rentre du Japon après une année d'études, et obtiens ma licence. Après quatre ans de japonais, j'ai envie de changer d'air, d'élargir mes horizons en quelque sorte. C'est alors que je découvre sur le master CAWEB, qui forme à la création de sites web multilingues sous toutes ses coutures. De la traduction technique à la localisation en passant par la gestion de projet sans oublier les fondamentaux : HTML, CSS, Javascript et bien d'autres ... "
+        "texte":"Je rentre du Japon après une année d'études, et obtiens ma licence. Après quatre ans de japonais, j'ai envie de changer d'air, d'élargir mes horizons en quelque sorte. C'est alors que je découvre le master CAWEB, qui forme à la création de sites web multilingues sous toutes ses coutures. De la traduction technique à la localisation en passant par la gestion de projet sans oublier les fondamentaux : HTML, CSS, Javascript et bien d'autres! "
 
     },
     {
         "icone":"about__icon--left",
         "iconeClass":"fa-laptop",
         "class":"about__wrapper--left",
-        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
+        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. J'effectue une veille technologique constante afin de me tenir informé des dernières nouveautés en matière de technologie web, que j'applique lors de la création de tout nouveau projet."
     },
     {
         "icone":"about__icon--right",
-        "iconeClass":"fa-laptop",
+        "iconeClass":"fa-check",
         "class":"about__wrapper--right",
-        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
+        "texte":"Titulaire du diplôme de Master CAWEB, je dispose des connaissances nécessaires pour mener à bien la réalisation d'un site web.  Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
     }
 
 
@@ -64,12 +64,13 @@
   "projets": [
 
     {
-        "lien":"single-project.html",
+        "lien":"emmaus.html",
         "nom": "Emmaüs Strasbourg",
         "objet":"Refonte site Emmaus Strasbourg",
         "image":"emmaus"
     },
     {
+        "lien":"codecats.html",
         "nom": "Codecats",
         "objet":"Projet universitaire Master 2",
         "image":"mini-project"
@@ -78,11 +79,15 @@
         "nom": "ViJump",
         "objet":"Refonte site et application ViJump",
         "image":"vijump"
+    },
+    {
+        "nom":"Site Portfolio",
+        "objet":"Création de mon site portfolio",
+        "image":"portfolio"
     }
-
     ],
 
-    "projet1":
+    "projet1":[
     {
             "titre":"Emmaüs Strasbourg",
             "image":"img/emmaus-optim.jpg",
@@ -95,6 +100,22 @@
             "date" : "2013-2014",
             "duree" : "4 mois",
             "lien" : "linkuu"
-    }
+    }],
+
+    "projet2":[
+    {
+            "titre":"Codecats",
+            "image":"img/miniprojet-optim.jpg",
+            "imageAlt":"Projet Universitaire Master 2",
+            "sousTitre":"Projet universitaire Master 2",
+            "texte":"Projet personnel de deuxième année de master CAWEB. Le but était de mettre en pratique toutes les connaissances acquises durant la première année, et de créer un site à partir de zéro sans utiliser de système de gestion de contenu ou de framework css. Encore juste une phrase comme ça pour voir si je peux remplir ce qui reste. Ah bah oui.<br/>",
+            "poste" : "Intégrateur, Designer",
+            "langages" : "HTML5, CSS3, PHP, JavaScript",
+            "outils" : "GulpJs",
+            "date" : "2014",
+            "duree" : "5 semaines",
+            "lien" : "linkuu"
+    }]
+
 
 }
