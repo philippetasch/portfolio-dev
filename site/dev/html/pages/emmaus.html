@@ -26,8 +26,8 @@
 			<div class="maxWrapper slicePad--h">
 				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 			</div>
-			<section class="bigSlice bigSlice--project-info slicePad--h slicePad--v">
-				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v">
+			<section class="bigSlice bigSlice--project-info slicePad--v--top">
+				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
 					<div class="intro-title-wrapper">
 						<span class="intro-title-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
 						<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
@@ -52,34 +52,44 @@
 					<div class="intro-text-wrapper">
 						<p class="intro-text">{{projet.texte}}</p>
 					</div>
-					<a href="#blob" class="intro-lien-site">Vers {{projet.titre}}</a>
 				</div>
+				<a href="#blob" class="intro-lien-site ">
+					<span class="lien__texte">
+						Vers {{projet.titre}}
+					</span>
+				</a>
 			</section>
-			<section class="bigSlice slicePad--v--top">
+			<section class="bigSlice">
 				<div class="maxWrapper slicePad--h slicePad--v">
-					<p class="center g-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+					<p class="center project-max-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
 				</div>
-					<div class="grids--zero g-3--zero c-left">
-						<div class="ratio--rel ratio--rel__4-3">
-							<div class="ratio--abs emmaus bg-img bg-project"></div>
-						</div>
+				<div class="grids--zero project-full-image c-left">
+					<div class="ratio--rel ratio--rel__4-3">
+						<div class="ratio--abs emmaus bg-img bg-project"></div>
 					</div>
-					<div class="grids--zero g-3--zero">
-						<div class="ratio--rel ratio--rel__4-3">
-							<div class="ratio--abs emmaus bg-img bg-project"></div>
-						</div>
-					</div>
-					<div class="grids--zero g-3--zero c-right">
-						<div class="ratio--rel ratio--rel__4-3">
-							<div class="ratio--abs emmaus bg-img bg-project"></div>
-						</div>
-					</div>
-				<div class="maxWrapper slicePad--h slicePad--v c-left">
-					<p class="center g-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
 				</div>
-
-				<div class="grids--zero g-2 t-center">PREVIOUS</div>
-				<div class="grids--zero g-2 t-center">NEXT</div>
+				<div class="grids--zero project-full-image">
+					<div class="ratio--rel ratio--rel__4-3">
+						<div class="ratio--abs emmaus bg-img bg-project"></div>
+					</div>
+				</div>
+				<div class="grids--zero project-full-image">
+					<div class="ratio--rel ratio--rel__4-3">
+						<div class="ratio--abs emmaus bg-img bg-project"></div>
+					</div>
+				</div>
+				<div class="maxWrapper slicePad--h slicePad--v--top c-left">
+					<p class="center project-max-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+				</div>
+				<a href="#blob" class="intro-lien-site ">
+					<span class="lien__texte">
+						Vers {{projet.titre}}
+					</span>
+				</a>
+				<div class="gridClear">
+					<div class="grids--zero g-2 t-center">PREVIOUS</div>
+					<div class="grids--zero g-2 t-center">NEXT</div>
+				</div>
 			</section>
 		</section>
 	{% endfor %}

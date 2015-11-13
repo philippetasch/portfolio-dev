@@ -197,7 +197,7 @@
 	color: $nav__link--2--bgc;
 
 	@include rem2px(padding, 1, 2);
-	@include rem2px(margin-bottom, 2);
+	@include rem2px(margin-bottom, 3);
 
 
 
@@ -236,7 +236,6 @@
 .intro-text-wrapper{
 
 	margin: auto;
-	@include rem2px(margin-bottom, 4);
 	max-width: 500px;
 	text-align: left;
 
@@ -266,7 +265,6 @@
 
 		background-color: $bigSlice--skills;
 		color: #fff;
-		border-bottom: 7px solid darken($bigSlice--skills, 15%);
 		border-top: 7px solid darken($bigSlice--skills, 15%);
 }
 
@@ -385,13 +383,99 @@
 	margin: 0;
 }
 
-.project-info__title{
-
-	font-size: 105%;
-}
-
 .project-info__text{
 
-	font-size: 95%;
 	color: lightgray;
+}
+
+.intro-lien-site{
+
+	display: block;
+	clear: both;
+	background-color: darken($bigSlice--skills, 15%);
+	color: $nav__link--2--bgc;
+	@include rem2px(margin-top, 3);
+	@include rem2px(padding, 3);
+	text-align: center;
+	font-family: Roboto Slab;
+
+	text-decoration: none;
+
+	transition: background-color 0.35s linear;
+
+	@include snap(small-medium){
+
+		font-size: 120%;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	@include snap(tweak-large){
+
+		@include rem2px(margin-top, 6);
+
+	@include h-f-a{
+
+		background-color:  $nav__link--2--bgc;
+		color: darken($bigSlice--skills, 15%);
+
+		.lien__texte:after{
+
+			background-color: darken($bigSlice--skills, 15%);
+		}
+	}
+
+	}
+
+	&:after{
+
+		content:"\f08e";
+		display: inline-block;
+		vertical-align: middle;
+		font-family: FontAwesome;
+		font-size: 130%;
+		margin-left: 10px;
+
+		@include snap(large){
+
+			font-size: 150%;
+		}
+	}
+
+}
+
+.lien__texte{
+
+		position: relative;
+
+		&:after{
+
+		content:"";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $nav__link--2--bgc;
+	}
+}
+
+.project-max-text{
+
+	max-width: 500px;
+
+	@include snap(large){
+
+		max-width: 600px;
+	}
+}
+
+.project-full-image{
+
+	width: 100%;
+
+	@include snap(small-medium){
+
+		@include lonm(3);
+	}
 }
