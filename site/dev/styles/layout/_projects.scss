@@ -93,7 +93,7 @@
 
 .tiles__overlay{
 
-	background-color: rgba($nav__link--3--bgc, .8);
+	background-color: $nav__link--3--bgc;
 	text-align: center;
 	z-index:10;
 	visibility: hidden;
@@ -185,7 +185,7 @@
 
 			&:hover{
 
-				color: rgba($nav__link--3--bgc, .9);
+				color: $nav__link--3--bgc;
 				border-color: transparent;
 				transition: color .25s ease-in;
 
@@ -211,27 +211,27 @@
 @keyframes slideInBottom{
 
 	0%{
-		transform: translateY(300%)
+		transform: translateX(-300%) skew(-25deg);
 	}
 
 	70%{
 
-		transform: translateY(-40%);
+		transform: translateX(40%);
 	}
 
 	80%{
 
-		transform: translateY(0%);
+		transform: translateX(10%);
 	}
 
 	90%{
 
-		transform: translateY(-10%);
+		transform: translateX(5%) skew(-25deg);
 
 	}
 
 	100%{
-		transform:translateY(0%);
+		transform:translateX(0%) skew(0deg);
 	}
 }
 

@@ -25,7 +25,13 @@
 
 	@include snap(large){
 
-		transform: translateY(-10%);
+		transform: translateY(5px) translateX(5px);
+
+		&:after{
+
+			transform: translateY(-3px) translateX(-3px);
+
+		}
 	}
 
 }
@@ -42,16 +48,35 @@
 
 	@include snap(medium){
 
-		transition: all .35s ease-in-out;
+		position: relative;
+		transition: transform .35s ease-in-out;
 		float: left;
 		@include rem2px(margin-right, 2);
 		@include rem2px(margin-bottom, 0);
+
+		&:after{
+
+			content:"";
+			position: absolute;
+			top:12%;
+			left: 6%;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: rgba($nav__link--2--bgc, .4);
+			transition: transform .35s ease-in-out;
+
+		}
+
 
 	}
 }
 
 .skills__icon.fa{
 
+	position: relative;
+	z-index: 1;
 	color:darken($bigSlice--skills, 15%);
 	display: inline-block;
 	vertical-align: middle;

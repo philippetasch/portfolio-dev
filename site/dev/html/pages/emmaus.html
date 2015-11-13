@@ -1,88 +1,86 @@
 {% extends "layout.html" %}
 {% block content %}
-{% for projet in projet1 %}
-	<section class="bigSlice headroom--projects">
-		<div class="project-nav gridClear">
-			<a href="index.html" class="grids--zero project-nav__item backHome">
-				<i class="fa fa-home project-nav__icon"></i>
-				<span class="project-nav__text">Accueil</span>
-			</a>
-			<a href="projets.html" class="grids--zero project-nav__item backProjects">
-				<i class="fa fa-flask project-nav__icon"></i>
-				<span class="project-nav__text">Projets</span>
-			</a>
-			<a href="#" class="grids--zero project-nav__item previousWork">
-				<i class="fa fa-arrow-left project-nav__icon"></i>
-				<span class="project-nav__text">Précédent</span>
-			</a>
-			<a href="#" class="grids--zero project-nav__item nextWork">
-				<span class="project-nav__text">Suivant</span>
-				<i class="fa fa-arrow-right project-nav__icon"></i>
-
-			</a>
-		</div>
-	</section>
-	<section class="bigSlice bigSlice--single-project slicePad--v">
-		<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
-		<div class="maxWrapper slicePad--h">
-			<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
-		</div>
-		<section class="bigSlice bigSlice--project-info slicePad--h slicePad--v">
-			<div class="maxWrapper gridClear slicePad--v">
-				<div class="intro-title-wrapper">
-					<span class="intro-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
-					<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
-				</div>
-				<div class="project-info-wrapper">
-					<div class="project-info gridClear">
-						<span class="rond poste"></span>
-						<p class="project-info__title ">Poste</p>
-						<p class="project-info__text">{{projet.poste}}</p>
-					</div>
-					<div class="project-info gridClear">
-						<span class="rond langages"></span>
-						<p class="project-info__title ">Langages</p>
-						<p class="project-info__text">{{projet.langages}}</p>
-					</div>
-					<div class="project-info gridClear">
-						<span class="rond  outils"></span>
-						<p class="project-info__title">Outils</p>
-						<p class="project-info__text">{{projet.outils}}</p>
-					</div>
-				</div>
-				<div class="intro-text-wrapper">
-					<p class="intro-text">{{projet.texte}}</p>
-				</div>
+	{% for projet in projet1 %}
+		<section class="bigSlice headroom--projects">
+			<div class="project-nav gridClear">
+				<a href="index.html" class="grids--zero project-nav__item backHome">
+					<i class="fa fa-home project-nav__icon"></i>
+					<span class="project-nav__text">Accueil</span>
+				</a>
+				<a href="projets.html" class="grids--zero project-nav__item backProjects">
+					<i class="fa fa-flask project-nav__icon"></i>
+					<span class="project-nav__text">Projets</span>
+				</a>
+				<a href="#" class="grids--zero project-nav__item previousWork">
+					<i class="fa fa-arrow-left project-nav__icon"></i>
+					<span class="project-nav__text">Précédent</span>
+				</a>
+				<a href="#" class="grids--zero project-nav__item nextWork">
+					<span class="project-nav__text">Suivant</span>
+					<i class="fa fa-arrow-right project-nav__icon"></i>
+				</a>
 			</div>
 		</section>
-		<div class="maxWrapper slicePad--v slicePad--h" >
-			<div class="projet-infos gridClear">
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Poste</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.poste}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Langages</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.langages}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Outils</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.outils}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Date</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.date}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Durée</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.duree}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Lien</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.lien}}</span>
-				</div>
+		<section class="bigSlice bigSlice--single-project slicePad--v">
+			<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
+			<div class="maxWrapper slicePad--h">
+				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 			</div>
-		</div>
-	</section>
-{% endfor %}
+			<section class="bigSlice bigSlice--project-info slicePad--h slicePad--v">
+				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v">
+					<div class="intro-title-wrapper">
+						<span class="intro-title-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
+						<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
+					</div>
+					<div class="intro-info-wrapper">
+						<div class="intro-info gridClear">
+							<span class="rond poste"></span>
+							<p class="project-info__title ">Poste</p>
+							<p class="project-info__text">{{projet.poste}}</p>
+						</div>
+						<div class="intro-info gridClear">
+							<span class="rond langages"></span>
+							<p class="project-info__title ">Langages</p>
+							<p class="project-info__text">{{projet.langages}}</p>
+						</div>
+						<div class="intro-info gridClear">
+							<span class="rond  outils"></span>
+							<p class="project-info__title">Outils</p>
+							<p class="project-info__text">{{projet.outils}}</p>
+						</div>
+					</div>
+					<div class="intro-text-wrapper">
+						<p class="intro-text">{{projet.texte}}</p>
+					</div>
+					<a href="#blob" class="intro-lien-site">Vers {{projet.titre}}</a>
+				</div>
+			</section>
+			<section class="bigSlice slicePad--v--top">
+				<div class="maxWrapper slicePad--h slicePad--v">
+					<p class="center g-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+				</div>
+					<div class="grids--zero g-3--zero c-left">
+						<div class="ratio--rel ratio--rel__4-3">
+							<div class="ratio--abs emmaus bg-img bg-project"></div>
+						</div>
+					</div>
+					<div class="grids--zero g-3--zero">
+						<div class="ratio--rel ratio--rel__4-3">
+							<div class="ratio--abs emmaus bg-img bg-project"></div>
+						</div>
+					</div>
+					<div class="grids--zero g-3--zero c-right">
+						<div class="ratio--rel ratio--rel__4-3">
+							<div class="ratio--abs emmaus bg-img bg-project"></div>
+						</div>
+					</div>
+				<div class="maxWrapper slicePad--h slicePad--v c-left">
+					<p class="center g-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+				</div>
+
+				<div class="grids--zero g-2 t-center">PREVIOUS</div>
+				<div class="grids--zero g-2 t-center">NEXT</div>
+			</section>
+		</section>
+	{% endfor %}
 {% endblock %}

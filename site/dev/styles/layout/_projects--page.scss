@@ -6,73 +6,7 @@
 .retour{
 
 	display: block;
-	width: 45px;
-	height: 45px;
-	border: 6px solid #000;
-	@include rem2px(margin, 1 , 0, 0, 1);
-	text-decoration: none;
-
-	position: relative;
-
-	@media screen and (min-width: 1400px){
-
-		position: fixed;
-		top: 60px;
-		margin-left: -100px;
-		transition: all .35s ease-in-out;
-
-	}
-
-	&:after{
-
-		content: "\f060";
-    	font-family: FontAwesome;
-    	font-size: 30px;
-    	color: #000;
-    	padding: 0;
-    	margin: 0;
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	margin-top: -26px;
-    	margin-left: -15px;
-
-	}
-
-	@include h-f-a{
-
-		background-color: #000;
-
-		&:after{
-
-			color: $bigSlice--projects;
-
-		}
-	}
-}
-
-.bounceHome{
-
-	animation: bounceHome 1.5s ease-in-out forwards;
-
-}
-
-@keyframes bounceHome {
-
-	0%{
-
-		opacity:0;
-		transform: translateX(-120%);
-	}
-
-	
-
-	100%{
-
-		opacity: 1;
-		transform: translateX(0%);
-
-	}
+	text-align: center;
 }
 
 .count-projects{

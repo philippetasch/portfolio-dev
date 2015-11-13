@@ -190,7 +190,7 @@
 
 }
 
-.intro-info{
+.intro-title-info{
 
 	display: inline-block;
 	background-color: darken($bigSlice--skills, 15%);
@@ -201,7 +201,7 @@
 
 
 
-	@include snap(large){
+	@include snap(tweak-large){
 
 		display: block;
 
@@ -217,7 +217,7 @@
 	font-weight: 500;
 	@include rem2px(margin-bottom, 3);
 
-	@include snap(large){
+	@include snap(tweak-large){
 
 		text-align: right;
 		float: left;
@@ -245,18 +245,14 @@
 		text-align: center;
 	}
 
-	@include snap(medium){
+	@include snap(tweak-large){
 
-		width: auto;
-	}
-
-	@include snap(large){
-
+		max-width: none;
 		float: left;
 		width: 38%;
 		@include rem2px(margin-bottom, 0);
 		margin-left: $gridMargin;
-		text-align: justify;
+		text-align: left;
 	}
 
 }
@@ -274,7 +270,7 @@
 		border-top: 7px solid darken($bigSlice--skills, 15%);
 }
 
-.project-info-wrapper{
+.intro-info-wrapper{
 
 	@include rem2px(padding, 2, 0, 2, 0);
 	@include rem2px(margin, 0, 0, 3, 0);
@@ -294,7 +290,7 @@
 
 	&:before{
 
-		top:-0px;
+		top:0px;
 	}
 
 
@@ -303,7 +299,7 @@
 	bottom:0px;
 	}
 
-	@include snap(large){
+	@include snap(tweak-large){
 
 		width: 26%;
 		float: right;
@@ -321,7 +317,7 @@
 
 }
 
-.project-info{
+.intro-info{
 
 	font-family: Roboto Slab;
 	padding-bottom: 10px;
@@ -334,7 +330,7 @@
 		float: left;
 	}
 
-	@include snap(large){
+	@include snap(tweak-large){
 
 		text-align: left;
 		width: 100%;
@@ -353,7 +349,7 @@
 	background-color: $nav__link--2--bgc;
 	@include rem2px(margin-bottom, 1);
 
-	@include snap(large){
+	@include snap(tweak-large){
 
 		float: left;
 		margin-right: 15px;
