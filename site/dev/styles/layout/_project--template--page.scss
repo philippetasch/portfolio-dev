@@ -478,4 +478,19 @@
 
 		@include lonm(3);
 	}
+
+	@include snap(medium){
+
+		&:nth-of-type(odd) img{
+
+			border: 6px solid $bigSlice--contact;
+			transform: scale(1.1);
+		}
+
+	}
+}
+
+.project-images{
+
+
 }

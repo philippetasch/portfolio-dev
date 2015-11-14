@@ -21,7 +21,7 @@
 				</a>
 			</div>
 		</section>
-		<section class="bigSlice bigSlice--single-project slicePad--v">
+		<section class="bigSlice bigSlice--single-project slicePad--v--top">
 			<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
 			<div class="maxWrapper slicePad--h">
 				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
@@ -29,31 +29,31 @@
 			<section class="bigSlice bigSlice--project-info slicePad--v--top">
 				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
 					<div class="intro-title-wrapper">
-						<span class="intro-title-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
+						<span class="intro-title-info">Date : {{projet.infos.date}} // Duree : {{projet.infos.duree}}</span>
 						<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
 					</div>
 					<div class="intro-info-wrapper">
 						<div class="intro-info gridClear">
 							<span class="rond poste"></span>
 							<p class="project-info__title ">Poste</p>
-							<p class="project-info__text">{{projet.poste}}</p>
+							<p class="project-info__text">{{projet.infos.poste}}</p>
 						</div>
 						<div class="intro-info gridClear">
 							<span class="rond langages"></span>
 							<p class="project-info__title ">Langages</p>
-							<p class="project-info__text">{{projet.langages}}</p>
+							<p class="project-info__text">{{projet.infos.langages}}</p>
 						</div>
 						<div class="intro-info gridClear">
 							<span class="rond  outils"></span>
 							<p class="project-info__title">Outils</p>
-							<p class="project-info__text">{{projet.outils}}</p>
+							<p class="project-info__text">{{projet.infos.outils}}</p>
 						</div>
 					</div>
 					<div class="intro-text-wrapper">
-						<p class="intro-text">{{projet.texte}}</p>
+						<p class="intro-text">{{projet.texteIntro}}</p>
 					</div>
 				</div>
-				<a href="#blob" class="intro-lien-site ">
+				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
 					<span class="lien__texte">
 						Vers {{projet.titre}}
 					</span>
@@ -61,25 +61,15 @@
 			</section>
 			<section class="bigSlice">
 				<div class="maxWrapper slicePad--h slicePad--v">
-					<p class="center project-max-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+					<p class="center project-max-text">{{projet.textePostLien}}</p>
 				</div>
-				<div class="grids--zero project-full-image c-left">
-					<div class="ratio--rel ratio--rel__4-3">
-						<div class="ratio--abs emmaus bg-img bg-project"></div>
-					</div>
+				{% for image in projet.images %}
+				<div class={% if loop.first %} "grids--zero project-full-image c-left"{% else %} "grids--zero project-full-image"{% endif %}>
+					<img src="{{image}}" class="img--resp">
 				</div>
-				<div class="grids--zero project-full-image">
-					<div class="ratio--rel ratio--rel__4-3">
-						<div class="ratio--abs emmaus bg-img bg-project"></div>
-					</div>
-				</div>
-				<div class="grids--zero project-full-image">
-					<div class="ratio--rel ratio--rel__4-3">
-						<div class="ratio--abs emmaus bg-img bg-project"></div>
-					</div>
-				</div>
+				{% endfor %}
 				<div class="maxWrapper slicePad--h slicePad--v--top c-left">
-					<p class="center project-max-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ut sint dignissimos ab repellat magnam quae tempore consequuntur ex eius, quibusdam, nemo laboriosam! Ex itaque enim illum quos quae obcaecati quia eaque reiciendis fugiat magnam officia dolor laboriosam, deserunt assumenda sed harum molestiae temporibus cumque odit necessitatibus, pariatur, tempore accusamus. Atque reprehenderit magnam corrupti aliquid reiciendis officiis aut ea fuga dicta, mollitia, nemo, consequatur exercitationem numquam dolorum corporis! Cum perspiciatis unde possimus dolores saepe temporibus ratione, sapiente pariatur aliquam ad. In ipsum doloribus eius debitis sit, eaque! Blanditiis sequi illo ducimus officia inventore, ipsa rerum enim, cumque minima qui est!</p>
+					<p class="center project-max-text">{{projet.textePostImages}}</p>
 				</div>
 				<a href="#blob" class="intro-lien-site ">
 					<span class="lien__texte">
