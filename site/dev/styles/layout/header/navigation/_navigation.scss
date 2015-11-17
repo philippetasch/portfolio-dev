@@ -21,7 +21,7 @@
 
 		clip: rect(0 0 0 0);
 		position: absolute;
-		top:65%;
+		top:0px;
 		max-height: 0;
 	    overflow: hidden;
 		@include rem2px(padding, 0, 1, 0, 1);

@@ -1,88 +1,86 @@
 {% extends "layout.html" %}
 {% block content %}
-{% for projet in projet2 %}
-	<section class="bigSlice headroom--projects">
-		<div class="project-nav gridClear">
-			<a href="index.html" class="grids--zero project-nav__item backHome">
-				<i class="fa fa-home project-nav__icon"></i>
-				<span class="project-nav__text">Accueil</span>
-			</a>
-			<a href="projets.html" class="grids--zero project-nav__item backProjects">
-				<i class="fa fa-flask project-nav__icon"></i>
-				<span class="project-nav__text">Projets</span>
-			</a>
-			<a href="#" class="grids--zero project-nav__item previousWork">
-				<i class="fa fa-arrow-left project-nav__icon"></i>
-				<span class="project-nav__text">Précédent</span>
-			</a>
-			<a href="#" class="grids--zero project-nav__item nextWork">
-				<span class="project-nav__text">Suivant</span>
-				<i class="fa fa-arrow-right project-nav__icon"></i>
-
-			</a>
-		</div>
-	</section>
-	<section class="bigSlice bigSlice--single-project slicePad--v">
-		<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
-		<div class="maxWrapper slicePad--h">
-			<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
-		</div>
-		<section class="bigSlice bigSlice--project-info slicePad--h slicePad--v">
-			<div class="maxWrapper gridClear slicePad--v">
-				<div class="intro-title-wrapper">
-					<span class="intro-info">Date : {{projet.date}} // Duree : {{projet.duree}}</span>
-					<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
-				</div>
-				<div class="project-info-wrapper">
-					<div class="project-info gridClear">
-						<span class="rond poste"></span>
-						<p class="project-info__title ">Poste</p>
-						<p class="project-info__text">{{projet.poste}}</p>
-					</div>
-					<div class="project-info gridClear">
-						<span class="rond langages"></span>
-						<p class="project-info__title ">Langages</p>
-						<p class="project-info__text">{{projet.langages}}</p>
-					</div>
-					<div class="project-info gridClear">
-						<span class="rond  outils"></span>
-						<p class="project-info__title">Outils</p>
-						<p class="project-info__text">{{projet.outils}}</p>
-					</div>
-				</div>
-				<div class="intro-text-wrapper">
-					<p class="intro-text">{{projet.texte}}</p>
-				</div>
+	{% for projet in projet2 %}
+		<section class="bigSlice headroom--projects">
+			<div class="project-nav gridClear">
+				<a href="index.html" class="grids--zero project-nav__item backHome">
+					<i class="fa fa-home project-nav__icon"></i>
+					<span class="project-nav__text">Accueil</span>
+				</a>
+				<a href="projets.html" class="grids--zero project-nav__item backProjects">
+					<i class="fa fa-flask project-nav__icon"></i>
+					<span class="project-nav__text">Projets</span>
+				</a>
+				<a href="#" class="grids--zero project-nav__item previousWork">
+					<i class="fa fa-arrow-left project-nav__icon"></i>
+					<span class="project-nav__text">Précédent</span>
+				</a>
+				<a href="#" class="grids--zero project-nav__item nextWork">
+					<span class="project-nav__text">Suivant</span>
+					<i class="fa fa-arrow-right project-nav__icon"></i>
+				</a>
 			</div>
 		</section>
-		<div class="maxWrapper slicePad--v slicePad--h" >
-			<div class="projet-infos gridClear">
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Poste</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.poste}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Langages</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.langages}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Outils</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.outils}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Date</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.date}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Durée</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.duree}}</span>
-				</div>
-				<div class="projet-infos__info">
-					<span class="project-infos__fill project-infos__fill--left">Lien</span>
-					<span class="project-infos__fill project-infos__fill--right">{{projet1.lien}}</span>
-				</div>
+		<section class="bigSlice bigSlice--single-project slicePad--v--top">
+			<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
+			<div class="maxWrapper slicePad--h">
+				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 			</div>
-		</div>
-	</section>
-{% endfor %}
+			<section class="bigSlice bigSlice--project-info slicePad--v--top">
+				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
+					<div class="intro-title-wrapper">
+						<span class="intro-title-info">Date : {{projet.infos.date}} // Duree : {{projet.infos.duree}}</span>
+						<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
+					</div>
+					<div class="intro-info-wrapper">
+						<div class="intro-info gridClear">
+							<span class="rond poste"></span>
+							<p class="project-info__title ">Poste</p>
+							<p class="project-info__text">{{projet.infos.poste}}</p>
+						</div>
+						<div class="intro-info gridClear">
+							<span class="rond langages"></span>
+							<p class="project-info__title ">Langages</p>
+							<p class="project-info__text">{{projet.infos.langages}}</p>
+						</div>
+						<div class="intro-info gridClear">
+							<span class="rond  outils"></span>
+							<p class="project-info__title">Outils</p>
+							<p class="project-info__text">{{projet.infos.outils}}</p>
+						</div>
+					</div>
+					<div class="intro-text-wrapper">
+						<p class="intro-text">{{projet.texteIntro}}</p>
+					</div>
+				</div>
+				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
+					<span class="lien__texte">
+						Vers {{projet.titre}}
+					</span>
+				</a>
+			</section>
+			<section class="bigSlice">
+				<div class="maxWrapper slicePad--h slicePad--v">
+					<p class="center project-max-text">{{projet.textePostLien}}</p>
+				</div>
+				{% for image in projet.images %}
+				<div class={% if loop.first %} "grids--zero project-full-image c-left"{% else %} "grids--zero project-full-image"{% endif %}>
+					<img src="{{image}}" class="img--resp">
+				</div>
+				{% endfor %}
+				<div class="maxWrapper slicePad--h slicePad--v--top c-left">
+					<p class="center project-max-text">{{projet.textePostImages}}</p>
+				</div>
+				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
+					<span class="lien__texte">
+						Vers {{projet.titre}}
+					</span>
+				</a>
+				<div class="gridClear">
+					<div class="grids--zero g-2 t-center">PREVIOUS</div>
+					<div class="grids--zero g-2 t-center">NEXT</div>
+				</div>
+			</section>
+		</section>
+	{% endfor %}
 {% endblock %}

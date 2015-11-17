@@ -65,7 +65,8 @@
 				</div>
 				{% for image in projet.images %}
 				<div class={% if loop.first %} "grids--zero project-full-image c-left"{% else %} "grids--zero project-full-image"{% endif %}>
-					<img src="{{image}}" class="img--resp">
+					<img src="{{image.originale}}" class="img--resp"
+						 srcset="{{image.imagesSrcset}}" >
 				</div>
 				{% endfor %}
 				<div class="maxWrapper slicePad--h slicePad--v--top c-left">

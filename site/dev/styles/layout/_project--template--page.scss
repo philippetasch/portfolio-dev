@@ -473,13 +473,15 @@
 .project-full-image{
 
 	width: 100%;
-
+	@include rem2px(margin-bottom, 0.5);
 	@include snap(small-medium){
 
 		@include lonm(3);
 	}
 
 	@include snap(medium){
+
+	@include rem2px(margin-bottom, 0);
 
 		&:nth-of-type(odd) img{
 
