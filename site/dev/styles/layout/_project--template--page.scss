@@ -1,6 +1,7 @@
 .project-nav{
 
 	text-align: center;
+	background-color: $bigSlice--about;
 
 }
 
@@ -9,7 +10,6 @@
 	@include lonm(4);
 
 	color: $bigSlice--skills;
-	background-color: $bigSlice--about;
 	@include rem2px(line-height, 7);
 	text-decoration: none;
 
@@ -20,13 +20,7 @@
 
 			color: $bigSlice--about;
 	}
-
-	@include snap(small-medium){
-
-		color: $bigSlice--skills;
-		background-color: $bigSlice--about;
-	}
-
+	
 	@include snap(large){
 
 		@include rem2px(line-height, 11);
@@ -355,7 +349,7 @@
 
 	&:before{
 
-		font-size: 3.5rem;
+		@include rem2px(font-size, 3.5);
 		font-family: FontAwesome;
 		color: darken($bigSlice--skills, 15%);
 
@@ -470,6 +464,14 @@
 	}
 }
 
+.maxWrapper-project--full-image{
+
+	@media screen and (min-width: 1700px){
+
+		max-width: $maxWrapperWidth;
+	}
+}
+
 .project-full-image{
 
 	width: 100%;
@@ -483,7 +485,7 @@
 
 	@include rem2px(margin-bottom, 0);
 
-		&:nth-of-type(odd) img{
+		&:nth-of-type(even) img{
 
 			border: 6px solid $bigSlice--contact;
 			transform: scale(1.1);
@@ -492,7 +494,21 @@
 	}
 }
 
-.project-images{
+.project-next,
+.project-previous{
 
+	color: #fff;
+}
 
+.project{
+
+	&-previous{
+
+		background-color: $nav__link--1--bgc;
+	}
+
+	&-next{
+
+		background-color: $nav__link--4--bgc;
+	}
 }

@@ -17,7 +17,8 @@
     "headroom.js": "WickyNilliams/headroom.js#~0.7.0",
     "font-awesome": "FortAwesome/Font-Awesome#~4.4.0",
     "scrollmagic": "ScrollMagic#~2.0.5",
-    "html5shiv": "~3.7.3"
+    "html5shiv": "~3.7.3",
+    "picturefill": "scottjehl/picturefill#~3.0.1"
   },
   "install": {
     "path": {

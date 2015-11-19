@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-	{% for projet in projet2 %}
+	{% for projet in projetCodecats %}
 		<section class="bigSlice headroom--projects">
 			<div class="project-nav gridClear">
 				<a href="index.html" class="grids--zero project-nav__item backHome">
@@ -63,22 +63,31 @@
 				<div class="maxWrapper slicePad--h slicePad--v">
 					<p class="center project-max-text">{{projet.textePostLien}}</p>
 				</div>
-				{% for image in projet.images %}
-				<div class={% if loop.first %} "grids--zero project-full-image c-left"{% else %} "grids--zero project-full-image"{% endif %}>
-					<img src="{{image}}" class="img--resp">
+				<div class="maxWrapper-project--full-image center">
+					{% for image in projet.images %}
+						<div class="grids--zero project-full-image">
+							<img src="{{image.originale}}" class="img--resp"
+							srcset="{{image.imagesSrcset}}" />
+						</div>
+					{% endfor %}
 				</div>
-				{% endfor %}
 				<div class="maxWrapper slicePad--h slicePad--v--top c-left">
 					<p class="center project-max-text">{{projet.textePostImages}}</p>
 				</div>
-				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
+				<a href="#blob" class="intro-lien-site ">
 					<span class="lien__texte">
 						Vers {{projet.titre}}
 					</span>
 				</a>
 				<div class="gridClear">
-					<div class="grids--zero g-2 t-center">PREVIOUS</div>
-					<div class="grids--zero g-2 t-center">NEXT</div>
+					<div class="grids--zero g-2--zero t-center slicePad--v project-previous">
+						<i class="fa fa-arrow-left project-nav__icon"></i>
+						<span class="project-nav__text">Précédent</span>
+					</div>
+					<div class="grids--zero g-2--zero t-center slicePad--v project-next">
+						<span class="project-nav__text">Suivant</span>
+						<i class="fa fa-arrow-right project-nav__icon"></i>
+					</div>
 				</div>
 			</section>
 		</section>

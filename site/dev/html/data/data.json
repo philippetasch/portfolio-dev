@@ -92,7 +92,7 @@
     }
     ],
 
-    "projet1":[
+    "projetEmmaus":[
     {
             "titre":"Emmaüs Strasbourg",
             "image":"img/emmaus/projet-emmaus-0.jpg",
@@ -111,22 +111,28 @@
             {
 
                 "originale":"img/emmaus/projet-emmaus-evenements.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w"
+                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w",
+                                "sizes":"(min-width: 1024px) 1024px,(min-width: 700px) 600px,(min-width: 350px) 400px"
+
             },
             {
                 "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w",
+                                "sizes":"(min-width: 1024px) 1024px,(min-width: 800px) 600px,(min-width: 350px) 400px"
+
             },
             {
                 "originale":"img/emmaus/projet-emmaus-activite.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w",
+                                "sizes":"(min-width: 1024px) 1024px,(min-width: 800px) 600px,(min-width: 350px) 400px"
+
             }
             ],
             "textePostLien": "Quatres maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette.Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.",
             "textePostImages":"Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines. Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand. J'étais en charge d'une partie de la traduction vers l'anglais et ai contribué à la traduction vers l'allemand."
     }],
 
-    "projet2":[
+    "projetCodecats":[
     {
             "titre":"Codecats",
             "image":"img/codecats/projet-fac-accueil.jpg",
@@ -141,9 +147,57 @@
                 "outils" : "GulpJs",
                 "lien" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/"
             },
-            "images":["img/codecats/projet-fac-shapes.jpg","img/codecats/projet-fac-responsive.jpg","img/codecats/projet-fac-compatibilite-menu.jpg"],
+            "images":[
+                {
+
+                    "originale":"img/codecats/projet-fac-flex.jpg",
+                    "imagesSrcset":""
+                },
+                {
+                    "originale":"img/codecats/projet-fac-responsive.jpg",
+                    "imagesSrcset":""
+                },
+                {
+                    "originale":"img/codecats/projet-fac-compatibilite-menu.jpg",
+                    "imagesSrcset":""
+                }
+            ],
             "textePostLien": "Le site devait proposer plusieurs feuilles de styles: une principale, une secondaire ainsi qu'une feuille de style print. L'aspect responsive était primordial. J'ai donc développé le site en commençant par un design fait pour le plus petit écran possible. Le site est résolument flat dans ses couleurs et icônes avec un design minimaliste qui laisse place au contenu.",
             "textePostImages":"Les animations CSS3 sont mises en avant dans le menu qui dévoile ses sous-catégories au survol, le tout agrémenté de transitions agréables à l'oeil. Les nouvelles balises HTML5 structurent le site pour un HTML plus sémantique et plus facilement interprétable par le navigateur. La rétrocompatibilité n'est pas mise de côté puisque le site est fonctionnel même sur Internet Explorer 7."
+    }],
+
+    "projetVijump":[
+    {
+            "titre":"ViJump",
+            "image":"img/vijump/projet-vijump-landing.jpg",
+            "imageAlt":"Projet ViJump page d'accueil",
+            "sousTitre":"Projet de refonte de l'application ViJump",
+            "texteIntro":"ViJump est une start-up que j'ai intégrée pour mon stage de fin d'études. Je suis chargé de la refonte complète du site et de l'application de cette start-up aux projets prometteurs. Dès mon arrivée j'ai été chargé du design du logo et de la réalisation de la maquette. L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants.",
+            "infos":{
+                "date" : "2015",
+                "duree" : "6 mois",
+                "poste" : "Intégrateur, Designer",
+                "langages" : "HTML5, CSS3, JavaScript",
+                "outils" : "AngularJS, SourceTree (git)",
+                "lien" : "https://www.vijump.com/#!/"
+            },
+            "images":[
+            {
+
+                "originale":"img/emmaus/projet-emmaus-evenements.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-activite.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            }
+            ],
+            "textePostLien": "Cette refonte est non seulement ma première expérience professionnelle dans le monde du web, mais aussi mon premier contact avec le framework Bootstrap. Je me suis assez rapidement habitué à son utilisation, qui permet de créer la structure - responsive - de base de tout site en un temps record.",
+            "textePostImages":"L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants. C'est un projet en cours, mais n'hésitez pas à l'essayer dès maintenant!"
     }]
 
 

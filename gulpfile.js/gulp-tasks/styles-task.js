@@ -19,7 +19,12 @@ module.exports = function (gulp, plugins) {
       browsers:['last 5 versions', 'Firefox > 20', 'ie 8','opera 15', 'ios 6', 'android 4'
         ]}))
 
-    .pipe(plugins.sourcemaps.write({includeContent: true}))
+    .pipe(plugins.sourcemaps.write({
+
+          includeContent: false,
+          sourceRoot: cssPaths.src
+
+    }))
     .pipe(plugins.uncss({
 
           html:[path.join(config.root, config.base.dest, '/*.html')],

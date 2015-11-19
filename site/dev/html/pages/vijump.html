@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-	{% for projet in projetEmmaus %}
+	{% for projet in projetVijump %}
 		<section class="bigSlice headroom--projects">
 			<div class="project-nav gridClear">
 				<a href="index.html" class="grids--zero project-nav__item backHome">
@@ -63,12 +63,11 @@
 				<div class="maxWrapper slicePad--h slicePad--v">
 					<p class="center project-max-text">{{projet.textePostLien}}</p>
 				</div>
-				<div class="maxWrapper-project--full-image center gridClear">
+				<div class="maxWrapper-project--full-image center">
 					{% for image in projet.images %}
 						<div class="grids--zero project-full-image">
 							<img src="{{image.originale}}" class="img--resp"
-							srcset="{{image.imagesSrcset}}"
-							sizes="{{image.sizes}}" />
+							srcset="{{image.imagesSrcset}}" />
 						</div>
 					{% endfor %}
 				</div>
@@ -81,14 +80,8 @@
 					</span>
 				</a>
 				<div class="gridClear">
-					<div class="grids--zero g-2--zero t-center slicePad--v project-previous">
-						<i class="fa fa-arrow-left project-nav__icon"></i>
-						<span class="project-nav__text">Précédent</span>
-					</div>
-					<div class="grids--zero g-2--zero t-center slicePad--v project-next">
-						<span class="project-nav__text">Suivant</span>
-						<i class="fa fa-arrow-right project-nav__icon"></i>
-					</div>
+					<div class="grids--zero g-2 t-center">PREVIOUS</div>
+					<div class="grids--zero g-2 t-center">NEXT</div>
 				</div>
 			</section>
 		</section>
