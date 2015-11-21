@@ -1,0 +1,80 @@
+/*
+*
+*  Overwrite template BG styles and whatnot
+*
+*/
+
+/* Background-color */
+
+.project-emmaus{
+
+	background-color: $bigSlice--about;
+
+}
+
+.project-codecats,
+.project-vijump{
+
+	background-color: #fff;
+}
+
+/* Navigation */
+
+/* Project Info */
+
+/* Codecats */
+
+.project-codecats .bigSlice--project-info{
+
+	background-color: lighten(#222, 2%);
+	border-color: darken(#222, 5%);
+}
+
+.project-codecats .intro-title-info,
+.project-codecats .intro-lien-site{
+
+	background-color: darken(#222, 5%);
+	color: #35AEF2;
+}
+
+.project-codecats .lien__texte{
+
+	&:after{
+
+		background-color: #35AEF2;
+	}
+}
+
+.project-codecats .rond{
+
+	background-color: #35AEF2;
+
+	&:before{
+
+			color: darken(#222, 5%);
+
+	}
+}
+
+.project-codecats .intro-info{
+
+	&:first-child .rond{
+
+		background-color: #F27935;
+	}
+
+	&:last-child .rond{
+
+		background-color: #00B16A;
+	}
+
+
+	&:before{
+
+			color: darken(#222, 5%);
+
+	}
+}
+
+
+/* ViJump */

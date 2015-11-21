@@ -1,0 +1,13 @@
+.img--projet{
+
+	@include snap(small){
+
+		max-width: 90%;
+	}
+
+	@include snap(small-medium){
+
+		max-width: 85%;
+	}
+
+}

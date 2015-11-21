@@ -1,0 +1,40 @@
+
+.project-max-text{
+
+	max-width: 500px;
+
+	@include snap(large){
+
+		max-width: 600px;
+	}
+}
+
+.maxWrapper-project--full-image{
+
+	@media screen and (min-width: 1700px){
+
+		max-width: $maxWrapperWidth;
+	}
+}
+
+.project-full-image{
+
+	width: 100%;
+	@include rem2px(margin-bottom, 0.5);
+	@include snap(small-medium){
+
+		@include lonm(3);
+	}
+
+	@include snap(medium){
+
+	@include rem2px(margin-bottom, 0);
+
+		&:nth-of-type(even) img{
+
+			border: 6px solid $bigSlice--about;
+			transform: scale(1.1);
+		}
+
+	}
+}

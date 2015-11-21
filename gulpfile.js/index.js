@@ -68,7 +68,7 @@ gulp.task('replaceAwesome', fetchTask('replaceAwesome-task'));
 
 gulp.task('watch', ['html','scripts','styles','images','fonts','browser-sync'], function () {
 
-    gulp.watch([htmlPaths.templates, htmlPaths.layout, htmlPaths.partials, htmlPaths.jsonData], ['html']);
+    gulp.watch(path.join(config.root, config.base.src, config.htmlFolder.src, '/**/*.{html,json}'), ['html']);
     gulp.watch(path.join(htmlPaths.dest, '/*.html')).on('change', reload);
     gulp.watch(cssPaths.src, ['styles']);
     gulp.watch(scriptsPaths.src, ['scripts', reload]);

@@ -81,6 +81,7 @@
         "image":"mini-project"
     },
     {
+        "lien":"vijump.html",
         "nom": "ViJump",
         "objet":"Refonte site et application ViJump",
         "image":"vijump"
@@ -94,6 +95,7 @@
 
     "projetEmmaus":[
     {
+            "projectColorClass":"project-emmaus",
             "titre":"Emmaüs Strasbourg",
             "image":"img/emmaus/projet-emmaus-0.jpg",
             "imageAlt":"Projet Emmaus Strasbourg",
@@ -134,6 +136,7 @@
 
     "projetCodecats":[
     {
+            "projectColorClass":"project-codecats",
             "titre":"Codecats",
             "image":"img/codecats/projet-fac-accueil.jpg",
             "imageAlt":"Projet Universitaire Master 2",
@@ -168,6 +171,7 @@
 
     "projetVijump":[
     {
+            "projectColorClass":"project-vijump",
             "titre":"ViJump",
             "image":"img/vijump/projet-vijump-landing.jpg",
             "imageAlt":"Projet ViJump page d'accueil",

@@ -1,7 +1,8 @@
-{% extends "layout.html" %}
+{% extends "index-layout.html" %}
 {% block content %}
-	{% for projet in projetVijump %}
-		<section class="bigSlice headroom--projects">
+{% for projet in projetVijump %}
+<section class="{{projet.projectColorClass}}">
+		<nav class="bigSlice headroom--projects">
 			<div class="project-nav gridClear">
 				<a href="index.html" class="grids--zero project-nav__item backHome">
 					<i class="fa fa-home project-nav__icon"></i>
@@ -20,8 +21,7 @@
 					<i class="fa fa-arrow-right project-nav__icon"></i>
 				</a>
 			</div>
-		</section>
-		<section class="bigSlice bigSlice--single-project slicePad--v--top">
+		</nav>
 			<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
 			<div class="maxWrapper slicePad--h">
 				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
@@ -63,11 +63,12 @@
 				<div class="maxWrapper slicePad--h slicePad--v">
 					<p class="center project-max-text">{{projet.textePostLien}}</p>
 				</div>
-				<div class="maxWrapper-project--full-image center">
+				<div class="maxWrapper-project--full-image center gridClear">
 					{% for image in projet.images %}
 						<div class="grids--zero project-full-image">
 							<img src="{{image.originale}}" class="img--resp"
-							srcset="{{image.imagesSrcset}}" />
+							srcset="{{image.imagesSrcset}}"
+							sizes="{{image.sizes}}" />
 						</div>
 					{% endfor %}
 				</div>
@@ -79,11 +80,11 @@
 						Vers {{projet.titre}}
 					</span>
 				</a>
-				<div class="gridClear">
-					<div class="grids--zero g-2 t-center">PREVIOUS</div>
-					<div class="grids--zero g-2 t-center">NEXT</div>
-				</div>
 			</section>
-		</section>
-	{% endfor %}
+		{% endfor %}
+
+		{% import "macros/pagination.html" as bottomNav %}
+		{{bottomNav.active(currentPage="lastProject", linkPrevious="codecats.html")}}
+
+</section>
 {% endblock %}

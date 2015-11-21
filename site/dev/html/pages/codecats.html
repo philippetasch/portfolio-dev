@@ -1,27 +1,27 @@
-{% extends "layout.html" %}
+{% extends "index-layout.html" %}
 {% block content %}
 	{% for projet in projetCodecats %}
-		<section class="bigSlice headroom--projects">
-			<div class="project-nav gridClear">
-				<a href="index.html" class="grids--zero project-nav__item backHome">
-					<i class="fa fa-home project-nav__icon"></i>
-					<span class="project-nav__text">Accueil</span>
-				</a>
-				<a href="projets.html" class="grids--zero project-nav__item backProjects">
-					<i class="fa fa-flask project-nav__icon"></i>
-					<span class="project-nav__text">Projets</span>
-				</a>
-				<a href="#" class="grids--zero project-nav__item previousWork">
-					<i class="fa fa-arrow-left project-nav__icon"></i>
-					<span class="project-nav__text">Précédent</span>
-				</a>
-				<a href="#" class="grids--zero project-nav__item nextWork">
-					<span class="project-nav__text">Suivant</span>
-					<i class="fa fa-arrow-right project-nav__icon"></i>
-				</a>
-			</div>
-		</section>
-		<section class="bigSlice bigSlice--single-project slicePad--v--top">
+		<section class="{{projet.projectColorClass}}">
+			<nav class="bigSlice headroom--projects">
+				<div class="project-nav gridClear">
+					<a href="index.html" class="grids--zero project-nav__item backHome">
+						<i class="fa fa-home project-nav__icon"></i>
+						<span class="project-nav__text">Accueil</span>
+					</a>
+					<a href="projets.html" class="grids--zero project-nav__item backProjects">
+						<i class="fa fa-flask project-nav__icon"></i>
+						<span class="project-nav__text">Projets</span>
+					</a>
+					<a href="#" class="grids--zero project-nav__item previousWork">
+						<i class="fa fa-arrow-left project-nav__icon"></i>
+						<span class="project-nav__text">Précédent</span>
+					</a>
+					<a href="#" class="grids--zero project-nav__item nextWork">
+						<span class="project-nav__text">Suivant</span>
+						<i class="fa fa-arrow-right project-nav__icon"></i>
+					</a>
+				</div>
+			</nav>
 			<h1 class="h1 h1--bigSlice slicePad--v--bottom slicePad--h">{{projet.titre}}</h1>
 			<div class="maxWrapper slicePad--h">
 				<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
@@ -63,11 +63,12 @@
 				<div class="maxWrapper slicePad--h slicePad--v">
 					<p class="center project-max-text">{{projet.textePostLien}}</p>
 				</div>
-				<div class="maxWrapper-project--full-image center">
+				<div class="maxWrapper-project--full-image center gridClear">
 					{% for image in projet.images %}
 						<div class="grids--zero project-full-image">
 							<img src="{{image.originale}}" class="img--resp"
-							srcset="{{image.imagesSrcset}}" />
+							srcset="{{image.imagesSrcset}}"
+							sizes="{{image.sizes}}" />
 						</div>
 					{% endfor %}
 				</div>
@@ -79,17 +80,9 @@
 						Vers {{projet.titre}}
 					</span>
 				</a>
-				<div class="gridClear">
-					<div class="grids--zero g-2--zero t-center slicePad--v project-previous">
-						<i class="fa fa-arrow-left project-nav__icon"></i>
-						<span class="project-nav__text">Précédent</span>
-					</div>
-					<div class="grids--zero g-2--zero t-center slicePad--v project-next">
-						<span class="project-nav__text">Suivant</span>
-						<i class="fa fa-arrow-right project-nav__icon"></i>
-					</div>
-				</div>
 			</section>
-		</section>
-	{% endfor %}
+		{% endfor %}
+		{% import "macros/pagination.html" as bottomNav %}
+		{{bottomNav.active(currentPage="Codecats", linkPrevious="emmaus.html", linkNext="vijump.html")}}
+	</section>
 {% endblock %}

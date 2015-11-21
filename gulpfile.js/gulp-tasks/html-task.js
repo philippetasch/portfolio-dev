@@ -18,13 +18,15 @@ return function () {
     plugins.nunjucksRender.nunjucks.configure([htmlPaths.src], {watch: false});
     gulp.src(htmlPaths.templates)
     .pipe(plugins.plumber())
+
     // Renders template with nunjucks
     .pipe(plugins.data(function() {
 
       return JSON.parse(fs.readFileSync(htmlPaths.jsonData, 'utf8'))
 
     }))
-  .pipe(plugins.nunjucksRender())
+        .pipe(plugins.nunjucksRender())
+
   .pipe(gulp.dest(htmlPaths.dest))
   };
 };

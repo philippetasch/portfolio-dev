@@ -1,6 +1,22 @@
-{% macro active(activePage='index') %}
-<nav>
-  <a href="#" class="{% if activePage == 'index' %} active {% endif %}">Home</a>
-  <!-- Repeat for about and contact -->
-</nav>
+{% macro active(currentPage='project') %}
+<section class="bigSlice headroom--projects">
+	<div class="project-nav gridClear">
+		<a href="index.html" class="grids--zero project-nav__item backHome">
+			<i class="fa fa-home project-nav__icon"></i>
+			<span class="project-nav__text">Accueil</span>
+		</a>
+		<a href="projets.html" class="grids--zero project-nav__item backProjects">
+			<i class="fa fa-flask project-nav__icon"></i>
+			<span class="project-nav__text">Projets</span>
+		</a>
+		<a href="#" class="grids--zero project-nav__item previousWork">
+			<i class="fa fa-arrow-left project-nav__icon"></i>
+			<span class="project-nav__text">Précédent</span>
+		</a>
+		<a href="#" class="grids--zero project-nav__item nextWork">
+			<span class="project-nav__text">Suivant</span>
+			<i class="fa fa-arrow-right project-nav__icon"></i>
+		</a>
+	</div>
+</section>
 {% endmacro %}

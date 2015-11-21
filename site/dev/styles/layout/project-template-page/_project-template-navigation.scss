@@ -1,0 +1,169 @@
+.project-nav{
+
+	text-align: center;
+}
+
+.headroom--projects{
+
+	@include rem2px(margin-bottom, 2);
+}
+
+.project-nav__item{
+
+	@include lonm(4);
+
+	color: $bigSlice--skills;
+	@include rem2px(line-height, 7);
+	text-decoration: none;
+
+	transition: color .35s ease-in,
+				background-color .35s ease-in;
+
+	@include f-a{
+
+			color: $bigSlice--about;
+	}
+
+	@include snap(large){
+
+		@include rem2px(line-height, 11);
+
+		&:hover{
+
+			color: $bigSlice--about;
+			transition: color .35s ease-in,
+						background-color .35s ease-in;
+		}
+
+	}
+
+}
+
+.project-nav__text{
+
+	display: none;
+
+	@include snap(small-medium){
+
+		display: inline-block;
+		margin-left: 10px;
+		font-family: Roboto Slab;
+		font-size: 105%;
+
+	}
+
+	@include snap(medium){
+
+		font-size: 115%;
+	}
+}
+
+.backHome{
+
+	color: $nav__link--1--bgc;
+	
+	@include f-a{
+
+			background-color: $nav__link--1--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--1--bgc;
+		}
+	}
+
+}
+
+.backProjects{
+
+	color: $nav__link--3--bgc;
+
+	@include f-a{
+
+			background-color: $nav__link--3--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--3--bgc;
+		}
+	}
+
+}
+
+.previousWork{
+
+	color: $nav__link--2--bgc;
+	
+	@include f-a{
+
+
+			background-color: $nav__link--2--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--2--bgc;
+		}
+	}
+
+}
+
+.nextWork{
+
+	color: $nav__link--4--bgc;
+
+	@include f-a{
+
+			background-color: $nav__link--4--bgc;
+			
+	}
+
+	@include snap(large){
+
+		&:hover{
+
+			background-color: $nav__link--4--bgc;
+		}
+	}
+
+}
+
+.project-nav__item:last-child{
+
+	@include snap(small-medium){
+
+			& .project-nav__text{
+
+				margin: 0 10px 0 0;
+			}
+
+			& .project-nav__icon{
+
+				margin: 0 0 0 10px;
+			}
+	}
+}
+
+.fa.project-nav__icon{
+
+	font-size: 200%;
+
+	@include snap(small-medium){
+		margin-right: 10px;
+	}
+
+}
+
+.project-nav__text,
+.fa.project-nav__icon{
+
+	vertical-align: middle;
+}

@@ -50,7 +50,7 @@
 
             "browser": ["firefox"],
 
-            "online": "false",
+            "online": "true",
 
             "host": "192.168.0.12"
 
@@ -61,6 +61,7 @@
             "templates": "/pages/*.html",
             "layout":"/templates/layout.html",
             "partials": "/templates/partials/*.html",
+            "macros":"/templates/macros/*.html",
             "jsonData": "/data/data.json"
         },
 

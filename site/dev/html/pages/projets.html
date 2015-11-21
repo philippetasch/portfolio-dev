@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "index-layout.html" %}
 {% block content %}
     <section id="projects" class="bigSlice bigSlice--projects--page wholePageSlice accomodateFooter gridClear count-projects">
         <div class="maxWrapper slicePad--v">
@@ -7,7 +7,6 @@
                 <span class="project-nav__text">Accueil</span>
             </a>
         </div>
-
             {% for projet in projets %}
                 <div class="grids--zero g-3--zero tiles tiles--projects">
                     <a href="{{projet.lien}}" class="ratio--abs tiles__overlay">
