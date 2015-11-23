@@ -3,40 +3,108 @@
 	text-align: center;
 }
 
-.headroom--projects{
-
-	@include rem2px(margin-bottom, 2);
-}
-
 .project-nav__item{
 
 	@include lonm(4);
-
-	color: $bigSlice--skills;
+	color: $bigSlice--contact;
 	@include rem2px(line-height, 7);
 	text-decoration: none;
 
-	transition: color .35s ease-in,
-				background-color .35s ease-in;
+	@include snap(small-medium){
 
-	@include f-a{
+		@include f-a{
 
-			color: $bigSlice--about;
+			background-color: none;
 	}
+}
 
 	@include snap(large){
 
 		@include rem2px(line-height, 11);
 
-		&:hover{
-
-			color: $bigSlice--about;
-			transition: color .35s ease-in,
-						background-color .35s ease-in;
-		}
-
 	}
 
+}
+
+.backHome:hover .project-nav__icon,
+.backProjects:hover .project-nav__icon{
+
+	@include snap(large){
+
+			animation : shake .85s linear forwards;
+	}
+}
+
+@keyframes shake{
+
+	0%{
+
+		transform: translateY(0px) scale(1) rotate(0deg);
+	}
+
+	20%{
+
+		transform: translateY(-5px) scale(1.1) rotate(15deg);
+	}
+
+	40%{
+
+		transform: translateY(-5px) scale(1) rotate(-15deg);
+	}
+
+	60%{
+
+		transform: translateY(-5px) scale(1) rotate(15deg);
+	}
+
+	80%{
+
+		transform: translateY(-5px) scale(1.1) rotate(-15deg);
+	}
+
+	100%{
+
+		transform: translateY(0px) scale(1) rotate(0deg);
+
+	}
+}
+
+.previousWork:hover .project-nav__icon,
+.nextWork:hover .project-nav__icon{
+
+	@include snap(large){
+
+			animation : point .85s linear forwards;
+	}
+}
+
+@keyframes point{
+
+	0%{
+
+		transform: translateX(0px);
+	}
+
+	25%{
+
+		transform: translateX(-7px);
+	}
+
+	50%{
+
+		transform: translateX(7px);
+	}
+
+	75%{
+
+		transform: translateX(-7px);
+	}
+
+	100%{
+
+		transform: translateX(0px);
+
+	}
 }
 
 .project-nav__text{
@@ -47,31 +115,34 @@
 
 		display: inline-block;
 		margin-left: 10px;
+		text-transform: uppercase;
 		font-family: Roboto Slab;
-		font-size: 105%;
+		font-weight: 900;
+		letter-spacing: 1px;
 
 	}
 
 	@include snap(medium){
 
-		font-size: 115%;
+		font-size: 105%;
+		transition: color .25s linear;
+
 	}
 }
 
 .backHome{
 
-	color: $nav__link--1--bgc;
-	
-	@include f-a{
+	.project-nav__icon{
 
-			background-color: $nav__link--1--bgc;
+		color: $nav__link--1--bgc;
+
 	}
-
 	@include snap(large){
 
-		&:hover{
+		&:hover .project-nav__text{
 
-			background-color: $nav__link--1--bgc;
+			color: $nav__link--1--bgc;
+
 		}
 	}
 
@@ -79,18 +150,16 @@
 
 .backProjects{
 
-	color: $nav__link--3--bgc;
+	.project-nav__icon{
 
-	@include f-a{
+		color: $nav__link--3--bgc;
 
-			background-color: $nav__link--3--bgc;
 	}
-
 	@include snap(large){
 
-		&:hover{
+		&:hover .project-nav__text{
 
-			background-color: $nav__link--3--bgc;
+			color: $nav__link--3--bgc;
 		}
 	}
 
@@ -98,19 +167,16 @@
 
 .previousWork{
 
-	color: $nav__link--2--bgc;
-	
-	@include f-a{
+	.project-nav__icon{
 
-
-			background-color: $nav__link--2--bgc;
+		color: $nav__link--2--bgc;
 	}
 
 	@include snap(large){
 
-		&:hover{
+		&:hover .project-nav__text{
 
-			background-color: $nav__link--2--bgc;
+			color: $nav__link--2--bgc;
 		}
 	}
 
@@ -118,25 +184,24 @@
 
 .nextWork{
 
-	color: $nav__link--4--bgc;
+	.project-nav__icon{
 
-	@include f-a{
+		color: $nav__link--4--bgc;
 
-			background-color: $nav__link--4--bgc;
-			
 	}
 
 	@include snap(large){
 
-		&:hover{
+		&:hover .project-nav__text{
 
-			background-color: $nav__link--4--bgc;
+			color: $nav__link--4--bgc;
 		}
 	}
 
 }
 
-.project-nav__item:last-child{
+.nextWork,
+.pagination-link--next{
 
 	@include snap(small-medium){
 

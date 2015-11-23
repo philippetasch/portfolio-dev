@@ -1,14 +1,14 @@
 {% extends "index-layout.html" %}
 {% block content %}
     <section id="projects" class="bigSlice bigSlice--projects--page wholePageSlice accomodateFooter gridClear count-projects">
-        <div class="maxWrapper slicePad--v">
-            <a href="index.html" class=" retour project-nav__item backHome">
-                <i class="fa fa-home project-nav__icon"></i>
-                <span class="project-nav__text">Accueil</span>
+        
+            <a href="index.html" class="retour backHome">
+                <i class="fa fa-arrow-left project-nav__icon"></i>
+                <span class="retour__text">Accueil</span>
             </a>
-        </div>
+        
             {% for projet in projets %}
-                <div class="grids--zero g-3--zero tiles tiles--projects">
+                <div class={% if loop.first %}" c-left grids--zero g-3--zero tiles tiles--projects"{% else %}"grids--zero g-3--zero tiles tiles--projects"{% endif %}>
                     <a href="{{projet.lien}}" class="ratio--abs tiles__overlay">
                         <div class="tiles__title">
                             <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
@@ -22,4 +22,5 @@
             {% endfor %}
 
     </section>
+    {% include "partials/footer.html" %}
 {% endblock %}

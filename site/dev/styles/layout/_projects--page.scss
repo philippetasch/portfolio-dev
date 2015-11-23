@@ -5,8 +5,25 @@
 
 .retour{
 
-	display: block;
+	float: left;
 	text-align: center;
+	@include rem2px(padding, 3rem);
+}
+
+.retour__text{
+
+	display: inline-block;
+		margin-left: 10px;
+
+		text-transform: uppercase;
+		font-family: Roboto Slab;
+
+	@include snap(medium){
+
+		font-size: 105%;
+		transition: color .35s linear;
+
+	}
 }
 
 .count-projects{

@@ -1,10 +1,98 @@
+.pagination{
+
+	@include  rem2px(margin-top, 3);
+}
+
 .pagination-link{
 
 	display: block;
 	color: #fff;
+	overflow: hidden;
+
+	position: relative;
+	z-index: 10;
+
+	&:before{
+
+			content:"";
+			position: absolute;
+			z-index: -10;
+			top: 0;
+			height: 100%;
+			background-color: $bigSlice--contact;
+			transition: transform .45s linear;
+			transform: translateX(0px) skew(-15deg) scaleX(0);
+		}
+
+	&--previous:before{
+
+			left: 25%;
+			width: 50%;
+	}
+
+	&--next:before{
+
+			right: 25%;
+			width: 50%;
+	}
+
 }
 
-.pagination-link--next{
+.pagination-link{
 
-	background-color: #587CA0;
+	&--previous:hover:before{
+
+		transform: translateX(5%) skew(-15deg) scaleX(2.2);
+
+	}
+
+	&--next:hover:before{
+
+		transform: translateX(-5%) skew(-15deg) scaleX(2.2);
+	}
 }
+
+.pagination-link--previous:hover .project-nav__icon,
+.pagination-link--next:hover .project-nav__icon{
+
+	@include snap(large){
+
+			animation : point .85s linear forwards;
+	}
+}
+
+@keyframes point{
+
+	0%{
+
+		transform: translateX(0px);
+	}
+
+	25%{
+
+		transform: translateX(-7px);
+	}
+
+	50%{
+
+		transform: translateX(7px);
+	}
+
+	75%{
+
+		transform: translateX(-7px);
+	}
+
+	100%{
+
+		transform: translateX(0px);
+
+	}
+}
+
+
+/* see project-template-navigation
+
+	nextWork styles
+
+*/

@@ -5,9 +5,9 @@
 		max-width: 90%;
 	}
 
-	@include snap(small-medium){
+	@include snap(veryLarge){
 
-		max-width: 85%;
+		max-width: 100%;
 	}
 
 }

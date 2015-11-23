@@ -228,6 +228,11 @@
 		background-color:  $nav__link--2--bgc;
 		color: darken($bigSlice--skills, 15%);
 
+		&:before{
+
+			transform: translateX(100%) skew(15deg);
+		}
+
 		.lien__texte:after{
 
 			background-color: darken($bigSlice--skills, 15%);

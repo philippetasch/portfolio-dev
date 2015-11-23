@@ -36,12 +36,12 @@
     "competences": [
     {
     "competenceIconType": "fa-html5",
-    "competenceTitleText":"HTML5, CSS3",
+    "competenceTitleText":"HTML5 / CSS3",
     "competenceText":"J'ai acquis de très bonnes compétences en HTML5 ainsi qu'en CSS3, que j'utilise au mieux dans mes réalisations. Je tire pleinement parti de ces nouvelles technologies tout en gardant la compatibilité et la performance à l'esprit. J'ai également des bases en JavaScript et en PHP grâces auxquelles je sais me repérer lorsque j'y suis confronté."
     },
     {
     "competenceIconType" : "fa-code",
-    "competenceTitleText":"GULP, SASS",
+    "competenceTitleText":"GULP / SASS",
     "competenceText":"Lors de mes pérégrinations sur le net, j'ai découvert deux outils qui m'ont été d'un secours immense, et m'ont fait gagner un temps précieux lors de mes projets. GULP est un exécuteur de tâches qui permet d'automatiser son workflow, alors que SASS est un préprocesseur CSS permettant d'allier langages de scripts au CSS et d'en changer drastiquement l'écriture."
     },
     {
@@ -51,7 +51,7 @@
     },
     {
     "competenceIconType": "fa-file-image-o",
-    "competenceTitleText":"Photoshop, Illustrator",
+    "competenceTitleText":"Photoshop / Illustrator",
     "competenceText":"Étant amené à réaliser divers contenus graphiques tels que des maquettes, des logos ou encore des mock-ups, j'ai recours à des logiciels tels qu'adobe Photoshop ou adobe Illustrator. J'ai également quelques expériences d'utilisation d'adobe Premiere Pro et InDesign. "
     },
     {
@@ -61,7 +61,7 @@
     },
     {
     "competenceIconType": "fa-google",
-    "competenceTitleText":"Gestion de projet, SEO",
+    "competenceTitleText":"Gestion de projet / SEO",
     "competenceText":"Initié au domaine de la gestion de projet, j'ai pleinement conscience des différentes étapes par lesquelles passe la réalisation d'un site web et des contraintes pouvant survenir lors de la réalisation d'un projet. Le référencement ne m'est pas inconnu; je suis capable de rédiger des textes optimisés pour les moteurs de recherche."
     }
   ],
@@ -100,7 +100,7 @@
             "image":"img/emmaus/projet-emmaus-0.jpg",
             "imageAlt":"Projet Emmaus Strasbourg",
             "sousTitre":"Projet de refonte du site Emmaüs Strasbourg",
-            "texteIntro":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master Caweb. Afin de mener à bien la refonte, l'équipe de quatre personnes au sein de laquelle j'occupais le poste d'intégrateur et de traducteur a opté pour Wordpress comme système de gestion de contenu. Le site est actuellement en mainteance et non disponsible.",
+            "texteIntro":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master CAWEB. Une équipe de quatre personnes, dont moi, avons réorganisé et traduit le contenu de tout le site, ainsi que procédé à une refonte graphique complète. Il s'agit de ma toute première expérience dans le domaine du web. Le site est actuellement en mainteance et non disponsible.",
             "infos":{
                 "date" : "2013-2014",
                 "duree" : "4 mois",
@@ -130,7 +130,7 @@
 
             }
             ],
-            "textePostLien": "Quatres maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette.Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.",
+            "textePostLien": "Quatre maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.Quatre maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.",
             "textePostImages":"Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines. Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand. J'étais en charge d'une partie de la traduction vers l'anglais et ai contribué à la traduction vers l'allemand."
     }],
 
