@@ -1,22 +1,39 @@
-{% macro active(currentPage='project') %}
-<section class="bigSlice headroom--projects">
-	<div class="project-nav gridClear">
-		<a href="index.html" class="grids--zero project-nav__item backHome">
+{% macro active(currentPage, linkPrevious, linkNext) %}
+<nav class="project-nav gridClear slicePad--v">
+		<a href="index.html" class="
+		{% if currentPage == 'firstProject' %} grids--zero project-nav__item--not-all project-nav__item backHome
+		{% elif currentPage == 'lastProject' %} grids--zero project-nav__item--not-all project-nav__item backHome
+		{% else %} grids--zero project-nav__item project-nav__item--all backHome
+		{% endif %}
+		">
 			<i class="fa fa-home project-nav__icon"></i>
 			<span class="project-nav__text">Accueil</span>
 		</a>
-		<a href="projets.html" class="grids--zero project-nav__item backProjects">
+		<a href="projets.html" class="
+		{% if currentPage == 'firstProject' %} grids--zero project-nav__item--not-all project-nav__item backProjects
+		{% elif currentPage == 'lastProject' %} grids--zero project-nav__item--not-all project-nav__item backProjects
+		{% else %} grids--zero project-nav__item project-nav__item--all backProjects
+		{% endif %}
+		">
 			<i class="fa fa-flask project-nav__icon"></i>
 			<span class="project-nav__text">Projets</span>
 		</a>
-		<a href="#" class="grids--zero project-nav__item previousWork">
+		<a href="{{ linkPrevious }}" class="
+		{% if currentPage == 'firstProject' %} hidden {% elif currentPage == 'lastProject' %} grids--zero project-nav__item--not-all project-nav__item previousWork
+		{% else %} grids--zero project-nav__item project-nav__item--all previousWork
+		{% endif %}
+		">
 			<i class="fa fa-arrow-left project-nav__icon"></i>
 			<span class="project-nav__text">Précédent</span>
 		</a>
-		<a href="#" class="grids--zero project-nav__item nextWork">
+		<a href="{{ linkNext }}" class="
+		{% if currentPage == 'firstProject' %} grids--zero project-nav__item--not-all project-nav__item nextWork
+		{% elif currentPage == 'lastProject' %} hidden
+		{% else %} grids--zero project-nav__item project-nav__item--all nextWork
+		{% endif %}
+		">
 			<span class="project-nav__text">Suivant</span>
 			<i class="fa fa-arrow-right project-nav__icon"></i>
 		</a>
-	</div>
-</section>
+</nav>
 {% endmacro %}

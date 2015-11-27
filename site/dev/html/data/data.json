@@ -69,16 +69,17 @@
   "projets": [
 
     {
-        "lien":"emmaus.html",
-        "nom": "Emmaüs Strasbourg",
-        "objet":"Refonte site Emmaus Strasbourg",
-        "image":"emmaus"
-    },
-    {
+
         "lien":"codecats.html",
         "nom": "Codecats",
         "objet":"Projet universitaire Master 2",
         "image":"mini-project"
+    },
+    {
+        "lien":"emmaus.html",
+        "nom": "Emmaüs Strasbourg",
+        "objet":"Refonte site Emmaus Strasbourg",
+        "image":"emmaus"
     },
     {
         "lien":"vijump.html",
@@ -88,7 +89,7 @@
     },
     {
         "nom":"Site Portfolio",
-        "objet":"Création de mon site portfolio",
+        "objet":"Porfolio (en construction)",
         "image":"portfolio"
     }
     ],
@@ -100,7 +101,7 @@
             "image":"img/emmaus/projet-emmaus-0.jpg",
             "imageAlt":"Projet Emmaus Strasbourg",
             "sousTitre":"Projet de refonte du site Emmaüs Strasbourg",
-            "texteIntro":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master CAWEB. Une équipe de quatre personnes, dont moi, avons réorganisé et traduit le contenu de tout le site, ainsi que procédé à une refonte graphique complète. Il s'agit de ma toute première expérience dans le domaine du web. Le site est actuellement en mainteance et non disponsible.",
+            "texteIntro":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master CAWEB. Une équipe de quatre personnes, dont moi, avons réorganisé et traduit le contenu de tout le site, ainsi que procédé à une refonte graphique complète. Il s'agit de ma toute première expérience dans le domaine du web. Le site est actuellement en maintenance et non disponible.",
             "infos":{
                 "date" : "2013-2014",
                 "duree" : "4 mois",
@@ -113,24 +114,24 @@
             {
 
                 "originale":"img/emmaus/projet-emmaus-evenements.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w",
-                                "sizes":"(min-width: 1024px) 1024px,(min-width: 700px) 600px,(min-width: 350px) 400px"
+                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w",
+                                "sizes":"(min-width: 1024px) 1024px,(min-width: 800px) 600px,(min-width: 350px) 400px"
 
             },
             {
                 "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w",
+                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w",
                                 "sizes":"(min-width: 1024px) 1024px,(min-width: 800px) 600px,(min-width: 350px) 400px"
 
             },
             {
                 "originale":"img/emmaus/projet-emmaus-activite.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w",
+                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w",
                                 "sizes":"(min-width: 1024px) 1024px,(min-width: 800px) 600px,(min-width: 350px) 400px"
 
             }
             ],
-            "textePostLien": "Quatre maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.Quatre maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.",
+            "textePostLien": "Quatre maquettes ont été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous avons intégré la maquette en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Les objectifs principaux étaient une meilleure répartition du contenu, une refonte graphique complète ainsi qu'une traduction vers l'allemand et l'anglais.",
             "textePostImages":"Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines. Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand. J'étais en charge d'une partie de la traduction vers l'anglais et ai contribué à la traduction vers l'allemand."
     }],
 
@@ -141,7 +142,7 @@
             "image":"img/codecats/projet-fac-accueil.jpg",
             "imageAlt":"Projet Universitaire Master 2",
             "sousTitre":"Projet universitaire : Codecats",
-            "texteIntro":"Projet universitaire de deuxième année de master CAWEB. Le but était de mettre en pratique toutes les connaissances acquises durant la première année, et de créer un site à partir de zéro sans utiliser de système de gestion de contenu ou de framework css. Encore juste une phrase comme ça pour voir si je peux remplir ce qui reste. Ah bah oui.<br/>",
+            "texteIntro":"Projet universitaire de deuxième année de master CAWEB. Le but était de mettre en pratique toutes les connaissances acquises durant la première année, et de créer un site à partir de zéro sans utiliser de système de gestion de contenu ou de framework css. ",
             "infos":{
                 "date" : "2014",
                 "duree" : "5 semaines",

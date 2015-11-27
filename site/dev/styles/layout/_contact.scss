@@ -114,3 +114,14 @@
 
 	}
 }
+
+
+.contact__text{
+
+	@include snap(medium){
+
+		@include rem2px(font-size, 2);
+
+	}
+}
+

@@ -3,24 +3,8 @@
 	{% for projet in projetEmmaus %}
 		<section class="{{projet.projectColorClass}}">
 			<div class="maxWrapper slicePad--h">
-				<nav class="project-nav gridClear slicePad--v">
-						<a href="index.html" class="grids--zero project-nav__item backHome">
-							<i class="fa fa-home project-nav__icon"></i>
-							<span class="project-nav__text">Accueil</span>
-						</a>
-						<a href="projets.html" class="grids--zero project-nav__item backProjects">
-							<i class="fa fa-flask project-nav__icon"></i>
-							<span class="project-nav__text">Projets</span>
-						</a>
-						<a href="#" class="grids--zero project-nav__item previousWork">
-							<i class="fa fa-arrow-left project-nav__icon"></i>
-							<span class="project-nav__text">Précédent</span>
-						</a>
-						<a href="#" class="grids--zero project-nav__item nextWork">
-							<span class="project-nav__text">Suivant</span>
-							<i class="fa fa-arrow-right project-nav__icon"></i>
-						</a>
-				</nav>
+					{% import "macros/nav-macro.html" as topNav %}
+					{{topNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="vijump.html")}}
 				<div>
 					<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 				</div>
@@ -55,7 +39,7 @@
 				</div>
 				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
 					<span class="lien__texte">
-						Vers {{projet.titre}}
+						 Lien indisponible
 					</span>
 				</a>
 			</section>
@@ -74,6 +58,6 @@
 			</section>
 		{% endfor %}
 		{% import "macros/pagination.html" as bottomNav %}
-		{{bottomNav.active(currentPage="firstProject", linkNext="codecats.html")}}
+		{{bottomNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="vijump.html")}}
 	</section>
 {% endblock %}

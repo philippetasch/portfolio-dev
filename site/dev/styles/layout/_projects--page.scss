@@ -8,15 +8,24 @@
 	float: left;
 	text-align: center;
 	@include rem2px(padding, 3rem);
+			color: $nav__link--3--bgc;
+
+}
+
+.bigSlice--projects--page .retour .project-nav__icon{
+
+			color: $nav__link--3--bgc;
+
 }
 
 .retour__text{
 
 	display: inline-block;
 		margin-left: 10px;
-
+		font-weight: 700;
 		text-transform: uppercase;
 		font-family: Roboto Slab;
+		vertical-align: middle;
 
 	@include snap(medium){
 

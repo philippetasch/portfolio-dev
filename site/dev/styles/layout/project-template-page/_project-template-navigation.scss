@@ -5,18 +5,27 @@
 
 .project-nav__item{
 
-	@include lonm(4);
 	color: $bigSlice--contact;
 	@include rem2px(line-height, 7);
 	text-decoration: none;
+
+	&--not-all{
+
+		width: 33.333%;
+	}
+
+	&--all{
+
+		width: 25%;
+	}
 
 	@include snap(small-medium){
 
 		@include f-a{
 
 			background-color: none;
+		}
 	}
-}
 
 	@include snap(large){
 
@@ -25,6 +34,7 @@
 	}
 
 }
+
 
 .backHome:hover .project-nav__icon,
 .backProjects:hover .project-nav__icon{
