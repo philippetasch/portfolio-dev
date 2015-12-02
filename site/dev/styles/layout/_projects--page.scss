@@ -21,11 +21,11 @@
 .retour__text{
 
 	display: inline-block;
-		margin-left: 10px;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-family: Roboto Slab;
-		vertical-align: middle;
+	margin-left: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: Roboto Slab;
+	vertical-align: middle;
 
 	@include snap(medium){
 
@@ -51,8 +51,13 @@
 		z-index: 1000;
 		width: 0px;
 		height: 0px;
-		border-left: 70px solid $nav__link--3--bgc;
-		border-bottom: 70px solid transparent;
+
+		@include snap(large){
+
+			border-left: 70px solid $nav__link--3--bgc;
+			border-bottom: 70px solid transparent;
+
+		}
 
 	}
 
@@ -62,8 +67,8 @@
 		content: "# " counter(number);
 		position: absolute;
 		z-index: 1000;
-		top: 0px;
-		left:0px;
+		top: 10px;
+		left:10px;
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
@@ -71,6 +76,22 @@
 		font-style: italic;
 		font-weight: 900;
 		color: $bigSlice--projects;
+
+		@include snap(large){
+
+			top:  0px;
+			left: 0px;
+		}
+
 	}
 }
 
+@include snap(large){
+
+	.tiles--projects:nth-of-type(3n+1):last-of-type{
+
+		float: none;
+		margin: auto;
+	}
+
+}

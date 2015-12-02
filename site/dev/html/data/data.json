@@ -82,15 +82,16 @@
         "image":"emmaus"
     },
     {
+        "lien":"site-perso-v1.html",
+        "nom":"Site Portfolio",
+        "objet":"Site CV V1",
+        "image":"portfolio"
+    },
+    {
         "lien":"vijump.html",
         "nom": "ViJump",
         "objet":"Refonte site et application ViJump",
         "image":"vijump"
-    },
-    {
-        "nom":"Site Portfolio",
-        "objet":"Porfolio (en construction)",
-        "image":"portfolio"
     }
     ],
 
@@ -108,7 +109,8 @@
                 "poste" : "Intégrateur, Traducteur",
                 "langages" : "HTML5, CSS3, PHP",
                 "outils" : "Wordpress",
-                "lien" : "#!"
+                "lien" : "#!",
+                "lien__texte":"Lien indisponible"
             },
             "images":[
             {
@@ -148,8 +150,9 @@
                 "duree" : "5 semaines",
                 "poste" : "Intégrateur, Designer",
                 "langages" : "HTML5, CSS3, PHP, JavaScript",
-                "outils" : "GulpJs",
-                "lien" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/"
+                "outils" : "SASS, GulpJs",
+                "lien" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
+                "lien__texte" : "Vers Codecats"
             },
             "images":[
                 {
@@ -183,8 +186,9 @@
                 "duree" : "6 mois",
                 "poste" : "Intégrateur, Designer",
                 "langages" : "HTML5, CSS3, JavaScript",
-                "outils" : "AngularJS, SourceTree (git)",
-                "lien" : "https://www.vijump.com/#!/"
+                "outils" : "SASS, AngularJS",
+                "lien" : "https://www.vijump.com/#!/",
+                "lien__texte":"Vers ViJump"
             },
             "images":[
             {
@@ -203,7 +207,42 @@
             ],
             "textePostLien": "Cette refonte est non seulement ma première expérience professionnelle dans le monde du web, mais aussi mon premier contact avec le framework Bootstrap. Je me suis assez rapidement habitué à son utilisation, qui permet de créer la structure - responsive - de base de tout site en un temps record.",
             "textePostImages":"L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants. C'est un projet en cours, mais n'hésitez pas à l'essayer dès maintenant!"
-    }]
+    }],
 
+    "projetPerso":[
+    {
+            "projectColorClass":"project-emmaus",
+            "titre":"Site CV - V1",
+            "image":"img/site_perso_v1/projet-site-perso-v1.jpg",
+            "imageAlt":"Site CV première version",
+            "sousTitre":"Réalisation de mon site CV",
+            "texteIntro":"Site personnel réalisé au cours de la deuxième année de Master CAWEB. J'ai entrepris la réalisation de ce site pour plusieurs raisons : me présener et disposer d'une plateforme qui permette un accès facile et rapide à mes réalisations, et surtout, parfaire mes connaissances en intégration.",
+            "infos":{
+                "date" : "2014",
+                "duree" : "2 mois",
+                "poste" : "Développeur, Designer",
+                "langages" : "HTML5, CSS3, JavaScript",
+                "outils" : "SASS, GulpJs, Nunjucks",
+                "lien" : "https://www.blargh.byethost31.com",
+                "lien__texte" :"Vers site CV V1"
+            },
+            "images":[
+            {
+
+                "originale":"img/emmaus/projet-emmaus-evenements.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-activite.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            }
+            ],
+            "textePostLien": "Cette première version se présentait sous la forme d'une simple page sur laquelle se trouvaient des détails concernant mon parcours et mes compétences, des liens directs vers mes projets, ainsi qu'un formulaire de contact. Le site était bien évidemment responsive et s'adaptait à différentes tailles d'écran. La navigation, simple, permettait d'accéder aux différentes sections de la page que ce soit sur écran d'ordinateur ou de mobile. <br/> J'ai opté pour des couleurs discrètes, beige et bleu-marine, que j'ai utilisées comme couleurs de fond des différentes sections de la page. Je me suis tourné vers une palette de couleurs plus vive pour les éléments de navigation, afin de créer un certain contraste avec le reste du site. Toutefois, j'ai vite trouvé que mon site portfolio était trop simple et pourrait bénéficier de nombreuses améliorations, qu'elles concernent le design ou le code. J'ai donc procédé à un ravalement de façade complet en mettant à profit des nouvelles compétences acquises au cours de la deuxième année de Master CAWEB. ",
+            "textePostImages":"Désormais le site n'est plus constitué d'une seule et unique page. Il comporte une page d'accueil, une page recensant  tous les projets ainsi qu'une page suppléentaire décrivant chaque projet.<br/> J'ai repris le code à zéro et ai apporté un nombre conséquent de modifications au design, tout gardant la palette de couleurs d'origine.<br/> J'ai pu rapidement créer, grâce à SASS, une grille CSS basique adaptée à mes besoins pour ce site. Plutôt que de limiter les couleurs plus vives à la navigation seule, j'ai fait le choix de les appliquer à chaque section afin de faire correspondre chaque onglet de navigation au contenu vers lequel il pointe. <br/> Côté HTML, le système de templates JavaScript Nunjucks s'est révélé être d'une grande utilité dans la construction de pages HTML statiques, puisqu'il m'a permis, de réduire des parties de pages à l'état de composants et ne les inclure que lorsque ils s'avèrent nécessaires. JSON est venu compléter le tableau : j'ai stocké la majorité des données textuelles dans un fichier JSON et ai injecté, via Gulp, toutes les données dans les templates Nunjucks au moment de la compilation. La séparation des balises HTML et de leur contenu me permet de garder un HTML propre et de n'avoir recours qu'au fichier JSON pour toute modification à apporter au contenu."
+    }]
 
 }

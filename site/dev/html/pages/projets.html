@@ -9,7 +9,7 @@
 
             {% for projet in projets %}
                 <div class={% if loop.first %}" c-left grids--zero g-3--zero tiles tiles--projects"{% else %}"grids--zero g-3--zero tiles tiles--projects"{% endif %}>
-                    <a href="{{projet.lien}}" class="ratio--abs tiles__overlay">
+                    <a href="{{projet.lien}}" class="tiles__overlay">
                         <div class="tiles__title">
                             <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
                             <p class="h4 h4--overlay">{{projet.objet}}</p>

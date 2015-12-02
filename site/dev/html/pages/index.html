@@ -51,10 +51,10 @@
     </section>
     <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
         <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
-        <div class="maxWrapper--projects gridClear slicePad--v--bottom">
+        <div class="maxWrapper--projects gridClear slicePad--v">
             {% for projet in projets %}
                 <div class="grids--zero g-4--zero tiles">
-                    <a href="{{projet.lien}}" class="ratio--abs tiles__overlay">
+                    <a href="{{projet.lien}}" class="tiles__overlay">
                         <div class="tiles__title">
                             <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
                             <p class="h4 h4--overlay">{{projet.objet}}</p>

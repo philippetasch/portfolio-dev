@@ -1,10 +1,10 @@
 {% extends "index-layout.html" %}
 {% block content %}
-	{% for projet in projetEmmaus %}
+	{% for projet in projetPerso %}
 		<section class="{{projet.projectColorClass}}">
 			<div class="maxWrapper slicePad--h">
 					{% import "macros/nav-macro.html" as topNav %}
-					{{topNav.active(currentPage="emmaus", linkPrevious="site-perso-v1.html", linkNext="vijump.html")}}
+					{{topNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="emmaus.html")}}
 				<div>
 					<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 				</div>
@@ -58,6 +58,6 @@
 			</section>
 		{% endfor %}
 		{% import "macros/pagination.html" as bottomNav %}
-		{{bottomNav.active(currentPage="emmaus", linkPrevious="site-perso-v1.html", linkNext="vijump.html")}}
+		{{bottomNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="emmaus.html")}}
 	</section>
 {% endblock %}

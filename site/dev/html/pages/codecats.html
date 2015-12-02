@@ -4,7 +4,7 @@
 		<section class="{{projet.projectColorClass}}">
 			<div class="maxWrapper slicePad--h">
 				{% import "macros/nav-macro.html" as topNav %}
-					{{topNav.active(currentPage="firstProject", linkNext="emmaus.html")}}
+					{{topNav.active(currentPage="firstProject", linkNext="site-perso-v1.html")}}
 				<div>
 					<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
 				</div>
@@ -39,7 +39,7 @@
 				</div>
 				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
 					<span class="lien__texte">
-						Vers {{projet.titre}}
+						 {{projet.infos.lien__texte}}
 					</span>
 				</a>
 			</section>
@@ -58,6 +58,6 @@
 			</section>
 		{% endfor %}
 		{% import "macros/pagination.html" as bottomNav %}
-		{{bottomNav.active(currentPage="firstProject", linkNext="emmaus.html")}}
+		{{bottomNav.active(currentPage="firstProject", linkNext="site-perso-v1.html")}}
 	</section>
 {% endblock %}

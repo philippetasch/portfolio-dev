@@ -175,12 +175,14 @@
 			&:nth-of-type(odd) .about__text{
 
 				border-right: 10px solid $nav__link--1--bgc;
+				box-shadow: 10px 10px rgba(#B62824, .5), -10px -10px rgba(#B62824, .2);
 
 			}
 
 			&:nth-of-type(even) .about__text{
 
 				border-left: 10px solid $nav__link--1--bgc;
+				box-shadow: 10px 10px rgba(#B62824, .2), -10px -10px rgba(#B62824, .5);
 
 			}
 
@@ -199,7 +201,6 @@
 
 		@include rem2px(padding, 1.5);
 		text-align: justify;
-		box-shadow: 10px 10px rgba(#B62824, .5), -10px -10px rgba(#B62824, .2);
 
 	}
 
