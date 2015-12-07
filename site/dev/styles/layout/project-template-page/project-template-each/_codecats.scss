@@ -1,0 +1,92 @@
+.project-codecats .bigSlice--project-info{
+
+	background-color: $codecats-info-bg;
+	border-color: $codecats-info-border;
+}
+
+.project-codecats .intro-info-wrapper{
+
+	&:after,
+	&:before{
+
+		background-color: $codecats-info-border;
+	}
+}
+
+.project-codecats .intro-title-info,
+.project-codecats .intro-lien-site{
+
+	background-color: $codecats-info-border;
+	color: $codecats-info-infos;
+}
+
+.project-codecats .intro-lien-site{
+
+@include snap(large){
+	@include h-f-a{
+
+		background-color: $codecats-info-infos;
+		color: $codecats-info-border;
+
+		.lien__texte:after{
+
+			background-color: $codecats-info-border;
+		}
+	}
+}
+}
+
+.project-codecats .lien__texte{
+
+	&:after{
+
+		background-color: $codecats-info-infos;
+	}
+}
+
+.project-codecats .rond{
+
+	background-color: $codecats-info-infos;
+
+	&:before{
+
+			color: $codecats-info-border;
+
+	}
+}
+
+.project-codecats .intro-info{
+
+	&:first-child .rond{
+
+		background-color: #F27935;
+	}
+
+	&:last-child .rond{
+
+		background-color: #00B16A;
+	}
+
+
+	&:before{
+
+			color: $codecats-info-border;
+
+	}
+}
+
+.project-codecats .project-max-text::first-letter{
+
+	background-color: $codecats-info-border;
+	color: $codecats-bg;
+}
+
+.project-codecats .pagination-link{
+
+		background-color: $codecats-info-bg;
+
+	&:before{
+
+		background-color: $codecats-info-border;
+	}
+}

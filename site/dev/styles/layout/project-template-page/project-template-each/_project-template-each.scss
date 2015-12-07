@@ -1,0 +1,33 @@
+/*
+*
+*  Overwrite template BG styles and whatnot
+*
+*
+*  Only imports and common styles here
+*
+*
+*/
+@import 'each-variables';
+@import 'emmaus';
+@import 'codecats';
+@import 'site-perso';
+@import 'vijump';
+
+.project-codecats,
+.project-vijump{
+
+	background-color: $codecats-bg;
+
+	& .project-full-image{
+
+	@include snap(medium){
+
+		&:nth-of-type(even) img{
+
+			border: 6px solid $codecats-bg;
+			transform: scale(1.1);
+		}
+
+	}
+}
+}

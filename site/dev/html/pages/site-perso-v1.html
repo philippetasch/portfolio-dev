@@ -6,7 +6,11 @@
 					{% import "macros/nav-macro.html" as topNav %}
 					{{topNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="emmaus.html")}}
 				<div>
-					<img src="{{projet.image}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"/>
+					{% for image in projet.imageMain %}
+					<img src="{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"
+							srcset="{{image.imagesSrcset}}"
+							sizes="{{image.imageSizes}}" />
+					{% endfor %}
 				</div>
 			</div>
 			<section class="bigSlice bigSlice--project-info slicePad--v--top">
@@ -46,7 +50,7 @@
 			<section class="bigSlice">
 					<p class="center project-max-text slicePad--h slicePad--v">{{projet.textePostLien}}</p>
 				<div class="maxWrapper-project--full-image center gridClear">
-					{% for image in projet.images %}
+					{% for image in projet.imagesTexte %}
 						<div class="grids--zero project-full-image">
 							<img src="{{image.originale}}" class="img--resp"
 							srcset="{{image.imagesSrcset}}"

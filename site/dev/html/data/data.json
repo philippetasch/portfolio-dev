@@ -8,26 +8,22 @@
     {
         "icone":"about__icon--left",
         "iconeClass":"fa-graduation-cap",
-        "class":"about__wrapper--left",
         "texte":"J'obtiens mon baccalauréat en sciences sociales en 2008, année lors de laquelle je viens m'installer à Strasbourg afin d'y poursuivre des études supérieures. J'opte pour une licence de «langues littératures et civilisations étrangères», en japonais. S'ensuivent quatre années de licence, dont l'une d'elles au Japon, à l'université d'Ôsaka, dans le cadre d'un échange inter-universitaire avec l'université de Strasbourg."
     },
     {
         "icone":"about__icon--right",
         "iconeClass":"fa-language",
-        "class":"about__wrapper--right",
         "texte":"Je rentre du Japon après une année d'études, et obtiens ma licence. Après quatre ans de japonais, j'ai envie de changer d'air, d'élargir mes horizons en quelque sorte. C'est alors que je découvre le master CAWEB, qui forme à la création de sites web multilingues sous toutes ses coutures. De la traduction technique à la localisation en passant par la gestion de projet sans oublier les fondamentaux : HTML, CSS, Javascript et bien d'autres! "
 
     },
     {
         "icone":"about__icon--left",
         "iconeClass":"fa-laptop",
-        "class":"about__wrapper--left",
         "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. J'effectue une veille technologique constante afin de me tenir informé des dernières nouveautés en matière de technologie web, que j'applique lors de la création de tout nouveau projet."
     },
     {
         "icone":"about__icon--right",
         "iconeClass":"fa-check",
-        "class":"about__wrapper--right",
         "texte":"Titulaire du diplôme de Master CAWEB, je dispose des connaissances nécessaires pour mener à bien la réalisation d'un site web.  Mon panel de connaissances en langues, dans le domaine du web, ainsi que dans la gestion de projet me permet de prendre part à de nombreuses étapes de la conception de sites. Rigoureux et motivé, je sais travailler en équipe et respecter les délais."
     }
 
@@ -99,7 +95,12 @@
     {
             "projectColorClass":"project-emmaus",
             "titre":"Emmaüs Strasbourg",
-            "image":"img/emmaus/projet-emmaus-0.jpg",
+            "imageMain":[{
+                "originale":"img/emmaus/emmaus-accueil@992.jpg",
+                "imagesSrcset":"img/emmaus/emmaus-accueil@480.jpg 480w,img/emmaus/emmaus-accueil@768.jpg 768w,img/emmaus/emmaus-accueil@992.jpg 992w,img/emmaus/emmaus-accueil@1170.jpg 1170w",
+                                "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px"
+            }
+            ],
             "imageAlt":"Projet Emmaus Strasbourg",
             "sousTitre":"Projet de refonte du site Emmaüs Strasbourg",
             "texteIntro":"La refonte du site d'Emmaus Strasbourg a été proposée comme projet de première année en Master CAWEB. Une équipe de quatre personnes, dont moi, avons réorganisé et traduit le contenu de tout le site, ainsi que procédé à une refonte graphique complète. Il s'agit de ma toute première expérience dans le domaine du web. Le site est actuellement en maintenance et non disponible.",
@@ -112,7 +113,7 @@
                 "lien" : "#!",
                 "lien__texte":"Lien indisponible"
             },
-            "images":[
+            "imagesTexte":[
             {
 
                 "originale":"img/emmaus/projet-emmaus-evenements.jpg",
@@ -141,7 +142,12 @@
     {
             "projectColorClass":"project-codecats",
             "titre":"Codecats",
-            "image":"img/codecats/projet-fac-accueil.jpg",
+            "imageMain":[{
+                "originale":"img/codecats/codecats@992.jpg",
+                "imagesSrcset":"img/codecats/codecats@480.jpg 480w,img/codecats/codecats@768.jpg 768w,img/codecats/codecats@992.jpg 992w,img/codecats/codecats@1170.jpg 1170w",
+                                "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px"
+            }
+            ],
             "imageAlt":"Projet Universitaire Master 2",
             "sousTitre":"Projet universitaire : Codecats",
             "texteIntro":"Projet universitaire de deuxième année de master CAWEB. Le but était de mettre en pratique toutes les connaissances acquises durant la première année, et de créer un site à partir de zéro sans utiliser de système de gestion de contenu ou de framework css. ",
@@ -154,7 +160,7 @@
                 "lien" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
                 "lien__texte" : "Vers Codecats"
             },
-            "images":[
+            "imagesTexte":[
                 {
 
                     "originale":"img/codecats/projet-fac-flex.jpg",
@@ -173,47 +179,16 @@
             "textePostImages":"Les animations CSS3 sont mises en avant dans le menu qui dévoile ses sous-catégories au survol, le tout agrémenté de transitions agréables à l'oeil. Les nouvelles balises HTML5 structurent le site pour un HTML plus sémantique et plus facilement interprétable par le navigateur. La rétrocompatibilité n'est pas mise de côté puisque le site est fonctionnel même sur Internet Explorer 7."
     }],
 
-    "projetVijump":[
-    {
-            "projectColorClass":"project-vijump",
-            "titre":"ViJump",
-            "image":"img/vijump/projet-vijump-landing.jpg",
-            "imageAlt":"Projet ViJump page d'accueil",
-            "sousTitre":"Projet de refonte de l'application ViJump",
-            "texteIntro":"ViJump est une start-up que j'ai intégrée pour mon stage de fin d'études. Je suis chargé de la refonte complète du site et de l'application de cette start-up aux projets prometteurs. Dès mon arrivée j'ai été chargé du design du logo et de la réalisation de la maquette. L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants.",
-            "infos":{
-                "date" : "2015",
-                "duree" : "6 mois",
-                "poste" : "Intégrateur, Designer",
-                "langages" : "HTML5, CSS3, JavaScript",
-                "outils" : "SASS, AngularJS",
-                "lien" : "https://www.vijump.com/#!/",
-                "lien__texte":"Vers ViJump"
-            },
-            "images":[
-            {
-
-                "originale":"img/emmaus/projet-emmaus-evenements.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w"
-            },
-            {
-                "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
-            },
-            {
-                "originale":"img/emmaus/projet-emmaus-activite.jpg",
-                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
-            }
-            ],
-            "textePostLien": "Cette refonte est non seulement ma première expérience professionnelle dans le monde du web, mais aussi mon premier contact avec le framework Bootstrap. Je me suis assez rapidement habitué à son utilisation, qui permet de créer la structure - responsive - de base de tout site en un temps record.",
-            "textePostImages":"L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants. C'est un projet en cours, mais n'hésitez pas à l'essayer dès maintenant!"
-    }],
-
     "projetPerso":[
     {
             "projectColorClass":"project-emmaus",
             "titre":"Site CV - V1",
-            "image":"img/site_perso_v1/projet-site-perso-v1.jpg",
+            "imageMain":[{
+                "originale":"img/site-perso-v1/site-perso-v1@992.jpg",
+                "imagesSrcset":"img/site-perso-v1/site-perso-v1@480.jpg 480w,img/site-perso-v1/site-perso-v1@768.jpg 768w,img/site-perso-v1/site-perso-v1@992.jpg 992w,img/site-perso-v1/site-perso-v1@1170.jpg 1170w",
+                                "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px"
+            }
+            ],
             "imageAlt":"Site CV première version",
             "sousTitre":"Réalisation de mon site CV",
             "texteIntro":"Site personnel réalisé au cours de la deuxième année de Master CAWEB. J'ai entrepris la réalisation de ce site pour plusieurs raisons : me présener et disposer d'une plateforme qui permette un accès facile et rapide à mes réalisations, et surtout, parfaire mes connaissances en intégration.",
@@ -226,7 +201,7 @@
                 "lien" : "https://www.blargh.byethost31.com",
                 "lien__texte" :"Vers site CV V1"
             },
-            "images":[
+            "imagesTexte":[
             {
 
                 "originale":"img/emmaus/projet-emmaus-evenements.jpg",
@@ -243,6 +218,46 @@
             ],
             "textePostLien": "Cette première version se présentait sous la forme d'une simple page sur laquelle se trouvaient des détails concernant mon parcours et mes compétences, des liens directs vers mes projets, ainsi qu'un formulaire de contact. Le site était bien évidemment responsive et s'adaptait à différentes tailles d'écran. La navigation, simple, permettait d'accéder aux différentes sections de la page que ce soit sur écran d'ordinateur ou de mobile. <br/> J'ai opté pour des couleurs discrètes, beige et bleu-marine, que j'ai utilisées comme couleurs de fond des différentes sections de la page. Je me suis tourné vers une palette de couleurs plus vive pour les éléments de navigation, afin de créer un certain contraste avec le reste du site. Toutefois, j'ai vite trouvé que mon site portfolio était trop simple et pourrait bénéficier de nombreuses améliorations, qu'elles concernent le design ou le code. J'ai donc procédé à un ravalement de façade complet en mettant à profit des nouvelles compétences acquises au cours de la deuxième année de Master CAWEB. ",
             "textePostImages":"Désormais le site n'est plus constitué d'une seule et unique page. Il comporte une page d'accueil, une page recensant  tous les projets ainsi qu'une page suppléentaire décrivant chaque projet.<br/> J'ai repris le code à zéro et ai apporté un nombre conséquent de modifications au design, tout gardant la palette de couleurs d'origine.<br/> J'ai pu rapidement créer, grâce à SASS, une grille CSS basique adaptée à mes besoins pour ce site. Plutôt que de limiter les couleurs plus vives à la navigation seule, j'ai fait le choix de les appliquer à chaque section afin de faire correspondre chaque onglet de navigation au contenu vers lequel il pointe. <br/> Côté HTML, le système de templates JavaScript Nunjucks s'est révélé être d'une grande utilité dans la construction de pages HTML statiques, puisqu'il m'a permis, de réduire des parties de pages à l'état de composants et ne les inclure que lorsque ils s'avèrent nécessaires. JSON est venu compléter le tableau : j'ai stocké la majorité des données textuelles dans un fichier JSON et ai injecté, via Gulp, toutes les données dans les templates Nunjucks au moment de la compilation. La séparation des balises HTML et de leur contenu me permet de garder un HTML propre et de n'avoir recours qu'au fichier JSON pour toute modification à apporter au contenu."
+    }],
+
+    "projetVijump":[
+    {
+            "projectColorClass":"project-vijump",
+            "titre":"ViJump",
+            "imageMain":[{
+                "originale":"img/vijump/vijump@992.jpg",
+                "imagesSrcset":"img/vijump/vijump@480.jpg 480w,img/vijump/vijump@768.jpg 768w,img/vijump/vijump@992.jpg 992w,img/vijump/vijump@1170.jpg 1170w",
+                                "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px"
+            }],
+            "imageAlt":"Projet ViJump page d'accueil",
+            "sousTitre":"Projet de refonte de l'application ViJump",
+            "texteIntro":"ViJump est une start-up que j'ai intégrée pour mon stage de fin d'études. Je suis chargé de la refonte complète du site et de l'application de cette start-up aux projets prometteurs. Dès mon arrivée j'ai été chargé du design du logo et de la réalisation de la maquette. L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants.",
+            "infos":{
+                "date" : "2015",
+                "duree" : "6 mois",
+                "poste" : "Intégrateur, Designer",
+                "langages" : "HTML5, CSS3, JavaScript",
+                "outils" : "SASS, AngularJS",
+                "lien" : "https://www.vijump.com/#!/",
+                "lien__texte":"Vers ViJump"
+            },
+            "imagesTexte":[
+            {
+
+                "originale":"img/emmaus/projet-emmaus-evenements.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-evenements.jpg 600w,\rimg/emmaus/projet-emmaus-0.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-partenaires.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-partenaires.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            },
+            {
+                "originale":"img/emmaus/projet-emmaus-activite.jpg",
+                "imagesSrcset":"img/emmaus/projet-emmaus-activite.jpg 600w,\rimg/codecats/projet-fac-accueil.jpg 1024w"
+            }
+            ],
+            "textePostLien": "Cette refonte est non seulement ma première expérience professionnelle dans le monde du web, mais aussi mon premier contact avec le framework Bootstrap. Je me suis assez rapidement habitué à son utilisation, qui permet de créer la structure - responsive - de base de tout site en un temps record.",
+            "textePostImages":"L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants. C'est un projet en cours, mais n'hésitez pas à l'essayer dès maintenant!"
     }]
 
 }

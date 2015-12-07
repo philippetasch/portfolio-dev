@@ -1,0 +1,79 @@
+
+.project-vijump .bigSlice--project-info{
+
+	background-color: $vijump-info-bg;
+	border-color: $vijump-info-border;
+}
+
+.project-vijump .intro-info-wrapper{
+
+	&:after,
+	&:before{
+
+		background-color: $vijump-info-border;
+		color: $vijump-bg;
+	}
+}
+
+.project-vijump .intro-title-info,
+.project-vijump .intro-lien-site{
+
+	background-color: $vijump-info-border;
+	color: $vijump-bg;
+}
+
+.project-vijump .intro-lien-site{
+
+	color: $vijump-bg;
+
+	@include snap(large){
+
+		@include h-f-a{
+
+			background-color: $vijump-info-infos;
+			color: $vijump-bg;
+
+			.lien__texte:after{
+
+				background-color: $vijump-bg;
+			}
+		}
+	}
+
+}
+
+.project-vijump .lien__texte{
+
+	&:after{
+
+		background-color: $vijump-bg;
+
+	}
+}
+
+.project-vijump .rond{
+
+	background-color: $vijump-info-infos;
+
+	&:before{
+
+			color: $vijump-bg;
+
+	}
+}
+
+.project-vijump .project-max-text::first-letter{
+
+	background-color: $vijump-info-border;
+	color: $vijump-bg;
+}
+
+.project-vijump .pagination-link{
+
+		background-color: $vijump-info-bg;
+
+	&:before{
+
+		background-color: $vijump-info-border;
+	}
+}

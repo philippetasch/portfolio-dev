@@ -82,6 +82,7 @@
 		margin: 0;
 		margin-left: $gridMargin;
 		padding: 0;
+		overflow: visible;
 
 		&:before,&:after{
 
@@ -123,6 +124,8 @@
 		border-radius: 50%;
 		display: inline-block;
 		background-color: $nav__link--2--bgc;
+		position: relative;
+
 		@include rem2px(margin-bottom, 1);
 
 		@include snap(tweak-large){
@@ -136,7 +139,30 @@
 			@include rem2px(font-size, 3.5);
 			font-family: FontAwesome;
 			color: darken($bigSlice--skills, 15%);
+			position: relative;
+			z-index: 5;
+		}
 
+		&:after{
+
+			content:"";
+			width: 70px;
+			height: 70px;
+			background-color: inherit;
+			opacity: .5;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -35px;
+			margin-top: -35px;
+			display: block;
+			border-radius: 50%;
+			transition: transform .35s linear;
+		}
+
+		&:hover:after{
+
+			transform: scale(1.1);
 		}
 
 	}

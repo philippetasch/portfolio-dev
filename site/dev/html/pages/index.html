@@ -18,8 +18,9 @@
         <section id="about" class="bigSlice bigSlice--about slope-bottom">
             <h2 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h2>
             <div class="maxWrapper maxWrapper--about gridClear slicePad--v">
+                {% set aboutClassLR = cycler("about__wrapper--left", "about__wrapper--right") %}
                 {% for histoire in parcours %}
-                    <div class="c-both {{histoire.class}} about__wrapper">
+                    <div class="c-both {{aboutClassLR.next()}} about__wrapper">
                         <div class="about__icon--wrapper {{histoire.icone}}">
                             <i class="fa {{histoire.iconeClass}} about__icon"></i>
                         </div>
@@ -29,7 +30,7 @@
                     </div>
                 {% endfor %}
             </div>
-                <a href="https://etudiants-caweb.u-strasbg.fr/1314/phil.t/site_perso/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv" role="button">
+                <a href="https://etudiants-caweb.u-strasbg.fr/1314/phil.t/site_perso/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv">
                     Téléchargez mon CV !
                 </a>
         </section>
@@ -66,13 +67,13 @@
                 </div>
             {% endfor %}
         </div>
-            <a href="projets.html" class="btn btn--slice btn--projects" role="button">
+            <a href="projets.html" class="btn btn--slice btn--projects">
                 Voir tous mes projets !
             </a>
     </section>
     <section id="contact" class="bigSlice bigSlice--contact  slicePad--h" >
         <h2 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h2>
-        <div class="maxWrapper gridClear gridsMar--v slicePad--v--top">
+        <div class="maxWrapper gridClear gridsMar--v slicePad--v">
             <p class="contact__text">Pour toute question vous pouvez me contacter via l'adresse ci-dessous. Je vous répondrai dans les plus brefs délais !</p>
             <!--<form class="first grids g-1">
                 <div class="first grids g-2 contact--input--group">
