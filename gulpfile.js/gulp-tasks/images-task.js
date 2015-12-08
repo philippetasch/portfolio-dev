@@ -17,7 +17,6 @@ return function () {
           progressive: true,
 
         }))
-        .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(imgPaths.dest))
         .pipe(plugins.size({
 

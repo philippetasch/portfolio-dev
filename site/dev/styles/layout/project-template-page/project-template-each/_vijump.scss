@@ -30,7 +30,7 @@
 
 		@include h-f-a{
 
-			background-color: $vijump-info-infos;
+			background-color: darken($vijump-info-infos, 5%);
 			color: $vijump-bg;
 
 			.lien__texte:after{

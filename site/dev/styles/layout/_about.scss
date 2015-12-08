@@ -66,27 +66,46 @@
 	clear: both;
 	text-align: center;
 
-	@include rem2px(margin-top, 2.5);
-	@include rem2px(margin-bottom, 2.5);
+	@include rem2px(margin-bottom, 4.5);
 
-	@include rem2px(width, 10);
-	@include rem2px(height, 10);
+	width: 100px;
+	height: 100px;
 
 	@include snap(large){
 
 		transition: all .35s ease-in-out;
 
 
-		&:hover{
+		&:hover:before{
 
-			transform: scale(1.3);
+			animation: bounce 1s linear;
 		}
 
 	}
 
 }
 
-.about__icon{
+@keyframes bounce{
+
+		10%{
+
+			transform: scale(0.8);
+
+		}
+
+		50%{
+
+			transform: scale(1.1);
+
+		}
+
+		90%{
+
+			transform: scale(1);
+		}
+}
+
+.about__icon--wrapper{
 
 		@media screen and (min-width: 1200px){
 
@@ -111,10 +130,23 @@
 
 }
 
+	.about__wrapper + .about__wrapper .about__icon--wrapper{
+
+		@include rem2px(margin-top, 4.5);
+
+			@media screen and(min-width: 1200px){
+
+				margin-top: -50px;
+
+			}
+
+	}
+
 
 .fa.about__icon{
 
 	position: relative;
+	z-index: 1;
 	z-index: 60;
 	color: $bigSlice--about;
 
@@ -130,6 +162,20 @@
 	max-width: 500px;
 	margin: auto;
 
+	@include snap(medium){
+
+		&:nth-of-type(odd) .about__text{
+
+			box-shadow: 10px 10px rgba(#B62824, .5), -10px -10px rgba(#B62824, .2);
+
+		}
+
+		&:nth-of-type(even) .about__text{
+
+			box-shadow: 10px 10px rgba(#B62824, .2), -10px -10px rgba(#B62824, .5);
+
+		}
+	}
 
 	@media screen and (min-width: 1200px){
 
@@ -172,19 +218,17 @@
 			}
 		}
 
-			&:nth-of-type(odd) .about__text{
+		&:nth-of-type(odd) .about__text{
 
-				border-right: 10px solid $nav__link--1--bgc;
-				box-shadow: 10px 10px rgba(#B62824, .5), -10px -10px rgba(#B62824, .2);
+			border-right: 10px solid $nav__link--1--bgc;
 
-			}
+		}
 
-			&:nth-of-type(even) .about__text{
+		&:nth-of-type(even) .about__text{
 
-				border-left: 10px solid $nav__link--1--bgc;
-				box-shadow: 10px 10px rgba(#B62824, .2), -10px -10px rgba(#B62824, .5);
+			border-left: 10px solid $nav__link--1--bgc;
 
-			}
+		}
 
 	}
 
@@ -194,19 +238,19 @@
 
 	background-color: #BD3B36;
 	color: $bigSlice--about;
-	@include rem2px(padding, 1);
+	@include rem2px(padding, 2, 1);
+	margin: 0;
 	text-align: center;
 
-	@include snap(medium){
+	@include snap(small-medium){
 
-		@include rem2px(padding, 1.5);
+		@include rem2px(padding, 2, 3);
 		text-align: justify;
-
 	}
 
 	@include snap(large){
 
-		@include rem2px(padding, .5, 3);
+		@include rem2px(padding, 2.5, 3);
 
 	}
 
@@ -231,16 +275,7 @@
 
 	}
 
-	@include snap(medium){
-
-		@include rem2px(margin-top, 2)
-	}
-
-
-	@include snap(large){
-
-		@include rem2px(margin-top, 4)
-	}
+	@include rem2px(margin-top, 4)
 
 	&:before{
 

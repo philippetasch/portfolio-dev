@@ -24,9 +24,7 @@
                         <div class="about__icon--wrapper {{histoire.icone}}">
                             <i class="fa {{histoire.iconeClass}} about__icon"></i>
                         </div>
-                        <div class="about__text">
-                            <p>{{histoire.texte}}</p>
-                        </div>
+                         <p class="about__text">{{histoire.texte}}</p>
                     </div>
                 {% endfor %}
             </div>
@@ -98,9 +96,12 @@
                 </div>
                 <button type="submit" id="envoi" name="envoi" class="btn btn--contact btn--slice">Envoyer</button>
             </form>-->
-            <p class="g-1 h1 t-center slicePad--v">flepptasch@gmail.com</p>
+            <p class="g-1 h1 t-center slicePad--v--top">flepptasch@gmail.com</p>
+            <div class="contact__icon">
+                <i class="fa fa-envelope"></i>
+            </div>
         </div>
-            
+
     </section>
     {% include "partials/footer.html" %}
 </div>

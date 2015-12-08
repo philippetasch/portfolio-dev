@@ -4,12 +4,12 @@
 		<section class="{{projet.projectColorClass}}">
 			<div class="maxWrapper slicePad--h">
 					{% import "macros/nav-macro.html" as topNav %}
-					{{topNav.active(currentPage="firstProject", linkNext="site-perso-v1.html")}}
+					{{topNav.active(currentPage="firstProject", linkNext="emmaus.html")}}
 				<div>
 					{% for image in projet.imageMain %}
-					<img src="{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center"
+					<img src="{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}}"
 							srcset="{{image.imagesSrcset}}"
-							sizes="{{image.imageSizes}}" />
+							sizes="{{image.sizes}}" />
 					{% endfor %}
 				</div>
 			</div>
@@ -62,6 +62,6 @@
 			</section>
 		{% endfor %}
 		{% import "macros/pagination.html" as bottomNav %}
-		{{bottomNav.active(currentPage="firstProject", linkNext="site-perso-v1.html")}}
+		{{bottomNav.active(currentPage="firstProject", linkNext="emmaus.html")}}
 	</section>
 {% endblock %}
