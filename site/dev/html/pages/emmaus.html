@@ -48,17 +48,30 @@
 				</a>
 			</section>
 			<section class="bigSlice">
-					<p class="center project-max-text slicePad--h slicePad--v">{{projet.textePostLien}}</p>
-				<div class="maxWrapper-project--full-image center gridClear">
-					{% for image in projet.imagesTexte %}
-						<div class="grids--zero project-full-image">
-							<img src="{{image.originale}}" class="img--resp"
-							srcset="{{image.imagesSrcset}}"
-							sizes="{{image.sizes}}" />
-						</div>
-					{% endfor %}
-				</div>
-					<p class="center project-max-text slicePad--h slicePad--v">{{projet.textePostImages}}</p>
+			<div class="center maxWrapper--project-description slicePad--v slicePad--h">
+					<h2 class="h1 h1--bigSlice heading--description slicePad--v">Description</h2>
+					<p class="center project-max-text slicePad--v--top">
+						{{projet.descriptionProjetUn}}
+					</p>
+						<aside class="img--description img--description--left" data-alt="{{projet.imagesTexteUn.imageAlt}}">
+							<img src="{{projet.imagesTexteUn.originale}}" alt="{{projet.imagesTexteUn.imageAlt}}" class="img--resp">
+						</aside>
+					<p class="center project-max-text">
+						{{projet.descriptionProjetDeux}}
+					</p>
+						<aside class="img--description img--description--right" data-alt="{{projet.imagesTexteUn.imageAlt}}">
+							<img src="{{projet.imagesTexteDeux.originale}}" alt="{{projet.imagesTexteDeux.imageAlt}}" class="img--resp">
+						</aside>
+					<p class="center project-max-text">
+						{{projet.descriptionProjetTrois}}
+					</p>
+						<aside class="img--description img--description--left" data-alt="{{projet.imagesTexteUn.imageAlt}}">
+							<img src="{{projet.imagesTexteTrois.originale}}" alt="{{projet.imagesTexteTrois.imageAlt}}" class="img--resp">
+						</aside>
+					<p class="center project-max-text">
+						{{projet.descriptionProjetTrois}}
+					</p>
+			</div>
 			</section>
 		{% endfor %}
 		{% import "macros/pagination.html" as bottomNav %}

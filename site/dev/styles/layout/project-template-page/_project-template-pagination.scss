@@ -1,9 +1,27 @@
 .pagination{
 
-	@include  rem2px(margin-top, 3);
+	@include snap(large){
+
+		@include  rem2px(margin-top, 1);
+	}
 }
 
-.pagination-link{
+.pagination__wrapper{
+
+	padding: 0px 5px 10px 10px;
+}
+
+.pagination__wrapper + .pagination__wrapper{
+
+	padding: 0px 10px 10px 5px;
+}
+
+.pagination .pagination__wrapper--only-child{
+
+	padding: 10px;
+}
+
+.pagination__link{
 
 	display: block;
 	color: #fff;
@@ -38,7 +56,7 @@
 
 }
 
-.pagination-link{
+.pagination__link{
 
 	&--previous:hover:before{
 
@@ -52,8 +70,8 @@
 	}
 }
 
-.pagination-link--previous:hover .project-nav__icon,
-.pagination-link--next:hover .project-nav__icon{
+.pagination__link--previous:hover .project-nav__icon,
+.pagination__link--next:hover .project-nav__icon{
 
 	@include snap(large){
 

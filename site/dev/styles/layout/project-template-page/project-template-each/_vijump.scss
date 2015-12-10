@@ -62,13 +62,18 @@
 	}
 }
 
+.project-vijump .h1.heading--description{
+
+	color: $vijump-info-border;
+}
+
 .project-vijump .project-max-text::first-letter{
 
 	background-color: $vijump-info-border;
 	color: $vijump-bg;
 }
 
-.project-vijump .pagination-link{
+.project-vijump .pagination__link{
 
 		background-color: $vijump-info-bg;
 

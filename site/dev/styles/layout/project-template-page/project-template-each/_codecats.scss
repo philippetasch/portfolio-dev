@@ -75,13 +75,18 @@
 	}
 }
 
+.project-codecats .h1.heading--description{
+
+	color: $codecats-info-border;
+}
+
 .project-codecats .project-max-text::first-letter{
 
 	background-color: $codecats-info-border;
 	color: $codecats-bg;
 }
 
-.project-codecats .pagination-link{
+.project-codecats .pagination__link{
 
 		background-color: $codecats-info-bg;
 

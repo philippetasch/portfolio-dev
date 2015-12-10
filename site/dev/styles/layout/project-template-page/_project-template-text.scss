@@ -1,35 +1,168 @@
-
-.project-max-text{
+.maxWrapper--project-description{
 
 	max-width: 500px;
 
-	&::first-letter{
+	@include snap(small-medium){
 
-			float: left;
-			padding: 10px 15px;
+			max-width: 600px;
+		}
 
-			background-color: #3D566F;
-			color: $bigSlice--about;
+}
 
-			font-size: 22px;
-			margin: 5px 10px -10px 0;
-			font-family: Roboto Slab;
+	.project-max-text{
+
+		margin: 0;
+		hyphens: auto;
+
+		@include snap(large){
+
+			text-align: justify;
+		}
+	}
+
+	.project-max-text{
+
+		&:first-child:first-letter{
+
+		float: left;
+		padding: 10px 15px;
+		background-color: #3D566F;
+		color: $bigSlice--about;
+		font-size: 22px;
+		margin: 5px 10px -10px 0;
+		font-family: Roboto Slab;
+		font-weight: bold;
+
+			@include snap(medium){
+
+				font-size: 30px;
+				margin: 5px 15px 0px 0;
+
+			}
+
+	}
+
+	}
+
+	.img--description{
+
+		margin: 25px auto 15px auto;
+		max-width: 400px;
+		position: relative;
+
+		&:after{
+
+			content:attr(data-alt);
+			display: block;
+			text-align: center;
+			margin: auto;
+			margin-top: 15px;
+			max-width: 60%;
+			font-size: small;
+			font-style: italic;
 			font-weight: bold;
 
-	@include snap(medium){
+			@media screen and (min-width: 870px){
+				
+				margin: 15px 0 0px 0;
+				max-width: 90%;
+			}
 
-			font-size: 30px;
-			margin: 5px 15px 0px 0;
+		}
 
+		@media screen and (min-width: 870px){
+
+			width: 50%;
+			max-width: none;
+
+		}
+
+		@include snap(tweak-large){
+
+			width: 60%;
+		}
+
+		@include snap(veryLarge){
+
+			width: 70%;
+		}
+
+		&--left{
+
+			@media screen and (min-width: 870px){
+
+				float: left;
+				margin: 20px 20px 0px -20%;
+
+			}
+
+			@include snap(tweak-large){
+
+				margin: 20px 20px 0px -30%;
+
+			}
+
+			@include snap(veryLarge){
+
+				margin: 20px 20px 0px -40%;
+			}
+
+			&:after{
+
+				@media screen and (min-width: 870px){
+
+					text-align: right;
+				}
+
+				@media screen and (min-width: 1650px){
+
+					position: absolute;
+					left: -45%;
+					right: 105%;
+					top: 40%;
+					text-align: right;
+				}
+			}
+		}
+
+		&--right{
+
+			@media screen and (min-width: 870px){
+
+				float: right;
+				margin: 20px -20% 0px 20px;
+			}
+
+			@include snap(tweak-large){
+
+				margin: 20px -30% 0px 20px;
+			}
+
+			@include snap(veryLarge){
+
+				margin: 20px -40% 0px 20px;
+			}
+
+			&:after{
+
+				@media screen and (min-width: 870px){
+					
+					text-align: left;
+				}
+
+
+				@media screen and (min-width: 1650px){
+
+					position: absolute;
+					left: 105%;
+					right: -45%;
+					top: 40%;
+					text-align: left;
+				}
+			}
+		}
 	}
 
-	}
-
-	@include snap(medium){
-
-		max-width: 600px;
-	}
-}
 
 .maxWrapper-project--full-image{
 

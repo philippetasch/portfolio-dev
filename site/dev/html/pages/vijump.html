@@ -48,7 +48,10 @@
 				</a>
 			</section>
 			<section class="bigSlice">
-					<p class="center project-max-text slicePad--h slicePad--v">{{projet.textePostLien}}</p>
+			<div class="center maxWrapper slicePad--v slicePad--h">
+					<h2 class="h1 h1--bigSlice heading--description slicePad--v">Description</h2>
+					<p class="center project-max-text slicePad--v">{{projet.textePostLien}}</p>
+			</div>
 				<div class="maxWrapper-project--full-image center gridClear">
 					{% for image in projet.imagesTexte %}
 						<div class="grids--zero project-full-image">
@@ -58,7 +61,9 @@
 						</div>
 					{% endfor %}
 				</div>
+				<div class="center maxWrapper slicePad--v slicePad--h">
 					<p class="center project-max-text slicePad--h slicePad--v">{{projet.textePostImages}}</p>
+				</div>
 			</section>
 		{% endfor %}
 
