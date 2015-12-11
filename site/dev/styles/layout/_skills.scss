@@ -39,7 +39,7 @@
 		transition: transform .35s ease-in-out;
 		float: left;
 		@include rem2px(margin-right, 2);
-		@include rem2px(margin-bottom, 0);
+		@include rem2px(margin-bottom, 1);
 
 	}
 
@@ -96,8 +96,11 @@
 	max-width: 500px;
 	margin: 0 auto;
 
+	hyphens:auto;
+
 	@include snap(medium){
 		
+		max-width: none;
 		margin: 0;
 		text-align: left;
 	}

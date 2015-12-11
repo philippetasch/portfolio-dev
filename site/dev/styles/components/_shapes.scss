@@ -115,7 +115,8 @@
 
 .about__icon--wrapper:before,
 .skills__icon--container:after,
-.contact__icon:after{
+.contact__icon:after,
+.rond:after{
 
 	@include snap(medium){
 

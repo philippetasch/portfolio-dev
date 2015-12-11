@@ -1,8 +1,82 @@
-
 .project-vijump .bigSlice--project-info{
 
-	background-color: $vijump-info-bg;
+	background-color: #384148;
 	border-color: $vijump-info-border;
+}
+
+.project-vijump{
+
+	.backHome{
+
+		.project-nav__icon{
+
+			color: $vijump-info-infos;
+
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $vijump-info-infos;
+
+			}
+		}
+
+	}
+
+	.backProjects{
+
+		.project-nav__icon{
+
+			color: $codecats-info-rond-outils;
+
+		}
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $codecats-info-rond-outils;
+			}
+		}
+
+	}
+
+	.previousWork{
+
+		.project-nav__icon{
+
+			color: $vijump-prev-work;
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $vijump-prev-work;
+			}
+		}
+
+	}
+
+	.nextWork{
+
+		.project-nav__icon{
+
+			color: $vijump-prev-work;
+
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $vijump-prev-work;
+			}
+		}
+
+	}
+
 }
 
 .project-vijump .intro-info-wrapper{

@@ -4,6 +4,83 @@
 	border-color: $codecats-info-border;
 }
 
+.project-codecats{
+
+	.backHome{
+
+		.project-nav__icon{
+
+			color: $codecats-info-rond-poste;
+
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $codecats-info-rond-poste;
+
+			}
+		}
+
+}
+
+.backProjects{
+
+	.project-nav__icon{
+
+		color: $codecats-info-rond-outils;
+
+	}
+	@include snap(large){
+
+		&:hover .project-nav__text{
+
+			color: $codecats-info-rond-outils;
+		}
+	}
+
+}
+
+.previousWork{
+
+	.project-nav__icon{
+
+		color: $nav__link--2--bgc;
+	}
+
+	@include snap(large){
+
+		&:hover .project-nav__text{
+
+			color: $nav__link--2--bgc;
+		}
+	}
+
+}
+
+.nextWork{
+
+	.project-nav__icon{
+
+		color: $codecats-info-rond-langages;
+
+	}
+
+	@include snap(large){
+
+		&:hover .project-nav__text{
+
+			color: $codecats-info-rond-langages;
+		}
+	}
+
+}
+
+
+
+}
+
 .project-codecats .intro-info-wrapper{
 
 	&:after,
@@ -57,14 +134,14 @@
 
 .project-codecats .intro-info{
 
-	&:first-child .rond{
+	.poste{
 
-		background-color: #F27935;
+		background-color: $codecats-info-rond-poste;
 	}
 
-	&:last-child .rond{
+	.outils{
 
-		background-color: #00B16A;
+		background-color: $codecats-info-rond-outils;
 	}
 
 

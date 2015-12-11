@@ -151,6 +151,7 @@
 	max-width: 90%;
 	transition: all .35s ease-in;
 	margin-left: -0.25em;
+
 }
 
 .h3--overlay {
@@ -176,7 +177,13 @@
 	font-weight: 900;
 	letter-spacing: 1px;
 
+	background-color: #fff;
+	color: $nav__link--3--bgc;
+
 	@include snap(large){
+
+		background-color: $nav__link--3--bgc;
+		color: #fff;
 
 		&:after{
 

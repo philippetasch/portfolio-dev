@@ -83,7 +83,7 @@
         "lien":"site-perso-v1.html",
         "lienExt" : "https://www.blargh.byethost31.com",
         "nom":"Site Portfolio",
-        "objet":"Site CV V1",
+        "objet":"Site Portfolio",
         "image":"portfolio"
     },
     {
@@ -207,8 +207,8 @@
                     "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px"
             }
             ],
-            "imageAlt":"Site CV première version",
-            "sousTitre":"Réalisation de mon site CV",
+            "imageAlt":"Site portfolio première version",
+            "sousTitre":"Réalisation de mon site portfolio",
             "texteIntro":"Site personnel réalisé au cours de la deuxième année de Master CAWEB. J'ai entrepris la réalisation de ce site pour plusieurs raisons : me présener et disposer d'une plateforme qui permette un accès facile et rapide à mes réalisations, et surtout, parfaire mes connaissances en intégration.",
             "infos":{
                 "date" : "2014",
@@ -217,7 +217,7 @@
                 "langages" : "HTML5, CSS3, JavaScript",
                 "outils" : "SASS, GulpJs, Nunjucks",
                 "lien" : "https://www.blargh.byethost31.com",
-                "lien__texte" :"Vers site CV V1"
+                "lien__texte" :"Vers site portfolio"
             },
             "imagesTexteUn":
             {
@@ -259,33 +259,43 @@
             }],
             "imageAlt":"Projet ViJump page d'accueil",
             "sousTitre":"Projet de refonte de l'application ViJump",
-            "texteIntro":"ViJump est une start-up que j'ai intégrée pour mon stage de fin d'études. Je suis chargé de la refonte complète du site et de l'application de cette start-up aux projets prometteurs. Dès mon arrivée j'ai été chargé du design du logo et de la réalisation de la maquette. L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants.",
+            "texteIntro":"ViJump est une start-up que j'ai intégrée pour mon stage de fin d'études. J'étais chargé de la refonte complète du site et de l'application de cette start-up aux projets prometteurs. L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants.",
             "infos":{
                 "date" : "2015",
                 "duree" : "6 mois",
                 "poste" : "Intégrateur, Designer",
                 "langages" : "HTML5, CSS3, JavaScript",
-                "outils" : "SASS, AngularJS",
+                "outils" : "SASS, AngularJS, Bootstrap",
                 "lien" : "https://www.vijump.com/#!/",
                 "lien__texte":"Vers ViJump"
             },
-            "imagesTexte":[
+            "imagesTexteUn":
             {
 
-                "originale":"img/vijump/projet-vijump-search-results@600x453.jpg",
-                "imagesSrcset":""
-            },
-            {
                 "originale":"img/vijump/vijump-videos@600x453.jpg",
-                "imagesSrcset":""
+                "imagesSrcset":"",
+                "imageAlt":"Vijump résultats de recherche"
+
             },
+            "imagesTexteDeux":
+            {
+                "originale":"img/vijump/projet-vijump-search-results@600x453.jpg",
+                "imagesSrcset":"",
+                "imageAlt":"Vijump page accueil - vidéos"
+
+            },
+            "imagesTexteTrois":
             {
                 "originale":"img/vijump/vijump-watch@600x453.jpg",
-                "imagesSrcset":""
-            }
-            ],
-            "textePostLien": "Cette refonte est non seulement ma première expérience professionnelle dans le monde du web, mais aussi mon premier contact avec le framework Bootstrap. Je me suis assez rapidement habitué à son utilisation, qui permet de créer la structure - responsive - de base de tout site en un temps record.",
-            "textePostImages":"L'application permet une recherche sémantique au sein même de vidéos et permet de créer une version raccourcie des segments les plus intéressants. C'est un projet en cours, mais n'hésitez pas à l'essayer dès maintenant!"
+                "imagesSrcset":"",
+                "imageAlt":"Vijump page vidéo"
+
+            },
+
+            "descriptionProjetUn": "Vijump permet la recherche sémantique à l'intérieur de vidéos, ainsi que le découpage de vidéos en ligne, un peu à l'image d'un logiciel de montage vidéo. Une fois une vidéo transcrite, il est possible de chercher un terme dans la vidéo via la barre de recherche du lecteur. Le découpage permet de créer des versions raccourcies de vidéos qui peuvent être sauvegardées et partagées.",
+            "descriptionProjetDeux":"J'ai été chargé de la refonte de cette application qui est non seulement mon stage de fin d'études ainsi que ma première réelle expérience professionnelle dans le monde du web, et au cours de laquelle j'ai pu avoir un premier contact avec des technologies web que je n'avais pas eu l'occasion d'essayer jusqu'à lors. J'ai débuté ce stage en proposant plusieurs maquettes et logos, créés respectivement avec photoshop et illustrator, afin de donner une nouvelle identité visuelle à l'application. Lors de l'intégration, j'ai dû me familiariser avec le framework css Bootstrap, qui m'a permis de créer en un temps record la structure de base des pages de l'application, le tout en mobile-first. Vijump est une <abbr title=\"application web monopage ou single page application\">SPA</abbr> construite avec AngularJS, un framework JavaScript. La charte graphique se veut simple: du rouge du blanc et du gris.",
+            "descriptionProjetTrois":"La page d'accueil détaille l'utilisation du produit avec quelques informations succintes ainsi qu'un screencast que j'ai réalisé. J'étais également chargé de créer les pages de résultats de recherche, la page vidéo ainsi que de mettre au point l'interface vidéo du lecteur en me basant sur l'interface pré-existante. Afin d'attirer l'attention du visiteur sur le fait que des vidéos soient cherchables ou bien qu'il existe déjà des versions raccourcies des vidéos, j'ai inclus des icônes servant d'indicateurs dans les résultats de recherche.",
+            "descriptionProjetQuatre":"L'application est passée par plusieurs phases et a connu plusieurs interfaces. Le projet étant en constante évolution il peut être sujet à changement, encore aujourd'hui. Si l'interface actuelle n'est pas définitive, la direction prise l'est: faire gagner du temps aux internautes en leur proposant exactement ce qu'il recherchent. C'est un projet très intéressant et prometteur, n'hésitez pas à l'essayer!"
     }]
 
 }

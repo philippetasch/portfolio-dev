@@ -46,7 +46,6 @@
 	    	top: 15%;
 	    }
 
-
 	}
 }
 
@@ -69,7 +68,6 @@
 
 		transition: all .35s ease-in-out;
 
-
 		&:hover:before{
 
 			animation: bounce 1s linear;
@@ -78,6 +76,8 @@
 	}
 
 }
+
+/*  SEE COMPONENTS/SHAPES */
 
 @keyframes bounce{
 
@@ -235,6 +235,8 @@
 	@include rem2px(padding, 2, 1);
 	margin: 0;
 	text-align: center;
+
+	hyphens: auto;
 
 	@include snap(small-medium){
 
