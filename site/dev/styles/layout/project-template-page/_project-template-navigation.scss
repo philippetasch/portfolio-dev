@@ -135,7 +135,7 @@
 	@include snap(medium){
 
 		font-size: 105%;
-		transition: color .25s linear;
+		transition: color 0.25s linear;
 
 	}
 }
@@ -211,7 +211,7 @@
 }
 
 .nextWork,
-.pagination-link--next{
+.pagination__link--next{
 
 	@include snap(small-medium){
 
@@ -220,9 +220,9 @@
 				margin: 0 10px 0 0;
 			}
 
-			& .project-nav__icon{
+			& .fa.project-nav__icon{
 
-				margin: 0 0 0 10px;
+				margin: 0 0 0 10px
 			}
 	}
 }
@@ -232,6 +232,7 @@
 	font-size: 200%;
 
 	@include snap(small-medium){
+
 		margin-right: 10px;
 	}
 

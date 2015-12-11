@@ -14,15 +14,13 @@
 		margin: 0;
 		hyphens: auto;
 
-		@include snap(large){
+		@include snap(medium){
 
 			text-align: justify;
 		}
 	}
 
-	.project-max-text{
-
-		&:first-child:first-letter{
+	.first-letter::first-letter{
 
 		float: left;
 		padding: 10px 15px;
@@ -39,8 +37,6 @@
 				margin: 5px 15px 0px 0;
 
 			}
-
-	}
 
 	}
 
@@ -63,9 +59,16 @@
 			font-weight: bold;
 
 			@media screen and (min-width: 870px){
-				
+
 				margin: 15px 0 0px 0;
-				max-width: 90%;
+				padding: 0 15px;
+				max-width: 100%;
+			}
+
+			@media screen and (min-width: 1650px){
+
+				width: 170px;
+				padding: 0;
 			}
 
 		}
@@ -117,7 +120,6 @@
 				@media screen and (min-width: 1650px){
 
 					position: absolute;
-					left: -45%;
 					right: 105%;
 					top: 40%;
 					text-align: right;
@@ -146,7 +148,7 @@
 			&:after{
 
 				@media screen and (min-width: 870px){
-					
+
 					text-align: left;
 				}
 
@@ -155,7 +157,6 @@
 
 					position: absolute;
 					left: 105%;
-					right: -45%;
 					top: 40%;
 					text-align: left;
 				}
@@ -163,38 +164,7 @@
 		}
 	}
 
+.project-description-image{
 
-.maxWrapper-project--full-image{
-
-	@include snap(large){
-
-		@include rem2px(margin, 3, 0);
-	}
-
-	@media screen and (min-width: 2100px){
-
-		max-width: $maxWrapperWidth;
-	}
-}
-
-.project-full-image{
-
-	width: 100%;
-	@include rem2px(margin-bottom, 0.5);
-	@include snap(small-medium){
-
-		@include lonm(3);
-	}
-
-	@include snap(medium){
-
-	@include rem2px(margin-bottom, 0);
-
-		&:nth-of-type(even) img{
-
-			border: 6px solid $bigSlice--about;
-			transform: scale(1.1);
-		}
-
-	}
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,.3);
 }

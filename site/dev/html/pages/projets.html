@@ -9,14 +9,15 @@
 
             {% for projet in projets %}
                 <div class={% if loop.first %}" c-left grids--zero g-3--zero tiles tiles--projects"{% else %}"grids--zero g-3--zero tiles tiles--projects"{% endif %}>
-                    <a href="{{projet.lien}}" class="tiles__overlay">
-                        <div class="tiles__title">
-                            <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
-                            <p class="h4 h4--overlay">{{projet.objet}}</p>
-                            <span class="tiles__btn">Voir plus</span>
-                        </div>
-                    </a>
                     <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
+                        <div class="tiles__overlay">
+                            <div class="tiles__title">
+                                <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
+                                <p class="h4 h4--overlay">{{projet.objet}}</p>
+                                <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
+                                <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             {% endfor %}

@@ -67,24 +67,28 @@
     {
 
         "lien":"codecats.html",
+        "lienExt" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
         "nom": "Codecats",
         "objet":"Projet universitaire Master 2",
         "image":"mini-project"
     },
     {
         "lien":"emmaus.html",
+        "lienExt" : "",
         "nom": "Emmaüs Strasbourg",
         "objet":"Refonte site Emmaus Strasbourg",
         "image":"emmaus"
     },
     {
         "lien":"site-perso-v1.html",
+        "lienExt" : "https://www.blargh.byethost31.com",
         "nom":"Site Portfolio",
         "objet":"Site CV V1",
         "image":"portfolio"
     },
     {
         "lien":"vijump.html",
+        "lienExt" : "https://www.vijump.com/#!/",
         "nom": "ViJump",
         "objet":"Refonte site et application ViJump",
         "image":"vijump"
@@ -138,8 +142,9 @@
 
             },
             "descriptionProjetUn": "Notre équipe a commencé par la mise au point d'un cahier des charges dans lequel étaient définies les tâches à accomplir. Parmi ces tâches figuraient: la réorganisation du contenu du site dans son ensemble, la traduction de ce contenu vers l'allemand et l'anglais, la refonte graphique complète ainsi que l'ajout de diverses fonctionnalités telles qu'une newsletter, ou un espace membre.",
-            "descriptionProjetDeux":"Pendant deux mois, l'équipe a procédé à la réorganisation ainsi qu'à la traduction du contenu, suivi de l'intégration de ce dernier au sein du thème Wordpress. L'ergonomie du site devait être entièrement revue et la navigation plus intuitive. Quatre maquettes avaient été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous l'avons intégrée en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette. Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines.",
-            "descriptionProjetTrois":"Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand. Le choix du logiciel de <abbr title=\"Traduction Assistée par Ordinateur\">TAO</abbr> s'est porté sur MEMOQ, facilitant le bon déroulement des traductions ainsi que l'extracction des mémoires de traductions et bases de données terminologiques, demandées dans le cadre du projet universitaire. J'étais en charge d'une partie de la traduction vers l'anglais et ai contribué à la traduction vers l'allemand. J'ai réalisé une des quatre maquettes proposées au donneur d'ordre, et me suis attelé à l'intégration HTML/CSS de celle retenue par le donneur d'ordre. J'ai également entrepris des modifications PHP du thème Wordpress afin d'obtenir l'affichage souhaité pour les différntes pages."
+            "descriptionProjetDeux":"Pendant deux mois, l'équipe a procédé à la réorganisation ainsi qu'à la traduction du contenu, suivi de l'intégration de ce dernier au sein du thème Wordpress. L'ergonomie du site devait être entièrement revue et la navigation plus intuitive. Quatre maquettes avaient été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous l'avons intégrée en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette.",
+            "descriptionProjetTrois":"Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines. En effet, nous avions fait le choix de démarrer le projet sur SPIP, qui  s'avérait prometteur en raison des fonctions dont il dispose pour l'intégration de contenu traduit. Nous nous sommes finalement rendus compte que SPIP ne correspondait pas à ce que nous en attendions et nous sommes tournés vers Wordpress. Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand.",
+            "descriptionProjetQuatre": " Le choix du logiciel de <abbr title=\"Traduction Assistée par Ordinateur\">TAO</abbr> s'est porté sur MEMOQ, facilitant le bon déroulement des traductions ainsi que l'extraction des mémoires de traductions et bases de données terminologiques, demandées dans le cadre du projet universitaire. Outre la traduction de la moitié du contenu du site vers l'anglais ainsi que la relecture et correction de la traduction allemande, j'ai réalisé une des quatre maquettes proposées, et me suis attelé à l'intégration HTML/CSS de celle retenue par le donneur d'ordre. J'ai également entrepris des modifications PHP du thème Wordpress afin d'obtenir l'affichage souhaité pour les différentes pages."
     }],
 
     "projetCodecats":[
@@ -165,23 +170,31 @@
                 "lien" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
                 "lien__texte" : "Vers Codecats"
             },
-            "imagesTexte":[
+            "imagesTexteUn":
                 {
 
                     "originale":"img/codecats/projet-fac-flex.jpg",
-                    "imagesSrcset":""
+                    "imagesSrcset":"",
+                    "imageAlt":"Projet Codecats Page Flexbox"
                 },
+            "imagesTexteDeux":
                 {
                     "originale":"img/codecats/projet-fac-responsive.jpg",
-                    "imagesSrcset":""
+                    "imagesSrcset":"",
+                    "imageAlt":"Projet Codecats Menu responsive"
+
                 },
+            "imagesTexteTrois":
                 {
                     "originale":"img/codecats/projet-fac-compatibilite-menu.jpg",
-                    "imagesSrcset":""
-                }
-            ],
-            "textePostLien": "Le site devait proposer plusieurs feuilles de styles: une principale, une secondaire ainsi qu'une feuille de style print. L'aspect responsive était primordial. J'ai donc développé le site en commençant par un design fait pour le plus petit écran possible. Le site est résolument flat dans ses couleurs et icônes avec un design minimaliste qui laisse place au contenu.",
-            "textePostImages":"Les animations CSS3 sont mises en avant dans le menu qui dévoile ses sous-catégories au survol, le tout agrémenté de transitions agréables à l'oeil. Les nouvelles balises HTML5 structurent le site pour un HTML plus sémantique et plus facilement interprétable par le navigateur. La rétrocompatibilité n'est pas mise de côté puisque le site est fonctionnel même sur Internet Explorer 7."
+                    "imagesSrcset":"",
+                    "imageAlt":"Projet Codecats Menu"
+
+                },
+            "descriptionProjetUn": "Le projet consistait en la création d'un site web dynamique sur base d'un moteur PHP fourni par les professeurs. Le site devait proposer plusieurs feuilles de styles, dont au moins une responsive, auxquelles il est possible d'accéder en un seul clic: une feuille de style principale, une secondaire, une feuille de style destinée à l'impression ainsi qu'une version vierge de tout style afin de visualiser la page sans mise en forme.",
+            "descriptionProjetDeux":"En plus de créer plusieurs feuilles de styles, il fallait s'assurer de la compatibilité du site envers tous les navigateurs modernes, et garantir sa bonne consultation même sur Internet Explorer 7 &amp; 8. Dans la liste des fonctionnaltés à mettre en place figurait aussi l'inclusion d'un formulaire de soumission de liens via lequel le visiteur peut ajouter un lien vers le site de son choix, accompagné d'un commentaire. Tout caractère HTML est echappé lors de la soumission de lien afin d'éviter l'exécution de script non désiré sur la page.",
+            "descriptionProjetTrois" :"Le plus grand défi de ce projet résidait dans le design de la navigation responsive, composée de sous-menus. Je voulais que la navigation puisse accompagner le visiteur sans le gêner dans sa visite en obstruant une partie de son écran. À cet effet, je me suis tourné vers un script qui permet de cacher la navigation aussitôt le scroll amorcé. De plus, il fallait qu'au toucher, la navigation révèle ses onglets principaux depuis lesquels on pourrait accéder facilement aux sous-menus. À nouveau, j'ai utilisé un script très léger, assurant le côté fonctionnel de la navigation. À partir d'une certaine largeur d'écran, la navigation s'adapte et est, dès lors, embellie par des animations complexes qui dévoilent les sous-catégories au survol, réalisées en CSS pur.",
+            "descriptionProjetQuatre":"J'ai développé le site selon la méthode dite mobile first, c'est-à-dire en commençant par un design fait pour le plus petit écran possible, pour ensuite en adapter l'interface selon le support. Le site est résolument flat dans ses couleurs et icônes avec un design minimaliste qui laisse place au contenu. Les nouvelles balises HTML5 structurent le site pour un HTML plus sémantique et plus facilement interprétable par le navigateur."
     }],
 
     "projetPerso":[
@@ -206,23 +219,32 @@
                 "lien" : "https://www.blargh.byethost31.com",
                 "lien__texte" :"Vers site CV V1"
             },
-            "imagesTexte":[
+            "imagesTexteUn":
             {
 
-                "originale":"img/site-perso-v1/site-perso-v1-projets@600x422.jpg",
-                "imagesSrcset":""
-            },
-            {
                 "originale":"img/site-perso-v1/site-perso-v1-competences@600x422.jpg",
-                "imagesSrcset":""
+                "imagesSrcset":"",
+                "imageAlt":"Site personnel section compétences"
+
             },
+            "imagesTexteDeux":
+            {
+                "originale":"img/site-perso-v1/site-perso-v1-projets@600x422.jpg",
+                "imagesSrcset":"",
+                "imageAlt":"Site personnel section projets"
+
+            },
+            "imagesTexteTrois":
             {
                 "originale":"img/site-perso-v1/site-perso-v1-responsive@600x422.jpg",
-                "imagesSrcset":""
-            }
-            ],
-            "textePostLien": "Cette première version se présentait sous la forme d'une simple page sur laquelle se trouvaient des détails concernant mon parcours et mes compétences, des liens directs vers mes projets, ainsi qu'un formulaire de contact. Le site était bien évidemment responsive et s'adaptait à différentes tailles d'écran. La navigation, simple, permettait d'accéder aux différentes sections de la page que ce soit sur écran d'ordinateur ou de mobile. <br/> J'ai opté pour des couleurs discrètes, beige et bleu-marine, que j'ai utilisées comme couleurs de fond des différentes sections de la page. Je me suis tourné vers une palette de couleurs plus vive pour les éléments de navigation, afin de créer un certain contraste avec le reste du site. Toutefois, j'ai vite trouvé que mon site portfolio était trop simple et pourrait bénéficier de nombreuses améliorations, qu'elles concernent le design ou le code. J'ai donc procédé à un ravalement de façade complet en mettant à profit des nouvelles compétences acquises au cours de la deuxième année de Master CAWEB. ",
-            "textePostImages":"Désormais le site n'est plus constitué d'une seule et unique page. Il comporte une page d'accueil, une page recensant  tous les projets ainsi qu'une page supplémentaire décrivant chaque projet.<br/> J'ai repris le code à zéro et ai apporté un nombre conséquent de modifications au design, tout gardant la palette de couleurs d'origine.<br/> J'ai pu rapidement créer, grâce à SASS, une grille CSS basique adaptée à mes besoins pour ce site. Plutôt que de limiter les couleurs plus vives à la navigation seule, j'ai fait le choix de les appliquer à chaque section afin de faire correspondre chaque onglet de navigation au contenu vers lequel il pointe. <br/> Côté HTML, le système de templates JavaScript Nunjucks s'est révélé être d'une grande utilité dans la construction de pages HTML statiques, puisqu'il m'a permis, de réduire des parties de pages à l'état de composants et ne les inclure que lorsque ils s'avèrent nécessaires. JSON est venu compléter le tableau : j'ai stocké la majorité des données textuelles dans un fichier JSON et ai injecté, via Gulp, toutes les données dans les templates Nunjucks au moment de la compilation. La séparation des balises HTML et de leur contenu me permet de garder un HTML propre et de n'avoir recours qu'au fichier JSON pour toute modification à apporter au contenu."
+                "imagesSrcset":"",
+                "imageAlt":"Site personnel menu responsive"
+
+            },
+            "descriptionProjetUn": "Cette première version se présentait sous la forme d'une simple page sur laquelle se trouvaient des détails concernant mon parcours et mes compétences, des liens directs vers mes projets, ainsi qu'un formulaire de contact. Le site était bien évidemment responsive et s'adaptait à différentes tailles d'écran. La navigation, simple, permettait d'accéder aux différentes sections de la page que ce soit sur écran d'ordinateur ou de mobile.",
+            "descriptionProjetDeux": "J'ai opté pour des couleurs discrètes, beige et bleu-marine, que j'ai utilisées comme couleurs de fond des différentes sections de la page. Je me suis tourné vers une palette de couleurs plus vive pour les éléments de navigation, afin de créer un certain contraste avec le reste du site. Toutefois, j'ai vite trouvé que mon site portfolio était trop simple et pourrait bénéficier de nombreuses améliorations, qu'elles concernent le design ou le code. J'ai donc procédé à un ravalement de façade complet en mettant à profit des nouvelles compétences acquises au cours de la deuxième année de Master CAWEB. Désormais le site n'est plus constitué d'une seule et unique page. Il comporte une page d'accueil, une page recensant  tous les projets ainsi qu'une page supplémentaire décrivant chaque projet.",
+            "descriptionProjetTrois":"J'ai repris le code à zéro et ai apporté un nombre conséquent de modifications au design, tout gardant la palette de couleurs d'origine.J'ai pu rapidement créer, grâce à SASS, une grille CSS basique adaptée à mes besoins pour ce site. Plutôt que de limiter les couleurs plus vives à la navigation seule, j'ai fait le choix de les appliquer à chaque section afin de faire correspondre chaque onglet de navigation au contenu vers lequel il pointe.",
+            "descriptionProjetQuatre": "Côté HTML, le système de templates JavaScript Nunjucks s'est révélé être d'une grande utilité dans la construction de pages HTML statiques, puisqu'il m'a permis, de réduire des parties de pages à l'état de composants et ne les inclure que lorsque ils s'avèrent nécessaires. JSON est venu compléter le tableau : j'ai stocké la majorité des données textuelles dans un fichier JSON et ai injecté, via Gulp, toutes les données dans les templates Nunjucks au moment de la compilation. La séparation des balises HTML et de leur contenu me permet de garder un HTML propre et de n'avoir recours qu'au fichier JSON pour toute modification à apporter au contenu."
     }],
 
     "projetVijump":[

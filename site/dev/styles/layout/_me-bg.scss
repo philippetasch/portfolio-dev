@@ -1,10 +1,11 @@
 .bigSlice--me{
 
-	@include rem2px(padding-top, 10);
-	@include rem2px(padding-bottom, 4);
+	height: 500px;
 	position: relative;
 	background-color:$bigSlice--skills;
 	background-image: linear-gradient(135deg, rgb(52, 73, 94) 50%, rgb(34, 47, 61) 50%);
+	background-image: url('../img/index/bg-img-compressor@768.jpg');
+	background-position: 100% 80%;
 
 	&:after,&:before{
 
@@ -23,7 +24,6 @@
 
 	}
 
-
 	&:before{
 
 		right: 0;
@@ -31,15 +31,16 @@
 
 	}
 
-	@include snap(medium){
+	@include snap(small-medium){
 
 		background-image: url('../img/index/bg-img-compressor.jpg');
-		background-position: 80% 40%;
-		height: auto;
+		background-position: 100% 40%;
+		height: 600px;
 
 	}
 
 	@include snap(large){
+	@include rem2px(padding-top, 10);
 
 		background-position: 80% 40%;
 		background-attachment: fixed;
@@ -49,76 +50,56 @@
 
 }
 
-.img--container{
-
-	overflow: hidden;
-	@include rem2px(margin-bottom, 2);
-	max-width: 200px;
-
-	@include snap(small-medium){
-
-		width: 250px;
-	}
-
-	@include snap(medium){
-
-		display: none;
-	}
-
-}
-
 .maxWrapper--heading{
 
 	position: relative;
+	height: 100%;
 
-	@include snap(medium){
-
-		height: 100%;
-	}
-}
-
-.welcome--heading{
-
-	text-align: center;
-	color:white;
-
-	@include rem2px(margin-bottom, 5);
-
-	@include snap(medium){
-
-		@include rem2px(padding-top, 10);
-		@include rem2px(padding-bottom, 10);
-		text-align: left;
-	}
-
-	@include snap(large){
-
-		@include rem2px(padding-top, 0);
-		@include rem2px(padding-bottom, 0);
-		position: absolute;
-		top:32%;
-		left:0;
-
-	}
 }
 
 .h1.h1--me{
 
-	@include snap(medium){
+	text-align: center;
+	color:white;
+	position: absolute;
+	bottom: 50px;
 
-		@include rem2px(padding-right, 4);
+	width: 100%;
+
+	@media screen and (min-width: 450px){
+
+		bottom: 42%;
+		right: 50%;
 		text-align: right;
 
+		width: auto;
+	}
+
+	@include snap(small-medium){
+
+		right: 41%;
+
+	}
+
+	@include snap(medium){
+	
+		@include rem2px(padding-right, 4);
+		text-align: right;
 	}
 
 	@include snap(large){
 
-		@include rem2px(font-size, 4.2);
+		@include rem2px(font-size, 5.2);
 
 			font-weight: 700;
 
 		}
-}
+}	
+
+	.h1--me .h1--me__part-two{
+
+		display: block;
+	}
 
 .slideInTop{
 

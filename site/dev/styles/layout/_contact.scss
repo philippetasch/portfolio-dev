@@ -110,6 +110,9 @@
 
 .contact__text{
 
+	max-width: 600px;
+	margin: auto;
+
 	@include snap(medium){
 
 		@include rem2px(font-size, 2);

@@ -2,23 +2,24 @@
 
 	@include snap(large){
 
-		@include  rem2px(margin-top, 1);
+		@include  rem2px(margin-top, 2);
 	}
 }
 
 .pagination__wrapper{
 
-	padding: 0px 5px 10px 10px;
+	@include rem2px(padding, 0, 0.5, 1, 1)
 }
 
 .pagination__wrapper + .pagination__wrapper{
 
-	padding: 0px 10px 10px 5px;
+	@include rem2px(padding, 0, 1, 1, 0.5)
+
 }
 
 .pagination .pagination__wrapper--only-child{
 
-	padding: 10px;
+	@include rem2px(padding, 1)
 }
 
 .pagination__link{

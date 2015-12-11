@@ -2,18 +2,16 @@
 {% block content %}
     <div class="wrapper stretch--v">
         {% include "partials/nav.html" %}
-        <section id="top" class="bigSlice bigSlice--me bg-img slicePad--h">
-            <div class="maxWrapper maxWrapper--heading gridClear">
-                <div class="img--container center radius">
+        <section id="top" class="bigSlice bigSlice--me bg-img">
+                <!--<div class="img--container center radius">
                     <img class="img--resp img--resp--rounded" src="{{entete.image}}" alt="{{entete.alt}}"/>
-                </div>
-                <div class="first grids g-3__23 welcome--heading ">
-                    <h1 class="h1 h1--me slideInTop">
+                </div>-->
+        <div class="maxWrapper maxWrapper--heading">
+                    <h1 class="h1 h1--me slideInTop welcome--heading">
                         <span class="h1--me__part-one">Philippe Tasch /</span>
                         <span class="h1--me__part-two">Webdesigner</span>
                     </h1>
-                </div>
-            </div>
+        </div>
         </section>
         <section id="about" class="bigSlice bigSlice--about slope-bottom">
             <h2 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h2>
@@ -53,14 +51,15 @@
         <div class="maxWrapper--projects gridClear slicePad--v">
             {% for projet in projets %}
                 <div class="grids--zero g-4--zero tiles">
-                    <a href="{{projet.lien}}" class="tiles__overlay">
-                        <div class="tiles__title">
-                            <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
-                            <p class="h4 h4--overlay">{{projet.objet}}</p>
-                            <span class="tiles__btn">Voir plus</span>
-                        </div>
-                    </a>
                     <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
+                        <div class="tiles__overlay">
+                            <div class="tiles__title">
+                                <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
+                                <p class="h4 h4--overlay">{{projet.objet}}</p>
+                                <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
+                                <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
