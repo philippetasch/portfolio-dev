@@ -11,6 +11,7 @@
     }
 
 }
+
 /*uncss:ignore*/
 .barreLangues{
 	display: none;
@@ -23,6 +24,8 @@
 }
 
 .headroom--home{
+
+	margin-top: 20px;
 
 	@include snap(medium){
 
@@ -38,6 +41,9 @@
 		right:0;
 		z-index: 150;
 		@include rem2px(padding-top, 1);
+
+		margin-top: 0px;
+
 	}
 
 	.js &{
@@ -48,6 +54,9 @@
 		right:0;
 		z-index: 150;
 		background-color: transparent;
+
+		margin-top: 0px;
+
 	}
 
 	.lt-ie10 &{
@@ -56,12 +65,10 @@
 	}
 }
 
-
 .headroom--pinned {
 
 	transform: translateY(0%);
  }
-
 
 .headroom--unpinned{
 
@@ -69,9 +76,9 @@
 }
 
 @include snap(large){
-	
+
 	.headroom--not-top {
-			
+
 			padding-top: 0;
 
 			& .navigation__link{

@@ -1,4 +1,7 @@
 {% extends "index-layout.html" %}
+
+{% block title %} Philippe Tasch | Emmaüs Strasbourg {% endblock %}
+
 {% block content %}
 	{% for projet in projetEmmaus %}
 		<section class="{{projet.projectColorClass}}">
@@ -18,7 +21,7 @@
 				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
 					<div class="intro-title-wrapper">
 						<span class="intro-title-info">Date : {{projet.infos.date}} // Duree : {{projet.infos.duree}}</span>
-						<h2 class="h1 intro-title">{{projet.sousTitre}}</h2>
+						<h1 class="h1 intro-title">{{projet.sousTitre}}</h1>
 					</div>
 					<div class="intro-info-wrapper">
 						<div class="intro-info gridClear">

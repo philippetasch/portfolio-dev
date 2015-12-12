@@ -241,7 +241,7 @@
 	@include snap(small-medium){
 
 		@include rem2px(padding, 2, 3);
-		text-align: justify;
+		text-align: left;
 	}
 
 	@include snap(large){
