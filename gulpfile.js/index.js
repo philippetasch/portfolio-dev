@@ -60,6 +60,7 @@ function fetchTask(task){
 }
 
 gulp.task('html', fetchTask('html-task'));
+gulp.task('cv', fetchTask('cv-task'));
 gulp.task('styles', fetchTask('styles-task'));
 gulp.task('images', fetchTask('images-task'));
 gulp.task('scripts', fetchTask('scripts-task'));

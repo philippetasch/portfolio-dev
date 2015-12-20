@@ -84,6 +84,12 @@
 
             "src" : "fonts/*",
             "dest" : "fonts"
+        },
+
+        "cv":{
+
+          "src":"cv/*",
+          "dest":"cv"
         }
 
       }
