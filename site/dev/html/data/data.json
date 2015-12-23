@@ -19,7 +19,7 @@
     {
         "icone":"about__icon--wrapper--left",
         "iconeClass":"fa-laptop",
-        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. J'effectue une veille technologique constante afin de me tenir informé des dernières nouveautés en matière de technologie web, ce que je m'efforce d'appliquer lors de la création de tout nouveau projet."
+        "texte":"La diversité des cours dispensés en Master CAWEB m'a permis d'acquérir les connaissances techniques nécessaires à la création de sites. J'effectue une veille technologique constante afin de me tenir informé des dernières nouveautés en matière de technologie web, ce qui me permet de démarrer tout nouveau projet en y appliquant de nouvelles connaissances."
     },
     {
         "icone":"about__icon--wrapper--right",
@@ -199,7 +199,7 @@
 
     "projetPerso":[
     {
-            "projectColorClass":"project-emmaus",
+            "projectColorClass":"site-perso",
             "titre":"Site CV - V1",
             "imageMain":[{
                 "originale":"img/site-perso-v1/site-perso-v1@992.jpg",

@@ -8,13 +8,55 @@
 
 	background-color: $standard-info-bg;
 	border-color: $standard-info-border;
+	color: #fff;
+
 }
 
-.project-emmaus .intro-title-info
-.project-emmaus .intro-lien-site .lien__texte{
+.project-emmaus .intro-title-info,
+.project-emmaus .intro-lien-site{
 
 	background-color: $standard-info-border;
+	color: $nav__link--2--bgc;
+
 }
+
+.project-emmaus .intro-lien-site{
+
+	@include snap(tweak-large){
+
+			@include h-f-a{
+
+			background-color:  $nav__link--2--bgc;
+			color: darken($bigSlice--skills, 15%);
+
+			.lien__texte:after{
+
+				background-color: darken($bigSlice--skills, 15%);
+			}
+		}
+	}
+}
+
+.project-emmaus .intro-info-wrapper{
+
+	&:before,&:after{
+
+		background-color: darken($bigSlice--skills, 15%);
+
+	}
+}
+
+.project-emmaus .rond{
+
+	background-color: $nav__link--2--bgc;
+
+	&:before{
+
+			color: darken($bigSlice--skills, 15%);
+		}
+}
+
+
 
 .project-emmaus .pagination__link{
 

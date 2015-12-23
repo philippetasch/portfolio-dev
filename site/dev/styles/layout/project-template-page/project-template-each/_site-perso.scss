@@ -1,0 +1,84 @@
+.site-perso{
+
+	background-color: $bigSlice--about;
+
+}
+
+.site-perso .bigSlice--project-info{
+
+	background-color: $standard-info-bg;
+	border-color: $site-perso-info-border;
+	color: #fff;
+}
+
+.site-perso .intro-title-info,
+.site-perso .intro-lien-site{
+
+	background-color: $site-perso-info-border;
+	color: $nav__link--2--bgc;
+}
+
+.site-perso .intro-lien-site{
+
+	@include snap(tweak-large){
+
+			@include h-f-a{
+
+			background-color:  $nav__link--2--bgc;
+			color: darken($bigSlice--skills, 15%);
+
+			.lien__texte:after{
+
+				background-color: darken($bigSlice--skills, 15%);
+			}
+		}
+	}
+}
+
+.site-perso .intro-info-wrapper{
+
+	&:before,&:after{
+
+		background-color: darken($bigSlice--skills, 15%);
+
+	}
+}
+
+.site-perso .rond{
+
+
+	&:before{
+
+			color: #fff;
+		}
+	&.poste{
+
+		background-color: $nav__link--1--bgc;
+	}
+
+	&.langages{
+
+		background-color: $nav__link--2--bgc;
+	}
+
+	&.outils{
+
+		background-color: $nav__link--3--bgc;
+	}
+}
+
+.site-perso .h1.heading--description{
+
+	color: $site-perso-info-border;
+}
+
+.site-perso .first-letter::first-letter{
+
+	background-color: $site-perso-info-border;
+	color: $site-perso-bg;
+}
+
+.site-perso .pagination__link{
+
+	background-color: $site-perso-info-border;
+}

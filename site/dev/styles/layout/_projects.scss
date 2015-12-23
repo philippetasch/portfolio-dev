@@ -259,7 +259,7 @@
 
 .btn--projects{
 
-	color: $bigSlice--projects;
+	color: #fff;
 	border-color: $nav__link--3--bgc;
 	background-color: $nav__link--3--bgc;
 
@@ -290,13 +290,13 @@
 	&:before{
 
 		content:"\f0c3";
-		color: $bigSlice--projects;
+		color: #fff;
 
 	}
 
 	@include h-f-a{
 
-		color: $bigSlice--projects;
+		color: #fff;
 		border-color: $nav__link--3--bgc;
 
 	}
