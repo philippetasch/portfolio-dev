@@ -35,7 +35,7 @@
     "vinyl-paths": "^2.1.0"
   },
   "dependencies": {
-    "bower": "^1.6.8",
+    "bower": "^1.7.2",
     "bower-installer": "^1.2.0"
   }
 }
