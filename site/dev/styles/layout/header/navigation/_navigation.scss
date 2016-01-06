@@ -106,7 +106,7 @@
 		float: left;
 		transition: all .45s ease-in-out;
 
-		&:hover {
+		@include h-f-a(){
 
 			transform: translateY(5px);
 

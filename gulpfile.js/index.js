@@ -67,6 +67,8 @@ gulp.task('scripts', fetchTask('scripts-task'));
 gulp.task('fonts', fetchTask('fonts-task'));
 gulp.task('replaceAwesome', fetchTask('replaceAwesome-task'));
 
+gulp.task('push-dist', fetchTask('push-dist'));
+
 gulp.task('watch', ['html','scripts','styles','images','fonts','browser-sync'], function () {
 
     gulp.watch(path.join(config.root, config.base.src, config.htmlFolder.src, '/**/*.{html,json}'), ['html']);
