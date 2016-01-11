@@ -25,8 +25,12 @@ return function () {
       return JSON.parse(fs.readFileSync(htmlPaths.jsonData, 'utf8'))
 
     }))
-        .pipe(plugins.nunjucksRender())
+    .pipe(plugins.nunjucksRender())
+    //remove any non-essential comments in dist
+    .pipe(plugins.htmlmin({
 
+          removeComments: true
+    }))
   .pipe(gulp.dest(htmlPaths.dest))
   };
 };
