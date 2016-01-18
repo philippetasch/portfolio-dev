@@ -2,7 +2,6 @@ var path                 = require('path');
 var fs                   = require('fs');
 var config               = require('../config.json');
 
-
 var htmlPaths = {
 
   src: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.src),

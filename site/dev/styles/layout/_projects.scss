@@ -87,10 +87,9 @@
 
 .tiles__overlay{
 
-	background-color: $nav__link--3--bgc;
+	background-color: rgba($nav__link--3--bgc, .9);
 	color:#fff;
 	z-index:10;
-	opacity: 0.9;
 	transition: all .35s ease-in-out;
 	position: absolute;
 	top: 10px;
@@ -100,6 +99,7 @@
 
 	@include snap(large){
 
+		background-color: $nav__link--3--bgc;
 		visibility: hidden;
 		opacity: 0;
 		transform: scale(3);
@@ -170,9 +170,8 @@
 
 	display: inline-block;
 	@include rem2px(padding, 1, 1.2);
-	border: 2px solid;
+	border: 2px solid #fff;
 	position: relative;
-	color: #fff;
 
 	font-weight: 900;
 	letter-spacing: 1px;

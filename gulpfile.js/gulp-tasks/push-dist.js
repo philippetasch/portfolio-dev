@@ -12,7 +12,7 @@ module.exports = function(gulp, plugins) {
 return function (){
 
 	gulp.src(distPaths.src)
-	  .pipe(plugins.newer(distPaths.src))
+	  .pipe(plugins.newer(distPaths.dest))
       .pipe(gulp.dest(distPaths.dest))
       .pipe(plugins.notify({message: 'Dist pushed !'}))
 };
