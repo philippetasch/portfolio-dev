@@ -1,8 +1,17 @@
-<footer class="bigslice bigSlice--footer slicePad--h slicePad--v t-center">
-        <span>
+<footer id="footer" class="bigslice bigSlice--footer slicePad--h slicePad--v t-center">
         <script type="text/javascript">
-  				document.write(new Date().getFullYear());
+  			var footer = document.getElementById('footer');
+
+
+var year = document.createTextNode(new Date().getFullYear());
+var showYear = document.createElement("span");
+var insertYear = showYear.appendChild(year);
+
+var copyRightName = document.getElementById("copyRightName");
+
+footer.insertBefore(insertYear, copyRightName);
 		</script>
+		<span id="copyRightName">
  		© Philippe Tasch 
  		</span>
 </footer>

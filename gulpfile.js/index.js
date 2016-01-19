@@ -26,4 +26,4 @@ gulp.task('replaceAwesome', fetchTask('replaceAwesome-task'));
 gulp.task('push-dist', fetchTask('push-dist'));
 
 gulp.task('watch', ['html','scripts','styles','images','browser-sync'], fetchTask('watch-task'));
-gulp.task('default',['watch','fonts','replaceAwesome','cv']);
+gulp.task('default',['fonts','replaceAwesome','cv','watch']);

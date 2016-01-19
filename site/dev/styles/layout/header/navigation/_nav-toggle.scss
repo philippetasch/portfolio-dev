@@ -1,5 +1,8 @@
 #trigger{
 
+	border: none;
+	border-radius: 0;
+
 	width: $hamburger-width;
 	height: $hamburger-height;
 	background-color: #222F3D;
@@ -11,9 +14,11 @@
 
 	padding: 22px;
 
-	&:hover{
+	&:hover,
+	&:active{
 
 		cursor:pointer;
+		outline: none;
 
 	}
 

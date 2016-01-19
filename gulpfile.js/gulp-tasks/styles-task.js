@@ -2,6 +2,11 @@ var browserSync          = require('browser-sync');
 var path                 = require('path');
 var config               = require('../config.json');
 
+var environments         = require('gulp-environments');
+
+var development          = environments.development;
+var production           = environments.production;
+
 var cssPaths = {
 
   src: path.join(config.root, config.base.src, config.stylesFolder.src, config.tasks.scss.src),
@@ -49,8 +54,8 @@ module.exports = function (gulp, plugins) {
 
         }))
 
-    .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(gulp.dest(cssPaths.dest))
+    .pipe(environments.production(plugins.rename({suffix: '.min'})))
+    .pipe(environments.production(gulp.dest(cssPaths.dest)))
     .pipe(browserSync.stream())
     .pipe(plugins.size({
                       showFiles : true

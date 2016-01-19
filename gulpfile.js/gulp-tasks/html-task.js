@@ -2,6 +2,11 @@ var path                 = require('path');
 var fs                   = require('fs');
 var config               = require('../config.json');
 
+var environments         = require('gulp-environments');
+
+var development          = environments.development;
+var production           = environments.production;
+
 var htmlPaths = {
 
   src: path.join(config.root, config.base.src, config.htmlFolder.src, config.tasks.html.src),
@@ -25,11 +30,19 @@ return function () {
 
     }))
     .pipe(plugins.nunjucksRender())
+    .pipe(environments.production(plugins.htmlReplace({
+
+      "js":"",
+      "css":"css/styles.min.css",
+
+      "keepUnassigned": false
+
+    })))
     //remove any non-essential comments in dist
-    .pipe(plugins.htmlmin({
+    .pipe(environments.production(plugins.htmlmin({
 
           removeComments: true
-    }))
+    })))
   .pipe(gulp.dest(htmlPaths.dest))
   };
 };

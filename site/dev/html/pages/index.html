@@ -2,6 +2,7 @@
 {% block title %} Philippe Tasch | Webdesigner {% endblock %}
 {% block content %}
     <div class="wrapper stretch--v">
+
         {% include "partials/nav.html" %}
         <section id="top" class="bigSlice bigSlice--me bg-img">
                 <!--<div class="img--container center radius">
@@ -28,7 +29,7 @@
                 {% endfor %}
             </div>
                 <a href="cv/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv">
-                    Téléchargez mon CV !
+                    Voir mon CV !
                 </a>
         </section>
         <section id="skills" class="bigSlice bigSlice--skills slicePad--h slope-bottom">
@@ -101,13 +102,78 @@
                 <i class="fa fa-envelope"></i>
             </div>
         </div>
+<!--build:js-->
+
+<!--    <a id="toggle-scroll">Toggle Scroll Bars</a> -->
+
+    <div class="output">
+        <!--viewportSize.getWidth() = --><span id="widthEl" class="value">Requires JavaScript</span> x
+        <!--viewportSize.getHeight() = --><span id="heightEl" class="value">Requires JavaScript</span>
+    </div>
+
+<!--endbuild-->
 
     </section>
     {% include "partials/footer.html" %}
 </div>
 
 {% include "partials/javascript.html" %}
+<!--build:js-->
+<script>
+     var scroll_link = document.getElementById("toggle-scroll");
+        /*var toggleScroll = function () {
+            if (document.documentElement.style.overflow == "hidden") {
+                document.documentElement.style.overflow = "scroll";
+            } else {
+                document.documentElement.style.overflow = "hidden";
+            }
+            updateValues();
+        };
+        scroll_link.onclick = toggleScroll;*/
 
+        var width_el = document.getElementById("widthEl");
+        var height_el = document.getElementById("heightEl");
+        var innerWidth_el = document.getElementById("innerWidthEl");
+        var clientWidth_el = document.getElementById("clientWidthEl");
+        var innerHeight_el = document.getElementById("innerHeightEl");
+        var clientHeight_el = document.getElementById("clientHeightEl");
+
+        var updateValues = function () {
+            var width = viewportSize.getWidth();
+            var height = viewportSize.getHeight();
+            var innerWidth = window.innerWidth;
+            var clientWidth = document.documentElement.clientWidth;
+            var innerHeight = window.innerHeight;
+            var clientHeight = document.documentElement.clientHeight;
+
+            width_el.innerHTML = width;
+            height_el.innerHTML = height;
+            innerWidth_el.innerHTML = innerWidth;
+            clientWidth_el.innerHTML = clientWidth;
+            innerHeight_el.innerHTML = innerHeight;
+            clientHeight_el.innerHTML = clientHeight;
+
+            innerWidth_el.style.backgroundColor = (width == innerWidth) ? "green" : "red";
+            clientWidth_el.style.backgroundColor = (width == clientWidth) ? "green" : "red";
+            innerHeight_el.style.backgroundColor = (height == innerHeight) ? "green" : "red";
+            clientHeight_el.style.backgroundColor = (height == clientHeight) ? "green" : "red";
+        };
+
+        if (window.addEventListener) {
+            window.addEventListener("resize", updateValues, false);
+            window.addEventListener("DOMContentLoaded", updateValues, false);
+            window.addEventListener("load", updateValues, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent("onload", updateValues);
+        }
+</script>
+<script src="bower_components/viewportSize/viewportSize.js"></script>
+<script type="text/javascript">
+    var width = viewportSize.getWidth();
+    var height = viewportSize.getHeight();
+</script>
+<!--endbuild-->
 <script type="text/javascript">
         var myElement = document.querySelector(".headroom--home");
                 // construct an instance of Headroom, passing the element
@@ -132,6 +198,7 @@
         headroom.init();
 
     </script>
+
     <script type="text/javascript">
     var nav = responsiveNav(".navigation", { // Selector
     animate: true, // Boolean: Use CSS3 transitions, true or false

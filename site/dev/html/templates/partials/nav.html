@@ -1,25 +1,23 @@
 <header class="bigSlice bigSlice--header headroom--home">
     <div class="maxWrapper maxWrapper--header gridClear">
-            <div id="trigger" class="trigger">
+            <button id="trigger" class="trigger">
             <div class="trigger__label">Menu</div>
                 <span class="trigger__bar trigger__bar--1 "></span>
                 <span class="trigger__bar trigger__bar--2 "></span>
                 <span class="trigger__bar trigger__bar--3 "></span>
                 <span class="trigger__bar trigger__bar--4 "></span>
-            </div>
+            </button>
             <ul class="navigation gridClear" role="navigation">
                 <li class="navigation__item ">
                     <a class="navigation__link link--1" data-scroll href="#about">Parcours</a>
                 </li>
-                <li class="navigation__item ">
+                <li class="navigation__item">
                     <a data-scroll href="#skills" class="navigation__link link--2">Competences</a>
                 </li>
-                <li class="navigation__item dropdown animate--sub">
-                    <span class="navigation__link link--3 dropdown-toggle">Projets</span>
+                <li class="navigation__item dropdown" aria-haspopup="true">
+                    <a data-scroll href="#projects" class="navigation__link link--3">Projets Récents</a>
+                    <button class="dropdown-toggle"></button>
                     <ul class="navigation__subnav">
-                        <li class="navigation__subnav__item">
-                            <a data-scroll href="#projects" class="navigation__link link--3--1">Aperçu</a>
-                        </li>
                         <li class="navigation__subnav__item">
                             <a href="projets.html" class="navigation__link link--3--2">Tous</a>
                         </li>
