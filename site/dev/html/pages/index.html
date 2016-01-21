@@ -107,8 +107,15 @@
 <!--    <a id="toggle-scroll">Toggle Scroll Bars</a> -->
 
     <div class="output">
-        <!--viewportSize.getWidth() = --><span id="widthEl" class="value">Requires JavaScript</span> x
-        <!--viewportSize.getHeight() = --><span id="heightEl" class="value">Requires JavaScript</span>
+        <div class="row main">viewportSize.getWidth() = <span id="widthEl" class="value">Requires JavaScript</span></div>
+        <div class="row">window.innerWidth = <span id="innerWidthEl" class="value">Requires JavaScript</span></div>
+        <div class="row">documentElement.clientWidth = <span id="clientWidthEl" class="value">Requires JavaScript</span></div>
+    </div>
+
+    <div class="output">
+        <div class="row main">viewportSize.getHeight() = <span id="heightEl" class="value">Requires JavaScript</span></div>
+        <div class="row">window.innerHeight = <span id="innerHeightEl" class="value">Requires JavaScript</span></div>
+        <div class="row">documentElement.clientHeight = <span id="clientHeightEl" class="value">Requires JavaScript</span></div>
     </div>
 
 <!--endbuild-->
@@ -121,7 +128,7 @@
 <!--build:js-->
 <script>
      var scroll_link = document.getElementById("toggle-scroll");
-        /*var toggleScroll = function () {
+        var toggleScroll = function () {
             if (document.documentElement.style.overflow == "hidden") {
                 document.documentElement.style.overflow = "scroll";
             } else {
@@ -129,7 +136,7 @@
             }
             updateValues();
         };
-        scroll_link.onclick = toggleScroll;*/
+        scroll_link.onclick = toggleScroll;
 
         var width_el = document.getElementById("widthEl");
         var height_el = document.getElementById("heightEl");
@@ -168,7 +175,7 @@
             window.attachEvent("onload", updateValues);
         }
 </script>
-<script src="bower_components/viewportSize/viewportSize.js"></script>
+<script src="viewportSize/viewportSize.js"></script>
 <script type="text/javascript">
     var width = viewportSize.getWidth();
     var height = viewportSize.getHeight();
