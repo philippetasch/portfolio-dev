@@ -185,6 +185,7 @@
 	@include snap(tweak-large){
 
 		max-width: none;
+		overflow: hidden;
 		@include rem2px(margin-bottom, 0);
 		text-align: left;
 	}

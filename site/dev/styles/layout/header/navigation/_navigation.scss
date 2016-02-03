@@ -131,7 +131,7 @@
 
 		@include lonm(4);
 		float: left;
-		transition: all .45s ease-in-out;
+		transition: all .25s ease-in-out;
 
 		@include h-f-a(){
 
@@ -139,16 +139,90 @@
 
 			.navigation__subnav{
 
-				max-height: 999px;
-				transition: all .5s ease-in-out;
+				/* show menu when no keyframes support */
+				opacity: 1;
 				visibility: visible;
+				/* ----- */
+				animation: subNavAppear .25s ease forwards;
 
+			}
+
+		}
 
 	}
 
 }
 
+@keyframes subNavAppear{
+
+	0%{
+
+		visibility: hidden;
+		opacity: 0;
+
+		transform: translateY(50%);
+	}
+
+	10%{
+
+		opacity: 0;
+	}
+
+	100%{
+
+		visibility: visible;
+		opacity: 1;
+
+		transform: translateY(0%);
+
+	}
 }
+
+.navigation__subnav{
+
+	@include lay-out(1);
+	overflow: hidden;
+	display: block;
+	clip: auto;
+    position: relative;
+	transition: all .35s ease-in-out;
+	transform-style: preserve-3d;
+
+	.js &{
+
+		clip: rect(0 0 0 0);
+   		position: absolute;
+		max-height: 0;
+
+	}
+
+	@include snap(large){
+
+		top:100%;
+		left:0%;
+		clip:auto;
+		visibility: hidden;
+   		position: absolute;
+		max-height: 999px;
+
+		.js &{
+
+			clip:auto;
+			max-height: 999px;
+		}
+
+	}
+
+}
+
+.navigation__subnav__item{
+
+	@include lay-out(1);
+
+	@include snap(large){
+		@include rem2px(margin-top, .5)
+
+	}
 }
 
 .navigation__link{
@@ -198,54 +272,6 @@
 		}
 	}
 
-}
-
-.navigation__subnav{
-
-	@include lay-out(1);
-	overflow: hidden;
-	display: block;
-	clip: auto;
-    position: relative;
-	transition: all .45s ease-in-out;
-	transform-style: preserve-3d;
-
-	.js &{
-
-		clip: rect(0 0 0 0);
-   		position: absolute;
-		max-height: 0;
-
-	}
-
-
-	@include snap(large){
-
-		top:100%;
-		left:0%;
-		clip:auto;
-		visibility: hidden;
-   		position: absolute;
-		max-height: 0;
-
-		.js &{
-
-			clip:auto;
-		}
-
-	}
-
-
-}
-
-.navigation__subnav__item{
-
-	@include lay-out(1);
-
-	@include snap(large){
-		@include rem2px(margin-top, .5)
-
-	}
 }
 
 // Navigation items styles //
@@ -323,7 +349,6 @@
 		}
 
 }
-
 
 .link--4{
 

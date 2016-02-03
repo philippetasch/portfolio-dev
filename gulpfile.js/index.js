@@ -21,6 +21,7 @@ gulp.task('browser-sync', fetchTask('browserSync-task'));
 gulp.task('cv', fetchTask('cv-task'));
 gulp.task('fonts', fetchTask('fonts-task'));
 gulp.task('replaceAwesome', fetchTask('replaceAwesome-task'));
+gulp.task('clean', fetchTask('clean-task'));
 
 /* Tasks not wrapped in default */
 gulp.task('push-dist', fetchTask('push-dist'));
