@@ -19,12 +19,13 @@
             <h2 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h2>
             <div class="maxWrapper maxWrapper--about gridClear slicePad--v">
                 {% set aboutClassLR = cycler("about__wrapper--left", "about__wrapper--right") %}
+                {% set aboutClassTLR = cycler("about__text--left", "about__text--right") %}
                 {% for histoire in parcours %}
                     <div class="c-both {{aboutClassLR.next()}} about__wrapper">
                         <div class="about__icon--wrapper {{histoire.icone}}">
                             <i class="fa {{histoire.iconeClass}} about__icon"></i>
                         </div>
-                         <p class="about__text">{{histoire.texte}}</p>
+                         <p class="about__text {{aboutClassTLR.next()}} waypoint-hidden">{{histoire.texte}}</p>
                     </div>
                 {% endfor %}
             </div>
@@ -175,12 +176,50 @@
             window.attachEvent("onload", updateValues);
         }
 </script>
-<script src="viewportSize/viewportSize.js"></script>
+<script src="../bower_components/viewportSize/viewportSize.js"></script>
 <script type="text/javascript">
     var width = viewportSize.getWidth();
     var height = viewportSize.getHeight();
 </script>
+
+<script src="waypoints/lib/noframework.waypoints.js"></script>
+<script src="waypoints/lib/waypoints.debug.js"></script>
+
 <!--endbuild-->
+
+<script>
+
+var continuousElements = document.getElementsByClassName('about__text--left');
+for (var i = 0; i < continuousElements.length; i++) {
+  new Waypoint({
+    element: continuousElements[i],
+    handler: function() {
+      console.log('Basic waypoint triggered');
+    this.element.classList.add('waypoint-shown');
+    this.destroy()
+    },
+
+  offset: "60%",
+
+  })
+}
+
+var continuousElements = document.getElementsByClassName('about__text--right');
+for (var i = 0; i < continuousElements.length; i++) {
+  new Waypoint({
+    element: continuousElements[i],
+    handler: function() {
+      console.log('Basic waypoint triggered');
+    this.element.classList.add('waypoint-shown');
+    this.destroy()
+    },
+
+  offset: "60%",
+
+  })
+}
+
+</script>
 <script type="text/javascript">
         var myElement = document.querySelector(".headroom--home");
                 // construct an instance of Headroom, passing the element
@@ -204,9 +243,6 @@
                 // initialise
         headroom.init();
 
-    </script>
-
-    <script type="text/javascript">
     var nav = responsiveNav(".navigation", { // Selector
     animate: true, // Boolean: Use CSS3 transitions, true or false
     transition: 284, // Integer: Speed of the transition, in milliseconds
@@ -222,10 +258,8 @@
             open: function(){}, // Function: Open callback
             close: function(){} // Function: Close callback
             });
-    </script>
 
-    <script type="text/javascript">
-            smoothScroll.init({
+    smoothScroll.init({
             speed: 800, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll

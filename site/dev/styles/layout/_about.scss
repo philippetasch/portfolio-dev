@@ -15,6 +15,31 @@
 		border-top: 7px solid darken($bigSlice--skills, 10%);
 	}
 }
+/* uncss:ignore */
+.classlist .waypoint-hidden{
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-20%);
+}
+/* uncss:ignore */
+
+.classlist .about__text--right{
+
+	transform: translateX(20%);
+
+}
+/* uncss:ignore */
+
+.classlist .waypoint-shown{
+
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0%);
+	transition: transform .3s linear,
+				opacity .3s linear;
+
+}
 
 .h1--bigSlice--about{
 

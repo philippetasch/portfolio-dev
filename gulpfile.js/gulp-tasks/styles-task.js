@@ -47,12 +47,12 @@ module.exports = function (gulp, plugins) {
         }))
     .pipe(gulp.dest(cssPaths.dest))
 
-    .pipe(plugins.minifyCss({
+    .pipe(environments.production(plugins.minifyCss({
 
           keepBreaks:false,
           keepSpecialComments:false,
 
-        }))
+        })))
 
     .pipe(environments.production(plugins.rename({suffix: '.min'})))
     .pipe(environments.production(gulp.dest(cssPaths.dest)))

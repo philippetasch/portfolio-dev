@@ -18,7 +18,8 @@
     "font-awesome": "FortAwesome/Font-Awesome#~4.4.0",
     "html5shiv": "~3.7.3",
     "abbr-touch": "~2.1.4",
-    "viewportSize": "tysonmatanich/viewportSize"
+    "viewportSize": "tysonmatanich/viewportSize",
+    "waypoints": "~4.0.0"
   },
   "install": {
     "path": {
@@ -29,7 +30,7 @@
       "smooth-scroll": "./site/bower_components/smooth-scroll/dist/js/smooth-scroll.js",
       "headroom.js": "./site/bower_components/headroom.js/dist/headroom.js",
       "font-awesome": "./site/bower_components/font-awesome/scss/*.scss",
-      "viewportSize":"./site/bower_components/viewportSize/samples/main.css"
+      "viewportSize": "./site/bower_components/viewportSize/samples/main.css"
     }
   },
   "devDependencies": {}
