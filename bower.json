@@ -30,7 +30,8 @@
       "smooth-scroll": "./site/bower_components/smooth-scroll/dist/js/smooth-scroll.js",
       "headroom.js": "./site/bower_components/headroom.js/dist/headroom.js",
       "font-awesome": "./site/bower_components/font-awesome/scss/*.scss",
-      "viewportSize": "./site/bower_components/viewportSize/samples/main.css"
+      "viewportSize": "./site/bower_components/viewportSize/samples/main.css",
+      "waypoints": "./site/bower_components/waypoints/lib/noframework.waypoints.js"
     }
   },
   "devDependencies": {}

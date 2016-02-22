@@ -38,16 +38,16 @@
             <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
                 {% for competence in competences %}
                     <div  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
-                    <h3 class="h3 h3--skills">
-                    <span class="skills__icon--container radius">
-                        <i class="fa {{competence.competenceIconType}} skills__icon"></i>
-                    </span>
-                    {{ competence.competenceTitleText }}
-                    </h3>
-                    <p class="skills__text">{{competence.competenceText}}</p>
-                </div>
-            {% endfor %}
-        </div>
+                        <h3 class="h3 h3--skills">
+                        <span class="skills__icon--container radius waypoint-hidden">
+                            <i class="fa {{competence.competenceIconType}} skills__icon"></i>
+                        </span>
+                        {{ competence.competenceTitleText }}
+                        </h3>
+                        <p class="skills__text">{{competence.competenceText}}</p>
+                    </div>
+                {% endfor %}
+            </div>
     </section>
     <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
         <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
@@ -189,35 +189,53 @@
 
 <script>
 
-var continuousElements = document.getElementsByClassName('about__text--left');
-for (var i = 0; i < continuousElements.length; i++) {
+
+var skillCont = document.getElementsByClassName('skills__icon--container');
+
+for (var i = 0; i < skillCont.length; i++) {
   new Waypoint({
-    element: continuousElements[i],
+    element: skillCont[i],
     handler: function() {
-      console.log('Basic waypoint triggered');
-    this.element.classList.add('waypoint-shown');
+      console.log('Skills waypoint triggered');
+    this.element.classList.add('waypoint-bounce');
     this.destroy()
     },
 
-  offset: "60%",
+  offset: "70%",
 
   })
 }
 
-var continuousElements = document.getElementsByClassName('about__text--right');
-for (var i = 0; i < continuousElements.length; i++) {
+var appearLeft = document.getElementsByClassName('about__text--left');
+for (var i = 0; i < appearLeft.length; i++) {
   new Waypoint({
-    element: continuousElements[i],
+    element: appearLeft[i],
     handler: function() {
-      console.log('Basic waypoint triggered');
+      console.log('left story waypoint triggered');
     this.element.classList.add('waypoint-shown');
     this.destroy()
     },
 
-  offset: "60%",
+  offset: "66%",
 
   })
 }
+
+var appearRight = document.getElementsByClassName('about__text--right');
+for (var i = 0; i < appearRight.length; i++) {
+  new Waypoint({
+    element: appearRight[i],
+    handler: function() {
+      console.log('right story waypoint triggered');
+    this.element.classList.add('waypoint-shown');
+    this.destroy()
+    },
+
+  offset: "66%",
+
+  })
+}
+
 
 </script>
 <script type="text/javascript">
