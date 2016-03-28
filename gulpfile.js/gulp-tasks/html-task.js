@@ -32,7 +32,8 @@ return function () {
     .pipe(plugins.nunjucksRender())
     .pipe(environments.production(plugins.htmlReplace({
 
-      "js":"",
+      "vanish":" ",
+      "js":"/scripts/main.min.js",
       "css":"css/styles.min.css",
 
       "keepUnassigned": false

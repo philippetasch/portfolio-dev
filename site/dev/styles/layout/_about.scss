@@ -1,6 +1,7 @@
 .bigSlice--about{
 
 	background-color: $bigSlice--about;
+	color: $bigSlice--about;
 	text-align: center;
 	overflow: hidden;
 
@@ -20,13 +21,23 @@
 
 	opacity: 0;
 	visibility: hidden;
-	transform: translateX(-20%);
+	transform: translateY(20%);
+
+	@include snap(veryLarge){
+
+		transform: translateX(-20%);
+	}
 }
 /* uncss:ignore */
 
 .classlist .about__text--right{
 
-	transform: translateX(20%);
+	transform: translateY(20%);
+
+	@include snap(veryLarge){
+
+		transform: translateX(20%);
+	}
 
 }
 /* uncss:ignore */
@@ -35,9 +46,14 @@
 
 	opacity: 1;
 	visibility: visible;
-	transform: translateX(0%);
+	transform: translateY(0%);
 	transition: transform .3s linear,
 				opacity .3s linear;
+
+	@include snap(veryLarge){
+
+		transform: translateX(0%);
+	}
 
 }
 
@@ -311,4 +327,7 @@
 		border-color: $nav__link--1--bgc;
 
 	}
+
 }
+
+

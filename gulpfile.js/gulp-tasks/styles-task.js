@@ -42,7 +42,8 @@ module.exports = function (gulp, plugins) {
           ,/\.active/
           ,/\.headroom/
           ,/\.headroom--/
-          ,/\.disable-hover/],
+          ,/\.disable-hover/
+          ,/^\.classlist/],
 
         }))
     .pipe(gulp.dest(cssPaths.dest))

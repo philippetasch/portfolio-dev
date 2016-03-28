@@ -51,7 +51,7 @@
 
             "browser": ["firefox"],
 
-            "online": "true"
+            "online": "false"
 
         },
 

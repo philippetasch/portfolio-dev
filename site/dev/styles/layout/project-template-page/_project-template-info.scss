@@ -1,6 +1,11 @@
 .bigSlice--project-info{
 
 		border-top: 7px solid;
+
+		@include snap(tweak-large){
+
+			overflow: hidden;
+		}
 }
 
 .intro-title-wrapper{
@@ -36,12 +41,61 @@
 
 		}
 	}
+/*
+	.fadeFromLeft{
 
+		@include snap(tweak-large){
+
+			animation: fadeFromLeft 0.7s linear;
+
+		}
+
+	}
+
+	@keyframes fadeFromLeft{
+
+		0%{
+
+			transform: translateX(-20%);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		100%{
+
+			transform: translateX(0%);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+*/
 	.intro-title{
 
 		margin: 0;
-	}
 
+		@include snap(tweak-large){
+
+			animation: fadeFromBottom 0.7s linear;
+		}
+	}
+/*
+	@keyframes fadeFromBottom{
+
+		0%{
+
+			transform: translateY(20%);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		100%{
+
+			transform: translateY(0%);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+*/
 .intro-info-wrapper{
 
 	font-family: Roboto Slab;
@@ -86,10 +140,30 @@
 			margin: 0;
 		}
 
+		animation: fadeFromRight 0.7s linear;
+
 	}
 
 }
+/*
+@keyframes fadeFromRight{
 
+		0%{
+
+			transform: translateX(20%);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		100%{
+
+			transform: translateX(0%);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+*/
 	.intro-info{
 
 		padding-bottom: 10px;
@@ -195,8 +269,31 @@
 	.intro-text{
 
 		margin: 0;
+
+		@include snap(tweak-large){
+
+			animation: reveal 0.8s linear;
+
+		}
+	}
+/*
+	@keyframes reveal{
+
+		0%{
+
+			opacity: 0;
+			transform: scale(0.8);
+		}
+
+		100%{
+
+			opacity: 1;
+			transform: scale(1);
+
+		}
 	}
 
+*/
 .intro-lien-site{
 
 	display: block;

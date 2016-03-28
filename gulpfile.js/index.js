@@ -10,6 +10,18 @@ function fetchTask(task){
   return require('./gulp-tasks/' + task)(gulp, plugins);
 }
 
+var vinylPaths           = require('vinyl-paths');
+var del                  = require('del');
+
+var scriptsPaths = {
+
+  src: path.join(config.root, config.base.src, config.scriptsFolder.src, config.tasks.js.src),
+  dest: path.join(config.root, config.base.dest, config.scriptsFolder.dest)
+}
+
+
+
+
 /* Tasks being watched */
 gulp.task('html', fetchTask('html-task'));
 gulp.task('scripts', fetchTask('scripts-task'));
