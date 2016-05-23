@@ -1,23 +1,15 @@
-$outh : 55px;
 
+#screenSize,
 .screenSize{
 
-	color: #fff;
 	position: fixed;
-	bottom: 0;
 	z-index: 1000000;
-	width: 100%;
-	text-align: center;
-
-}
-
-.sizeWidth{
-
-	background-color: lightgreen;
-	position: absolute;
 	left: 10px;
 	bottom: 10px;
+
+	background-color: lightgreen;
 	max-width: 200px;
 	padding: 10px;
 
+	text-align: center;
 }

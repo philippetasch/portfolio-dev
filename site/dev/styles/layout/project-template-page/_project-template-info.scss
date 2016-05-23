@@ -32,14 +32,35 @@
 		@include rem2px(padding, 1, 2);
 		@include rem2px(margin-bottom, 3);
 
+		&:before{
+
+			content:"\f073";
+			font-family: FontAwesome;
+			color: #fff;
+			@include rem2px(margin-right, 0.5);
+
+		}
+
 		@include snap(tweak-large){
 
 			display: block;
-
-			@include rem2px(padding, 0, 1.5);
+			@include rem2px(padding, 0.5, 1.5);
 			@include rem2px(margin-bottom, 0);
 
 		}
+	}
+
+	.intro-title-info .duree{
+
+		&:before{
+
+			content:"\f017";
+			font-family: FontAwesome;
+			color: #fff;
+		    	@include rem2px(margin,0 , 0.5, 0, 1.5);
+
+		}
+
 	}
 /*
 	.fadeFromLeft{

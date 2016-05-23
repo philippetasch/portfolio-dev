@@ -3,83 +3,21 @@
 {% block title %} Philippe Tasch | Vijump {% endblock %}
 
 {% block content %}
+
 	{% for projet in projetVijump %}
+
 		<section class="{{projet.projectColorClass}}">
-			<div class="maxWrapper slicePad--h">
-					{% import "macros/nav-macro.html" as topNav %}
-					{{topNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html")}}
-				<div>
-					{% for image in projet.imageMain %}
-					<img src="{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}}"
-							srcset="{{image.imagesSrcset}}"
-							sizes="{{image.sizes}}" />
-					{% endfor %}
-				</div>
-			</div>
-			<section class="bigSlice bigSlice--project-info slicePad--v--top">
 
-				<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
-					<div class="intro-title-wrapper">
-						<span class="intro-title-info">Date : {{projet.infos.date}} // Duree : {{projet.infos.duree}}</span>
-						<h1 class="h1 intro-title">{{projet.sousTitre}}</h1>
-					</div>
-					<div class="intro-info-wrapper">
-						<div class="intro-info gridClear">
-							<span class="rond poste"></span>
-							<p class="project-info__title ">Poste</p>
-							<p class="project-info__text">{{projet.infos.poste}}</p>
-						</div>
-						<div class="intro-info gridClear">
-							<span class="rond langages"></span>
-							<p class="project-info__title ">Langages</p>
-							<p class="project-info__text">{{projet.infos.langages}}</p>
-						</div>
-						<div class="intro-info gridClear">
-							<span class="rond  outils"></span>
-							<p class="project-info__title">Outils</p>
-							<p class="project-info__text">{{projet.infos.outils}}</p>
-						</div>
-					</div>
-					<div class="intro-text-wrapper">
-						<p class="intro-text">{{projet.texteIntro}}</p>
-					</div>
-				</div>
-				<a href="{{projet.infos.lien}}" class="intro-lien-site ">
-					<span class="lien__texte">
-						 {{projet.infos.lien__texte}}
-					</span>
-				</a>
-			</section>
-			<section class="bigSlice slicePad--v--bottom gridClear">
-				<div class="center maxWrapper--project-description slicePad--v slicePad--h">
-					<h2 class="h1 h1--bigSlice heading--description slicePad--v">Description</h2>
-					<p class="center project-max-text slicePad--v--top first-letter">
-						{{projet.descriptionProjetUn}}
-					</p>
-						<aside class="img--description img--description--left" data-alt="{{projet.imagesTexteUn.imageAlt}}">
-							<img src="{{projet.imagesTexteUn.originale}}" alt="{{projet.imagesTexteUn.imageAlt}}" class="img--resp project-description-image">
-						</aside>
-					<p class="center project-max-text">
-						{{projet.descriptionProjetDeux}}
-					</p>
-						<aside class="img--description img--description--right" data-alt="{{projet.imagesTexteDeux.imageAlt}}">
-							<img src="{{projet.imagesTexteDeux.originale}}" alt="{{projet.imagesTexteDeux.imageAlt}}" class="img--resp project-description-image">
-						</aside>
-					<p class="center project-max-text">
-						{{projet.descriptionProjetTrois}}
-					</p>
-						<aside class="img--description img--description--left" data-alt="{{projet.imagesTexteTrois.imageAlt}}">
-							<img src="{{projet.imagesTexteTrois.originale}}" alt="{{projet.imagesTexteTrois.imageAlt}}" class="img--resp project-description-image">
-						</aside>
-					<p class="center project-max-text">
-						{{projet.descriptionProjetQuatre}}
-					</p>
-			</div>
-			</section>
-		{% endfor %}
+			{% import "macros/nav-macro.html" as topNav %}
+			{{topNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html")}}
 
-		{% import "macros/pagination.html" as bottomNav %}
-		{{bottomNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html")}}
+			{% include "partials/project-tpl/project-base-tpl.html" %}
 
-</section>
+			{% import "macros/pagination.html" as bottomNav %}
+			{{bottomNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html")}}
+
+		</section>
+
+	{% endfor %}
+
 {% endblock %}

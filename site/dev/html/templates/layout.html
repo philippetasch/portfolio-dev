@@ -4,95 +4,97 @@
 <!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang=""> <![endif]-->
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang=""> <![endif]-->
 <!--[if gt IE 9]><!--> <html  class="no-js" lang="fr"> <!--<![endif]-->
-<head>
-<!-- prevent responsive nav flashing -->
-<script>
-   document.documentElement.className += " js";
-</script>
-<!-- -->
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,900' rel='stylesheet' type='text/css'>
-    <meta charset="utf-8">
-    <title>{% block title %}  {% endblock %}</title>
-    <meta name="description" content="Site personnel de Philippe Tasch, Webdesigner - Intégrateur.">
-    <meta name="keywords" content="HTML5, CSS3, Responsive Web Design, UX, UI, Webdesigner, Intégrateur, CV, Compétences, Accessibilité">
-    <meta name="author" content="Philippe Tasch">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- prevent responsive nav flashing -->
+        <script>
+           document.documentElement.className += " js";
+        </script>
+        <!-- -->
 
-    <!--build:css-->
-    <link rel="stylesheet" href="css/styles.css">
-    <!--endbuild-->
+        <meta charset="utf-8">
+        <title>{% block title %}  {% endblock %}</title>
+        <meta name="description" content="Site personnel de Philippe Tasch, Webdesigner - Intégrateur.">
+        <meta name="keywords" content="HTML5, CSS3, Responsive Web Design, UX, UI, Webdesigner, Intégrateur, CV, Compétences, Accessibilité">
+        <meta name="author" content="Philippe Tasch">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--[if lt IE 9]>
-        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>    
-    <![endif]-->
-</head>
-<body>
-    <noscript class="no-script-msg">
-    <div class="no-script-msg-text">
-      Javascript est désactivé dans votre navigateur! Rassurez-vous, le site est pensé pour. Bonne visite!
-    </div>
-    </noscript>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,900' rel='stylesheet' type='text/css'>
+        <!--build:css-->
+        <link rel="stylesheet" href="css/styles.css">
+        <!--endbuild-->
 
-    <!--build:vanish-->
+        <!--[if lt IE 9]>
+            <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+        <![endif]-->
 
-    <div class="screenSize" id="screenSize">
+    </head>
 
-    </div>
+    <body>
 
-    <script>
+        <noscript class="no-script-msg">
+            <div class="no-script-msg-text">
+                Javascript est désactivé dans votre navigateur! Rassurez-vous, le site est pensé pour. Bonne visite!
+            </div>
+        </noscript>
 
-        var dimensBlock = document.createElement("div");
-        dimensBlock.className = "sizeWidth";
-        dimensBlock.id = "sizeWidth";
-        var screenContainer = document.getElementById("screenSize");
-        screenContainer.appendChild(dimensBlock);
+        <!--build:vanish-->
 
-        var screenHeight = window.innerHeight;
-        var screenWidth = window.innerWidth;
-        dimensBlock.textContent = screenWidth + " x " + screenHeight;
+        <script>
 
-        window.addEventListener("resize", function(){
+            var dimensBlock = document.createElement("div");
+            dimensBlock.className = "screenSize";
+            dimensBlock.id = "screenSize";
+            var corps = document.querySelector("body");
+            corps.appendChild(dimensBlock);
 
             var screenHeight = window.innerHeight;
             var screenWidth = window.innerWidth;
             dimensBlock.textContent = screenWidth + " x " + screenHeight;
 
-        });
+            window.addEventListener("resize", function(){
 
-    </script>
+                var screenHeight = window.innerHeight;
+                var screenWidth = window.innerWidth;
+                dimensBlock.textContent = screenWidth + " x " + screenHeight;
 
-<!--endbuild-->
+            });
 
-  {% block wrap %}
+        </script>
 
-  {% endblock %}
+        <!--endbuild-->
 
-  <!--build:vanish-->
+          {% block wrap %}
 
-<script src="/scripts/modernizr.js"></script>
+          {% endblock %}
 
-<script src="/waypoints/lib/noframework.waypoints.js"></script>
+          <!--build:vanish-->
 
-<!--endbuild-->
+        <script src="/scripts/modernizr.js"></script>
 
-<script>
+        <script src="/waypoints/lib/noframework.waypoints.js"></script>
 
-var introTitle = document.getElementsByClassName('intro-info-title');
+        <!--endbuild-->
 
-var blob = new Waypoint({
-    element: introTitle,
-    handler: function() {
-      console.log('right story waypoint triggered');
-    this.element.classList.add('waypoint-shown');
-    this.destroy()
-    },
+        <script>
 
-  offset: "66%",
+            var introTitle = document.getElementsByClassName('intro-info-title');
 
-  })
+            var blob = new Waypoint({
+                element: introTitle,
+                handler: function() {
+                  console.log('right story waypoint triggered');
+                this.element.classList.add('waypoint-shown');
+                this.destroy()
+                },
 
-</script>
-</body>
+              offset: "66%",
+
+              })
+
+        </script>
+
+    </body>
+
 </html>

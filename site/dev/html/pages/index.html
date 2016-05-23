@@ -1,19 +1,20 @@
 {% extends "index-layout.html" %}
 {% block title %} Philippe Tasch | Webdesigner {% endblock %}
 {% block content %}
+
     <div class="wrapper stretch--v">
+
         {% include "partials/nav.html" %}
+
         <section id="top" class="bigSlice bigSlice--me bg-img">
-                <!--<div class="img--container center radius">
-                    <img class="img--resp img--resp--rounded" src="{{entete.image}}" alt="{{entete.alt}}"/>
-                </div>-->
-        <div class="maxWrapper maxWrapper--heading">
-                    <h1 class="h1 h1--me slideInTop welcome--heading">
-                        <span class="h1--me__part-one">Philippe Tasch /</span>
-                        <span class="h1--me__part-two">Webdesigner</span>
-                    </h1>
-        </div>
+            <div class="maxWrapper maxWrapper--heading">
+                <h1 class="h1 h1--me slideInTop welcome--heading">
+                    <span class="h1--me__part-one">Philippe Tasch /</span>
+                    <span class="h1--me__part-two">Webdesigner</span>
+                </h1>
+            </div>
         </section>
+
         <section id="about" class="bigSlice bigSlice--about slope-bottom">
             <h2 class="h1 h1--bigSlice h1--bigSlice--about slicePad--v t-center">Parcours</h2>
             <div class="maxWrapper maxWrapper--about gridClear slicePad--v">
@@ -28,10 +29,11 @@
                     </div>
                 {% endfor %}
             </div>
-                <a href="cv/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv">
-                    Voir mon CV 
-                </a>
+            <a href="cv/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv">
+                Voir mon CV 
+            </a>
         </section>
+
         <section id="skills" class="bigSlice bigSlice--skills slicePad--h slope-bottom">
             <h2 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h2>
             <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
@@ -47,73 +49,74 @@
                     </div>
                 {% endfor %}
             </div>
-    </section>
-    <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
-        <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
-        <div class="maxWrapper--projects gridClear slicePad--v">
-            {% for projet in projets %}
-                <div class="grids--zero g-4--zero tiles">
-                    <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
-                        <div class="tiles__overlay">
-                            <div class="tiles__title">
-                                <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
-                                <p class="h4 h4--overlay">{{projet.objet}}</p>
-                                <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
-                                <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+        </section>
+
+        <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
+            <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
+            <div class="maxWrapper--projects gridClear slicePad--v">
+                {% for projet in projets %}
+                    <div class="grids--zero g-4--zero tiles">
+                        <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
+                            <div class="tiles__overlay">
+                                <div class="tiles__title">
+                                    <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
+                                    <p class="h4 h4--overlay">{{projet.objet}}</p>
+                                    <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
+                                    <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
             <a href="projets.html" class="btn btn--slice btn--projects">
                 Voir tous mes projets 
             </a>
-    </section>
-    <section id="contact" class="bigSlice bigSlice--contact  slicePad--h" >
-        <h2 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h2>
-        <div class="maxWrapper gridClear gridsMar--v slicePad--v">
-            <p class="contact__text">Pour toute question vous pouvez me contacter via l'adresse ci-dessous. Je vous répondrai dans les plus brefs délais !</p>
-            <!--<form class="first grids g-1">
-                <div class="first grids g-2 contact--input--group">
-                    <label for="nom" class="label--contact">Nom</label>
-                    <input type="text" id="nom" class="input--contact g-1"/>
+        </section>
+
+        <section id="contact" class="bigSlice bigSlice--contact  slicePad--h" >
+            <h2 class="h1 h1--bigSlice h1--bigSlice--contact slicePad--v">Contact</h2>
+            <div class="maxWrapper gridClear gridsMar--v slicePad--v">
+                <p class="contact__text">Pour toute question vous pouvez me contacter via l'adresse ci-dessous. Je vous répondrai dans les plus brefs délais !</p>
+                <!--<form class="first grids g-1">
+                    <div class="first grids g-2 contact--input--group">
+                        <label for="nom" class="label--contact">Nom</label>
+                        <input type="text" id="nom" class="input--contact g-1"/>
+                    </div>
+                    <div class="grids g-2 contact--input--group">
+                        <label for="prenom" class="label--contact">Prénom</label>
+                        <input type="text" id="prenom" class="input--contact g-1"/>
+                    </div>
+                    <div class="first grids g-2 contact--input--group">
+                        <label for="mail" class="label--contact">Adresse E-mail</label>
+                        <input type="email" id="mail" class="input--contact g-1" required/>
+                    </div>
+                    <div class="grids g-2 contact--input--group">
+                        <label for="sujet" class="label--contact">Sujet</label>
+                        <input type="text" id="sujet" class="input--contact g-1"/>
+                    </div>
+                    <div class="first grids g-1">
+                        <label for="message" class="label--contact">Message</label>
+                        <textarea name="message" id="message" class="message--contact g-1" rows="10"></textarea>
+                    </div>
+                    <button type="submit" id="envoi" name="envoi" class="btn btn--contact btn--slice">Envoyer</button>
+                </form>-->
+                <p class="g-1 h1 t-center slicePad--v--top">flepptasch@gmail.com</p>
+                <div class="contact__icon">
+                    <i class="fa fa-envelope"></i>
                 </div>
-                <div class="grids g-2 contact--input--group">
-                    <label for="prenom" class="label--contact">Prénom</label>
-                    <input type="text" id="prenom" class="input--contact g-1"/>
-                </div>
-                <div class="first grids g-2 contact--input--group">
-                    <label for="mail" class="label--contact">Adresse E-mail</label>
-                    <input type="email" id="mail" class="input--contact g-1" required/>
-                </div>
-                <div class="grids g-2 contact--input--group">
-                    <label for="sujet" class="label--contact">Sujet</label>
-                    <input type="text" id="sujet" class="input--contact g-1"/>
-                </div>
-                <div class="first grids g-1">
-                    <label for="message" class="label--contact">Message</label>
-                    <textarea name="message" id="message" class="message--contact g-1" rows="10"></textarea>
-                </div>
-                <button type="submit" id="envoi" name="envoi" class="btn btn--contact btn--slice">Envoyer</button>
-            </form>-->
-            <p class="g-1 h1 t-center slicePad--v--top">flepptasch@gmail.com</p>
-            <div class="contact__icon">
-                <i class="fa fa-envelope"></i>
             </div>
-        </div>
+        </section>
 
-    </section>
+        {% include "partials/footer.html" %}
 
-    {% include "partials/footer.html" %}
+    </div>
 
-      <!--build:js-->
-      <script></script>
-      <!--endbuild-->
+    <!--build:js-->
+    <script></script>
+    <!--endbuild-->
 
-</div>
-
-<!--build:vanish-->
+    <!--build:vanish-->
 
     <script src="/scripts/responsive-nav.js"></script>
 
@@ -127,9 +130,9 @@
 
     <script src="/scripts/lastmodified.js"></script>
 
-<!--endbuild-->
+    <!--endbuild-->
 
-<script type="text/javascript">
+    <script type="text/javascript">
         var myElement = document.querySelector(".headroom--home");
                 // construct an instance of Headroom, passing the element
         var headroom  = new Headroom(myElement,
@@ -151,102 +154,99 @@
               });
                 // initialise
         headroom.init();
-</script>
-<script type="text/javascript">
+    </script>
+    <script type="text/javascript">
 
-    var nav = responsiveNav(".navigation", { // Selector
-    animate: true, // Boolean: Use CSS3 transitions, true or false
-    transition: 284, // Integer: Speed of the transition, in milliseconds
-    label: "", // String: Label for the navigation toggle
-    insert: "", // String: Insert the toggle before or after the navigation
-    customToggle: "trigger", // Selector: Specify the ID of a custom toggle
-    closeOnNavClick: true, // Boolean: Close the navigation when one of the links are clicked
-    openPos: "relative", // String: Position of the opened nav, relative or static
-    navClass: "navigation", // String: Default CSS class. If changed, you need to edit the CSS too!
-    navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
-        jsClass: "js", // String: 'JS enabled' class which is added to <html> element
-            init: function(){}, // Function: Init callback
-            open: function(){}, // Function: Open callback
-            close: function(){} // Function: Close callback
-            });
+        var nav = responsiveNav(".navigation", { // Selector
+        animate: true, // Boolean: Use CSS3 transitions, true or false
+        transition: 284, // Integer: Speed of the transition, in milliseconds
+        label: "", // String: Label for the navigation toggle
+        insert: "", // String: Insert the toggle before or after the navigation
+        customToggle: "trigger", // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: true, // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative", // String: Position of the opened nav, relative or static
+        navClass: "navigation", // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+            jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+                init: function(){}, // Function: Init callback
+                open: function(){}, // Function: Open callback
+                close: function(){} // Function: Close callback
+                });
 
-</script>
-<script type="text/javascript">
+    </script>
+    <script type="text/javascript">
 
-    smoothScroll.init({
-            speed: 800, // Integer. How fast to complete the scroll in milliseconds
-            easing: 'easeInOutCubic', // Easing pattern to use
-            updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
-            callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
-            });
+        smoothScroll.init({
+                speed: 800, // Integer. How fast to complete the scroll in milliseconds
+                easing: 'easeInOutCubic', // Easing pattern to use
+                updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+                offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+                callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
+                callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
+                });
 
-</script>
+    </script>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-var appearLeft = document.getElementsByClassName('about__text--left');
-for (var i = 0; i < appearLeft.length; i++) {
-  new Waypoint({
-    element: appearLeft[i],
-    handler: function() {
-      console.log('left story waypoint triggered');
-    this.element.classList.add('waypoint-shown');
-    this.destroy()
-    },
+        var appearLeft = document.getElementsByClassName('about__text--left');
+        for (var i = 0; i < appearLeft.length; i++) {
+          new Waypoint({
+            element: appearLeft[i],
+            handler: function() {
+            this.element.classList.add('waypoint-shown');
+            this.destroy()
+            },
 
-  offset: "66%",
+          offset: "66%",
 
-  })
-}
+          })
+        }
 
-var appearRight = document.getElementsByClassName('about__text--right');
-for (var i = 0; i < appearRight.length; i++) {
-  new Waypoint({
-    element: appearRight[i],
-    handler: function() {
-      console.log('right story waypoint triggered');
-    this.element.classList.add('waypoint-shown');
-    this.destroy()
-    },
+        var appearRight = document.getElementsByClassName('about__text--right');
+        for (var i = 0; i < appearRight.length; i++) {
+          new Waypoint({
+            element: appearRight[i],
+            handler: function() {
+            this.element.classList.add('waypoint-shown');
+            this.destroy()
+            },
 
-  offset: "66%",
+          offset: "66%",
 
-  })
-}
+          })
+        }
 
-var skillCont = document.getElementsByClassName('skills__icon--container');
+        var skillCont = document.getElementsByClassName('skills__icon--container');
 
-for (var i = 0; i < skillCont.length; i++) {
-  new Waypoint({
-    element: skillCont[i],
-    handler: function() {
-      console.log('Skills waypoint triggered');
-    this.element.classList.add('waypoint-bounce');
-    this.destroy()
-    },
+        for (var i = 0; i < skillCont.length; i++) {
+          new Waypoint({
+            element: skillCont[i],
+            handler: function() {
+            this.element.classList.add('waypoint-bounce');
+            this.destroy()
+            },
 
-  offset: "70%",
+          offset: "70%",
 
-  })
-}
+          })
+        }
 
-var skillCont = document.getElementsByClassName('btn--slice');
+        var skillCont = document.getElementsByClassName('btn--slice');
 
-for (var i = 0; i < skillCont.length; i++) {
-  new Waypoint({
-    element: skillCont[i],
-    handler: function() {
-      console.log('Button waypoint triggered');
-    this.element.classList.add('btn--fill');
-    this.destroy()
-    },
+        for (var i = 0; i < skillCont.length; i++) {
+          new Waypoint({
+            element: skillCont[i],
+            handler: function() {
+            this.element.classList.add('btn--fill');
+            this.destroy()
+            },
 
-  offset: "78%",
+          offset: "78%",
 
-  })
-}
+          })
+        }
 
-</script>
-{% endblock %}
+    </script>
+
+    {% endblock %}
