@@ -1,4 +1,4 @@
-.project-vijump .bigSlice--project-info{
+.project-vijump .bigSlice--project-card{
 
 	background-color: #384148;
 	border-color: $vijump-info-border;
@@ -33,6 +33,7 @@
 			color: $codecats-info-rond-outils;
 
 		}
+
 		@include snap(large){
 
 			&:hover .project-nav__text{
@@ -80,7 +81,7 @@
 
 }
 
-.project-vijump .intro-info-wrapper{
+.project-vijump .card__details{
 
 	&:after,
 	&:before{
@@ -90,14 +91,14 @@
 	}
 }
 
-.project-vijump .intro-title-info,
-.project-vijump .intro-lien-site{
+.project-vijump .card__title-info,
+.project-vijump .card__link{
 
 	background-color: $vijump-info-border;
 	color: $vijump-bg;
 }
 
-.project-vijump .intro-lien-site{
+.project-vijump .card__link{
 
 	color: $vijump-bg;
 
@@ -108,7 +109,7 @@
 			background-color: darken($vijump-info-infos, 5%);
 			color: $vijump-bg;
 
-			.lien__texte:after{
+			span:after{
 
 				background-color: $vijump-bg;
 			}
@@ -117,7 +118,7 @@
 
 }
 
-.project-vijump .lien__texte{
+.project-vijump .card__link span{
 
 	&:after{
 
@@ -126,7 +127,7 @@
 	}
 }
 
-.project-vijump .rond{
+.project-vijump .detail__icon{
 
 	background-color: $vijump-info-infos;
 
@@ -150,7 +151,7 @@
 
 .project-vijump .pagination__link{
 
-		background-color: $vijump-info-bg;
+	background-color: $vijump-info-bg;
 
 	&:before{
 

@@ -1,21 +1,23 @@
 {% macro active(currentPage, linkPrevious, linkNext) %}
-<section class="bigSlice gridClear t-center pagination">
-	<div class="pagination__wrapper
-	{% if currentPage == 'firstProject' %} hidden {% elif currentPage == 'lastProject' %} g-1 t-center pagination__wrapper--only-child {% else %} grids--zero g-2--zero{% endif %}
-	">
-		<a href="{{ linkPrevious }}" class="pagination__link pagination__link--previous slicePad--v">
-			<i class="fa fa-arrow-left project-nav__icon"></i>
-			<span class="project-nav__text">Précédent</span>
-		</a>
-	</div>
-	<div class="
-	pagination__wrapper
-	{% if currentPage == 'firstProject' %} g-1 t-center pagination__wrapper--only-child {% elif currentPage == 'lastProject' %} hidden {% else %} grids--zero g-2--zero{% endif %}
-	">
-		<a href="{{ linkNext }}" class="pagination__link pagination__link--next slicePad--v">
-			<span class="project-nav__text">Suivant</span>
-			<i class="fa fa-arrow-right project-nav__icon"></i>
-		</a>
-	</div>
-</section>
+<footer>
+	<section class="bigSlice gridClear t-center pagination">
+		<div class="pagination__wrapper
+		{% if currentPage == 'firstProject' %} hidden {% elif currentPage == 'lastProject' %} g-1 t-center pagination__wrapper--only-child {% else %} grids--zero g-2--zero{% endif %}
+		">
+			<a href="{{ linkPrevious }}" class="pagination__link pagination__link--previous slicePad--v">
+				<i class="fa fa-arrow-left project-nav__icon"></i>
+				<span class="project-nav__text">Précédent</span>
+			</a>
+		</div>
+		<div class="
+		pagination__wrapper
+		{% if currentPage == 'firstProject' %} g-1 t-center pagination__wrapper--only-child {% elif currentPage == 'lastProject' %} hidden {% else %} grids--zero g-2--zero{% endif %}
+		">
+			<a href="{{ linkNext }}" class="pagination__link pagination__link--next slicePad--v">
+				<span class="project-nav__text">Suivant</span>
+				<i class="fa fa-arrow-right project-nav__icon"></i>
+			</a>
+		</div>
+	</section>
+</footer>
 {% endmacro %}

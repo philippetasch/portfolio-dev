@@ -4,7 +4,7 @@
 
 }
 
-.project-emmaus .bigSlice--project-info{
+.project-emmaus .bigSlice--project-card{
 
 	background-color: $standard-info-bg;
 	border-color: $standard-info-border;
@@ -12,15 +12,15 @@
 
 }
 
-.project-emmaus .intro-title-info,
-.project-emmaus .intro-lien-site{
+.project-emmaus .card__title-info,
+.project-emmaus .card__link{
 
 	background-color: $standard-info-border;
 	color: $nav__link--2--bgc;
 
 }
 
-.project-emmaus .intro-lien-site{
+.project-emmaus .card__link{
 
 	@include snap(tweak-large){
 
@@ -29,7 +29,7 @@
 			background-color:  $nav__link--2--bgc;
 			color: darken($bigSlice--skills, 15%);
 
-			.lien__texte:after{
+			span:after{
 
 				background-color: darken($bigSlice--skills, 15%);
 			}
@@ -37,16 +37,17 @@
 	}
 }
 
-.project-emmaus .intro-info-wrapper{
+.project-emmaus .card__details{
 
-	&:before,&:after{
+	&:before,
+	&:after{
 
 		background-color: darken($bigSlice--skills, 15%);
 
 	}
 }
 
-.project-emmaus .rond{
+.project-emmaus .detail__icon{
 
 	background-color: $nav__link--2--bgc;
 

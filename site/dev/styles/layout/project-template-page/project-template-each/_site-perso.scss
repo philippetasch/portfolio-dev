@@ -4,21 +4,21 @@
 
 }
 
-.site-perso .bigSlice--project-info{
+.site-perso .bigSlice--project-card{
 
 	background-color: $standard-info-bg;
 	border-color: $site-perso-info-border;
 	color: #fff;
 }
 
-.site-perso .intro-title-info,
-.site-perso .intro-lien-site{
+.site-perso .card__title-info,
+.site-perso .card__link{
 
 	background-color: $site-perso-info-border;
 	color: $nav__link--2--bgc;
 }
 
-.site-perso .intro-lien-site{
+.site-perso .card__link{
 
 	@include snap(tweak-large){
 
@@ -27,7 +27,7 @@
 			background-color:  $nav__link--2--bgc;
 			color: darken($bigSlice--skills, 15%);
 
-			.lien__texte:after{
+			span:after{
 
 				background-color: darken($bigSlice--skills, 15%);
 			}
@@ -35,16 +35,17 @@
 	}
 }
 
-.site-perso .intro-info-wrapper{
+.site-perso .card__details{
 
-	&:before,&:after{
+	&:before,
+	&:after{
 
 		background-color: darken($bigSlice--skills, 15%);
 
 	}
 }
 
-.site-perso .rond{
+.site-perso .detail__icon{
 
 
 	&:before{

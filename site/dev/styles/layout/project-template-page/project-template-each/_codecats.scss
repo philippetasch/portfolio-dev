@@ -1,4 +1,4 @@
-.project-codecats .bigSlice--project-info{
+.project-codecats .bigSlice--project-card{
 
 	background-color: $codecats-info-bg;
 	border-color: $codecats-info-border;
@@ -24,65 +24,64 @@
 			}
 		}
 
-}
-
-.backProjects{
-
-	.project-nav__icon{
-
-		color: $codecats-info-rond-outils;
-
 	}
-	@include snap(large){
 
-		&:hover .project-nav__text{
+	.backProjects{
+
+		.project-nav__icon{
 
 			color: $codecats-info-rond-outils;
+
 		}
+		
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $codecats-info-rond-outils;
+			}
+		}
+
 	}
 
-}
+	.previousWork{
 
-.previousWork{
-
-	.project-nav__icon{
-
-		color: $nav__link--2--bgc;
-	}
-
-	@include snap(large){
-
-		&:hover .project-nav__text{
+		.project-nav__icon{
 
 			color: $nav__link--2--bgc;
 		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $nav__link--2--bgc;
+			}
+		}
+
 	}
 
-}
+	.nextWork{
 
-.nextWork{
-
-	.project-nav__icon{
-
-		color: $codecats-info-rond-langages;
-
-	}
-
-	@include snap(large){
-
-		&:hover .project-nav__text{
+		.project-nav__icon{
 
 			color: $codecats-info-rond-langages;
+
 		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $codecats-info-rond-langages;
+			}
+		}
+
 	}
 
 }
 
-
-
-}
-
-.project-codecats .intro-info-wrapper{
+.project-codecats .card__details{
 
 	&:after,
 	&:before{
@@ -91,30 +90,30 @@
 	}
 }
 
-.project-codecats .intro-title-info,
-.project-codecats .intro-lien-site{
+.project-codecats .card__title-info,
+.project-codecats .card__link{
 
 	background-color: $codecats-info-border;
 	color: $codecats-info-infos;
 }
 
-.project-codecats .intro-lien-site{
+.project-codecats .card__link{
 
-@include snap(large){
-	@include h-f-a{
+	@include snap(large){
+		@include h-f-a{
 
-		background-color: $codecats-info-infos;
-		color: $codecats-info-border;
+			background-color: $codecats-info-infos;
+			color: $codecats-info-border;
 
-		.lien__texte:after{
+			span:after{
 
-			background-color: $codecats-info-border;
+				background-color: $codecats-info-border;
+			}
 		}
 	}
 }
-}
 
-.project-codecats .lien__texte{
+.project-codecats .card__link span{
 
 	&:after{
 
@@ -122,7 +121,7 @@
 	}
 }
 
-.project-codecats .rond{
+.project-codecats .detail__icon{
 
 	background-color: $codecats-info-infos;
 
@@ -133,7 +132,7 @@
 	}
 }
 
-.project-codecats .intro-info{
+.project-codecats .card__detail{
 
 	.poste{
 

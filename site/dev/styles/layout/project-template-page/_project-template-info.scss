@@ -1,4 +1,4 @@
-.bigSlice--project-info{
+.bigSlice--project-card{
 
 		border-top: 7px solid;
 
@@ -8,7 +8,7 @@
 		}
 }
 
-.intro-title-wrapper{
+.card__title-wrapper{
 
 	text-align: center;
 	font-weight: 500;
@@ -25,41 +25,45 @@
 
 }
 
-	.intro-title-info{
+	.card__title-info{
 
 		display: inline-block;
 
-		@include rem2px(padding, 1, 2);
+		@include rem2px(padding, 1, 0);
 		@include rem2px(margin-bottom, 3);
+
+		&:before,
+		& :before{
+
+			font-family: FontAwesome;
+			color: #fff;
+		    @include rem2px(margin,0 , 0.5, 0, 1.5);
+
+		}
 
 		&:before{
 
 			content:"\f073";
-			font-family: FontAwesome;
-			color: #fff;
-			@include rem2px(margin-right, 0.5);
-
 		}
 
 		@include snap(tweak-large){
 
 			display: block;
-			@include rem2px(padding, 0.5, 1.5);
+			@include rem2px(padding, 0.5, 0);
 			@include rem2px(margin-bottom, 0);
 
 		}
 	}
 
-	.intro-title-info .duree{
+	.card__title-info .duree{
 
 		&:before{
 
 			content:"\f017";
-			font-family: FontAwesome;
-			color: #fff;
-		    	@include rem2px(margin,0 , 0.5, 0, 1.5);
 
 		}
+
+		@include rem2px(margin, 0, 1.5, 0, 0);
 
 	}
 /*
@@ -90,7 +94,7 @@
 		}
 	}
 */
-	.intro-title{
+	.card__title{
 
 		margin: 0;
 
@@ -117,7 +121,7 @@
 		}
 	}
 */
-.intro-info-wrapper{
+.card__details{
 
 	font-family: Roboto Slab;
 	@include rem2px(padding, 2, 0, 2, 0);
@@ -125,7 +129,8 @@
 	overflow: hidden;
 	position: relative;
 
-	&:before,&:after{
+	&:before,
+	&:after{
 
 		content:"";
 		width: 80px;
@@ -143,7 +148,7 @@
 
 	&:after{
 
-	bottom:0px;
+		bottom:0px;
 	}
 
 	@include snap(tweak-large){
@@ -185,7 +190,7 @@
 	}
 
 */
-	.intro-info{
+	.card__detail{
 
 		padding-bottom: 10px;
 		text-align: center;
@@ -206,7 +211,7 @@
 
 	}
 
-	.rond{
+	.detail__icon{
 
 		width: 60px;
 		height: 60px;
@@ -238,14 +243,14 @@
 
 	}
 
-	.project-info__title,
-	.project-info__text{
+	.detail__title,
+	.detail__text{
 
 		display: block;
 		margin: 0;
 	}
 
-	.project-info__text{
+	.detail__text{
 
 		color: lightgray;
 	}
@@ -265,8 +270,7 @@
 		content:"\f085";
 	}
 
-
-.intro-text-wrapper{
+.card__description{
 
 	margin: auto;
 	max-width: 500px;
@@ -285,18 +289,13 @@
 		text-align: left;
 	}
 
-}
-
-	.intro-text{
+	p{
 
 		margin: 0;
-
-		@include snap(tweak-large){
-
-			animation: reveal 0.8s linear;
-
-		}
 	}
+
+}
+
 /*
 	@keyframes reveal{
 
@@ -315,7 +314,7 @@
 	}
 
 */
-.intro-lien-site{
+.card__link{
 
 	display: block;
 	clear: both;
@@ -359,11 +358,11 @@
 
 }
 
-.lien__texte{
+.card__link span{
 
-		position: relative;
+	position: relative;
 
-		&:after{
+	&:after{
 
 		content:"";
 		position: absolute;
