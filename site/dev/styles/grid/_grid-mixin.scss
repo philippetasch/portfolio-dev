@@ -1,211 +1,44 @@
+
+$columns : 10;
+
+@for $i from 1 through $columns{
+    .#{goriddo}-#{$i}{
+        width: (($maxGridWidth - ($gridMargin * ($i - 1))) / $i);
+    }
+}
+
+@for $i from 1 through $columns{
+    .#{goriddo-null}-#{$i}{
+        width: (($maxGridWidth - ($gridMarginZero * ($i - 1))) / $i);
+    }
+}
+
+
 @mixin lay-out($colNumber){
 
-    @if $colNumber == 1{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-    @else if $colNumber == 2{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 3{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 4{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 5{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 6{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 7{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 8{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 9{
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 10 {
-
-        width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
+    width: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
 }
 
 @mixin ratio($colNumber){
 
-    @if $colNumber == 1{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-    @else if $colNumber == 2{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 3{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 4{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 5{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 6{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 7{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 8{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 9{
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 10 {
-
-        padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
-
-    }
-
-
+    padding-bottom: (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber);
 }
-
-
-@mixin twoThirds{
-    
-        $colNumber:3;
-        width: $maxGridWidth - (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber) - $gridMargin;
-
-    }
-
-@mixin threeFourths{
-    
-        $colNumber:4;
-        width: $maxGridWidth - (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber) - $gridMargin;
-
-    }
-
-
 
 @mixin lonm($colNumber){
 
- @if $colNumber == 1{
+    width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
+}
 
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
+@mixin twoThirds{
 
-    }
+    $colNumber:3;
+    width: $maxGridWidth - (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber) - $gridMargin;
+}
 
-    @else if $colNumber == 2{
+@mixin threeFourths{
 
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 3{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 4{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 5{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 6{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 7{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 8{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 9{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
-     @else if $colNumber == 10{
-
-        width: (($maxGridWidth - ($gridMarginZero * ($colNumber - 1))) / $colNumber);
-
-    }
-
+    $colNumber:4;
+    width: $maxGridWidth - (($maxGridWidth - ($gridMargin * ($colNumber - 1))) / $colNumber) - $gridMargin;
 }
 
 @mixin push($colNumber){

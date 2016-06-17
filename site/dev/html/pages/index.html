@@ -21,12 +21,12 @@
                 {% set aboutClassLR = cycler("about__wrapper--left", "about__wrapper--right") %}
                 {% set aboutClassTLR = cycler("about__text--left", "about__text--right") %}
                 {% for histoire in parcours %}
-                    <div class="c-both {{aboutClassLR.next()}} about__wrapper">
+                    <article class="c-both {{aboutClassLR.next()}} about__wrapper">
                         <div class="about__icon--wrapper {{histoire.icone}}">
                             <i class="fa {{histoire.iconeClass}} about__icon"></i>
                         </div>
                          <p class="about__text {{aboutClassTLR.next()}} waypoint-hidden">{{histoire.texte}}</p>
-                    </div>
+                    </article>
                 {% endfor %}
             </div>
             <a href="cv/cv_Tasch_Philippe.pdf" class="btn btn--slice btn--cv">
@@ -38,15 +38,15 @@
             <h2 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h2>
             <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
                 {% for competence in competences %}
-                    <div  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
+                    <article  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
                         <h3 class="h3 h3--skills">
-                        <span class="skills__icon--container radius waypoint-hidden">
-                            <i class="fa {{competence.competenceIconType}} skills__icon"></i>
-                        </span>
-                        {{ competence.competenceTitleText }}
+                            <span class="skills__icon--container radius waypoint-hidden">
+                                <i class="fa {{competence.competenceIconType}} skills__icon"></i>
+                            </span>
+                            {{ competence.competenceTitleText }}
                         </h3>
                         <p class="skills__text">{{competence.competenceText}}</p>
-                    </div>
+                    </article>
                 {% endfor %}
             </div>
         </section>
@@ -55,7 +55,7 @@
             <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
             <div class="maxWrapper--projects gridClear slicePad--v">
                 {% for projet in projets %}
-                    <div class="grids--zero g-4--zero tiles">
+                    <article class="grids--zero g-4--zero tiles">
                         <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
                             <div class="tiles__overlay">
                                 <div class="tiles__title">
@@ -66,11 +66,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 {% endfor %}
             </div>
             <a href="projets.html" class="btn btn--slice btn--projects">
-                Voir tous mes projets 
+                Voir tous mes projets
             </a>
         </section>
 

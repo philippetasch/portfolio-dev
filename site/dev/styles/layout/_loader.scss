@@ -1,0 +1,42 @@
+/*.loader-container{
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: $nav__link--1--bgc;
+	z-index: 5000000;
+}
+
+.loader{
+
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+	border: 5px solid rgba(lightgray, 0.5);
+	border-top: 5px solid #fff;
+	animation: loaderSpin 1.3s linear infinite;
+
+}
+
+.loader-hide .loader-container{
+
+	z-index: -5000000;
+	opacity: 0;
+	transition: all 1s linear;
+
+}
+
+@keyframes loaderSpin{
+
+	100%{
+
+		transform: rotate(1turn);
+	}
+}*/
+

@@ -73,23 +73,23 @@
 
         <script src="/scripts/modernizr.js"></script>
 
-        <script src="/waypoints/lib/noframework.waypoints.js"></script>
+        <script src="/scripts/waypoints/noframework.waypoints.js"></script>
 
         <!--endbuild-->
 
         <script>
 
-            var introTitle = document.getElementsByClassName('intro-info-title');
+            var introTitle = document.getElementById('card__title-wrapper');
 
             var blob = new Waypoint({
                 element: introTitle,
                 handler: function() {
-                  console.log('right story waypoint triggered');
+                  console.log('title fell into place');
                 this.element.classList.add('waypoint-shown');
                 this.destroy()
                 },
 
-              offset: "66%",
+              offset: "40%",
 
               })
 
