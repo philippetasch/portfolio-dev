@@ -8,7 +8,9 @@
 
 .pagination__wrapper{
 
-	@include rem2px(padding, 0, 0.5, 1, 1)
+	@include rem2px(padding, 0, 0.5, 1, 1);
+	@include lonm(2);
+	float: left;
 }
 
 .pagination__wrapper + .pagination__wrapper{
@@ -19,7 +21,8 @@
 
 .pagination .pagination__wrapper--only-child{
 
-	@include rem2px(padding, 1)
+	@include rem2px(padding, 1);
+	@include lonm(1);
 }
 
 .pagination__link{

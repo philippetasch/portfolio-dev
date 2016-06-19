@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <section id="projects" class="bigSlice bigSlice--projects--page wholePageSlice accomodateFooter gridClear count-projects">
+    <section id="projects" class="bigSlice bigSlice--project--page wholePageSlice accomodateFooter gridClear count-projects">
 
             <a href="index.html" class="retour backHome">
                 <i class="fa fa-home project-nav__icon"></i>
@@ -12,14 +12,14 @@
             </a>
 
             {% for projet in projets %}
-                <div class={% if loop.first %}" c-left grids--zero g-3--zero tiles tiles--projects"{% else %}"grids--zero g-3--zero tiles tiles--projects"{% endif %}>
+                <div class={% if loop.first %}" c-left project project--all"{% else %}" project project--all"{% endif %}>
                     <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
-                        <div class="tiles__overlay">
-                            <div class="tiles__title">
+                        <div class="project__overlay">
+                            <div class="project__infos">
                                 <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
                                 <p class="h4 h4--overlay">{{projet.objet}}</p>
-                                <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
-                                <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+                                <a href="{{projet.lien}}" class="project__btn">Voir plus</a>
+                                <a href="{{projet.lienExt}}" class="project__btn">Lien Site</a>
                             </div>
                         </div>
                     </div>

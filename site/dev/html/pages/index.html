@@ -34,35 +34,35 @@
             </a>
         </section>
 
-        <section id="skills" class="bigSlice bigSlice--skills slicePad--h slope-bottom">
-            <h2 class="h1 h1--bigSlice h1--bigSlice--skills slicePad--v">Compétences</h2>
-            <div class="maxWrapper maxWrapper--skills gridsMar--v gridClear">
+        <section id="skills" class="bigSlice bigSlice--skill slicePad--h slope-bottom">
+            <h2 class="h1 h1--bigSlice h1--bigSlice--skill slicePad--v">Compétences</h2>
+            <div class="maxWrapper maxWrapper--skill gridsMar--v gridClear">
                 {% for competence in competences %}
-                    <article  class={% if loop.first %}"first grids--clear g-3"{% else %}"grids--clear g-3"{% endif %}>
-                        <h3 class="h3 h3--skills">
-                            <span class="skills__icon--container radius waypoint-hidden">
-                                <i class="fa {{competence.competenceIconType}} skills__icon"></i>
+                    <article  class={% if loop.first %}"first skill"{% else %}"skill"{% endif %}>
+                        <h3 class="h3 skill__heading">
+                            <span class="skill__icon--container radius waypoint-hidden">
+                                <i class="fa {{competence.competenceIconType}} skill__icon"></i>
                             </span>
                             {{ competence.competenceTitleText }}
                         </h3>
-                        <p class="skills__text">{{competence.competenceText}}</p>
+                        <p class="skill__text">{{competence.competenceText}}</p>
                     </article>
                 {% endfor %}
             </div>
         </section>
 
-        <section id="projects" class="bigSlice bigSlice--projects gridClear slope-bottom">
+        <section id="projects" class="bigSlice bigSlice--project gridClear slope-bottom">
             <h2 class="h1 h1--bigSlice h1--bigSlice--project slicePad--v">Projets</h2>
-            <div class="maxWrapper--projects gridClear slicePad--v">
+            <div class="maxWrapper--project gridClear slicePad--v">
                 {% for projet in projets %}
-                    <article class="grids--zero g-4--zero tiles">
+                    <article class="project">
                         <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
-                            <div class="tiles__overlay">
-                                <div class="tiles__title">
+                            <div class="project__overlay">
+                                <div class="project__infos">
                                     <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
                                     <p class="h4 h4--overlay">{{projet.objet}}</p>
-                                    <a href="{{projet.lien}}" class="tiles__btn">Voir plus</a>
-                                    <a href="{{projet.lienExt}}" class="tiles__btn">Lien Site</a>
+                                    <a href="{{projet.lien}}" class="project__btn">Voir plus</a>
+                                    <a href="{{projet.lienExt}}" class="project__btn">Lien Site</a>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
           })
         }
 
-        var skillCont = document.getElementsByClassName('skills__icon--container');
+        var skillCont = document.getElementsByClassName('skill__icon--container');
 
         for (var i = 0; i < skillCont.length; i++) {
           new Waypoint({

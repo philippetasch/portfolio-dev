@@ -1,52 +1,21 @@
+$adapt-points:(
+
+    'small' : 500px,
+    'small-medium' : 650px,
+    'medium' : 769px,
+    'large': 1025px,
+    'tweak-large': 1065px,
+    'veryLarge': 1170px
+
+);
 
 @mixin snap($adapt-point){
 
-    @if $adapt-point == 'small'{
+    @if map-has-key($adapt-points, $adapt-point){
 
-        @media screen and (min-width: 500px){
-
-            @content;
-        }
-    }
-
-    @else if $adapt-point == 'small-medium'{
-
-        @media screen and (min-width:650px){
+        @media screen and (min-width: map-get($adapt-points, $adapt-point)){
 
             @content;
         }
     }
-
-    @else if $adapt-point == 'medium'{
-
-        @media screen and (min-width:769px){
-
-            @content;
-        }
-    }
-
-    @else if $adapt-point == 'large'{
-
-        @media screen and (min-width:1025px){
-
-            @content;
-        }
-    }
-
-     @else if $adapt-point == 'tweak-large'{
-
-        @media screen and (min-width:1065px){
-
-            @content;
-        }
-    }
-
-    @else if $adapt-point == 'veryLarge'{
-
-        @media screen and (min-width:1170px){
-
-            @content;
-        }
-    }
-
 }

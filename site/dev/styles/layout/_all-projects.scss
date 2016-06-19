@@ -1,4 +1,4 @@
-.bigSlice--projects--page{
+.bigSlice--project--page{
 
 	background-color: $bigSlice--projects;
 }
@@ -12,9 +12,9 @@
 
 }
 
-.bigSlice--projects--page .retour .project-nav__icon{
+.bigSlice--project--page .retour .project-nav__icon{
 
-			color: $nav__link--3--bgc;
+	color: $nav__link--3--bgc;
 
 }
 
@@ -40,7 +40,20 @@
 	counter-reset: number;
 }
 
-.tiles--projects{
+.project.project--all{
+
+	@include snap(large){
+
+		@include lonm(3);
+
+		&:nth-of-type(3n+1):last-of-type{
+
+			float: none;
+			margin: auto;
+
+		}
+
+	}
 
 	&:before{
 
@@ -84,14 +97,6 @@
 		}
 
 	}
-}
 
-@include snap(large){
-
-	.tiles--projects:nth-of-type(3n+1):last-of-type{
-
-		float: none;
-		margin: auto;
-	}
 
 }

@@ -5,6 +5,8 @@
 
 .project-nav__item{
 
+	float: left;
+
 	color: $bigSlice--contact;
 	@include rem2px(line-height, 7);
 	text-decoration: none;
@@ -12,11 +14,15 @@
 	&--not-all{
 
 		width: 33.333%;
+		@include lonm(3);
+
 	}
 
 	&--all{
 
 		width: 25%;
+		@include lonm(4);
+
 	}
 
 	@include snap(small-medium){
@@ -215,15 +221,15 @@
 
 	@include snap(small-medium){
 
-			& .project-nav__text{
+		& .project-nav__text{
 
-				margin: 0 10px 0 0;
-			}
+			margin: 0 10px 0 0;
+		}
 
-			& .fa.project-nav__icon{
+		& .fa.project-nav__icon{
 
-				margin: 0 0 0 10px
-			}
+			margin: 0 0 0 10px
+		}
 	}
 }
 
