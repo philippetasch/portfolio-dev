@@ -59,7 +59,7 @@
 	text-align: center;
 	text-decoration: none;
 
-	@include snap(medium){
+	@include snap(small-medium){
 
 		float: left;
 		@include lonm(2);
