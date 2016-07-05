@@ -54,7 +54,7 @@
 }
 /* uncss:ignore */
 
-  .navigation.closed .navigation__subnav {
+.navigation.closed .navigation__subnav {
   	@include snap(large){
     max-height: 0px;
   }
@@ -239,6 +239,7 @@
 	font-weight: 900;
 	border-right: 4px solid rgba(#000, 0.1);
 	border-bottom: 4px solid rgba(#000, 0.1);
+	font-family: Roboto Slab;
 
 	@include snap(large){
 

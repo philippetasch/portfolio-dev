@@ -3,16 +3,15 @@
 	border: none;
 	border-radius: 0;
 
-	width: $hamburger-width;
-	height: $hamburger-height;
 	background-color: #222F3D;
 	position: relative;
 	z-index: 10000;
 
 	float: right;
+	@include rem2px(padding,0.9,3.9,0.9,0)
 	@include rem2px(margin, 1, 1, 1, 0);
 
-	padding: 22px;
+	box-shadow: -5px 5px rgba(#222F3D, 0.5);
 
 	&:hover,
 	&:active{
@@ -30,25 +29,21 @@
 
 .trigger__label{
 
-	position: absolute;
 	top: 0px;
-	right: 100%;
 	height: 100%;
-	padding: 0px 1rem;
-	line-height: 43px;
+	@include rem2px(padding,0,1rem);
 	color: #FFF;
-	@include rem2px(font-size, 1.6);
+	@include rem2px(font-size, 1.8);
 	font-family: Roboto Slab;
 	font-weight: 900;
 	letter-spacing: 1px;
 	background-color: #222F3D;
 
-	
 }
 
 .trigger.active{
-	
-		z-index: 5000;
+
+	z-index: 5000;
 
 	.trigger__bar{
 
@@ -56,25 +51,26 @@
 
 	}
 
-	.trigger__bar--1{
+		.trigger__bar--1{
 
-		top:0;
-		transform:rotate(315deg);
-		background-color: #fff;
+			top:0;
+			transform:rotate(315deg);
+			background-color: #fff;
 		}
 
-		.trigger__bar--2,.trigger__bar--4{
+		.trigger__bar--2,
+		.trigger__bar--4{
 
-		background-color: #000;
-		visibility: hidden;
+			background-color: #000;
+			visibility: hidden;
 
 		}
 
 		.trigger__bar--3{
 
-		bottom:0;
-		transform:rotate(405deg);
-		background-color: #fff;
+			bottom:0;
+			transform:rotate(405deg);
+			background-color: #fff;
 		}
 
 }
@@ -85,19 +81,16 @@
 	height: 3px;
 	background-color: #fff;
 	position: absolute;
-	left: 0;
 	top:0;
-	right: 0;
+	@include rem2px(right, 0.7);
 	bottom: 0;
 	margin: auto;
 	transition: transform .30s linear;
 
-
 }
 
 
-	.trigger__bar--1
-			{
+	.trigger__bar--1{
 
 		top: -24px;
 		background-color: $nav__link--1--bgc;
@@ -105,20 +98,19 @@
 
 	.trigger__bar--2{
 
-	z-index: 10;
-	top:-8px;
-	background-color: $nav__link--2--bgc;
+		z-index: 10;
+		top:-8px;
+		background-color: $nav__link--2--bgc;
 
 	}
 
-	.trigger__bar--3
-			{
+	.trigger__bar--3{
 
-	bottom:-9px;
-	background-color: $nav__link--3--bgc;
+		bottom:-9px;
+		background-color: $nav__link--3--bgc;
 	}
-	.trigger__bar--4
-			{
+
+	.trigger__bar--4{
 
 		bottom:-24px;
 		background-color: $nav__link--4--bgc;
