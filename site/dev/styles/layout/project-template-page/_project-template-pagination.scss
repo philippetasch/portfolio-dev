@@ -33,18 +33,19 @@
 
 	position: relative;
 	z-index: 10;
+	text-align: center;
 
 	&:before{
 
-			content:"";
-			position: absolute;
-			z-index: -10;
-			top: 0;
-			height: 100%;
-			background-color: $bigSlice--contact;
-			transition: transform .45s linear;
-			transform: translateX(0px) skew(-15deg) scaleX(0);
-		}
+		content:"";
+		position: absolute;
+		z-index: -10;
+		top: 0;
+		height: 100%;
+		background-color: $bigSlice--contact;
+		transition: transform .45s linear;
+		transform: translateX(0px) skew(-15deg) scaleX(0);
+	}
 
 	&--previous:before{
 
@@ -74,45 +75,35 @@
 	}
 }
 
-.pagination__link--previous:hover .project-nav__icon,
-.pagination__link--next:hover .project-nav__icon{
 
-	@include snap(large){
+.pagination__text{
 
-			animation : point .85s linear forwards;
-	}
-}
+	display: block;
+	text-transform: uppercase;
+	font-family: Roboto Slab;
+	font-weight: 900;
+	letter-spacing: 1px;
 
-@keyframes point{
+	@include snap(medium){
 
-	0%{
-
-		transform: translateX(0px);
-	}
-
-	25%{
-
-		transform: translateX(-7px);
-	}
-
-	50%{
-
-		transform: translateX(7px);
-	}
-
-	75%{
-
-		transform: translateX(-7px);
-	}
-
-	100%{
-
-		transform: translateX(0px);
+		font-size: 105%;
+		transition: color 0.25s linear;
 
 	}
 }
 
+.pagination__text span{
 
+	display: none;
+	@include snap(small){
+		display: block;
+	}
+}
+
+.pagination__text small{
+	display: block;
+	text-transform: lowercase;
+}
 /* see project-template-navigation
 
 	nextWork styles

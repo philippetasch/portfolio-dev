@@ -145,7 +145,8 @@
             "descriptionProjetDeux":"Pendant deux mois, l'équipe a procédé à la réorganisation ainsi qu'à la traduction du contenu, suivi de l'intégration de ce dernier au sein du thème Wordpress. L'ergonomie du site devait être entièrement revue et la navigation plus intuitive. Quatre maquettes avaient été proposées, parmi lesquelles une seule a été retenue par le donneur d'ordre. Nous l'avons intégrée en nous aidant d'un thème pré-existant que nous avons pris soin de modifier grandement afin de coller parfaitement à la maquette.",
             "descriptionProjetTrois":"Wordpress a rendu la création de pages et d'articles relativement aisée et a permis à notre équipe de mettre en place les nombreux changements souhaités par le donneur d'ordre en quelques semaines. En effet, nous avions fait le choix de démarrer le projet sur SPIP, qui  s'avérait prometteur en raison des fonctions dont il dispose pour l'intégration de contenu traduit. Nous nous sommes finalement rendus compte que SPIP ne correspondait pas à ce que nous en attendions et nous sommes tournés vers Wordpress. Le contenu extrêmement fourni du site devait être traduit vers l'anglais ainsi que l'allemand.",
             "descriptionProjetQuatre": " Le choix du logiciel de <abbr title=\"Traduction Assistée par Ordinateur\">TAO</abbr> s'est porté sur MEMOQ, facilitant le bon déroulement des traductions ainsi que l'extraction des mémoires de traductions et bases de données terminologiques, demandées dans le cadre du projet universitaire. Outre la traduction de la moitié du contenu du site vers l'anglais ainsi que la relecture et correction de la traduction allemande, j'ai réalisé une des quatre maquettes proposées, et me suis attelé à l'intégration HTML/CSS de celle retenue par le donneur d'ordre. J'ai également entrepris des modifications PHP du thème Wordpress afin d'obtenir l'affichage souhaité pour les différentes pages."
-    }],
+    }
+    ],
 
     "projetCodecats":[
     {
@@ -268,6 +269,56 @@
                 "outils" : "SASS, AngularJS, Bootstrap",
                 "lien" : "https://www.vijump.com/#!/",
                 "lien__texte":"Vers ViJump"
+            },
+            "imagesTexteUn":
+            {
+
+                "originale":"img/vijump/vijump-videos@600x453.jpg",
+                "imagesSrcset":"",
+                "imageAlt":"Vijump page accueil - vidéos "
+
+            },
+            "imagesTexteDeux":
+            {
+                "originale":"img/vijump/projet-vijump-search-results@600x453.jpg",
+                "imagesSrcset":"",
+                "imageAlt":"Vijump résultats de recherche"
+
+            },
+            "imagesTexteTrois":
+            {
+                "originale":"img/vijump/vijump-watch@600x453.jpg",
+                "imagesSrcset":"",
+                "imageAlt":"Vijump page vidéo"
+
+            },
+
+            "descriptionProjetUn": "Vijump permet la recherche sémantique à l'intérieur de vidéos, ainsi que le découpage de vidéos en ligne, un peu à l'image d'un logiciel de montage vidéo. Une fois une vidéo transcrite, il est possible de chercher un terme dans la vidéo via la barre de recherche du lecteur. Le découpage permet de créer des versions raccourcies de vidéos qui peuvent être sauvegardées et partagées.",
+            "descriptionProjetDeux":"J'ai été chargé de la refonte de cette application qui est non seulement mon stage de fin d'études ainsi que ma première réelle expérience professionnelle dans le monde du web, et au cours de laquelle j'ai pu avoir un premier contact avec des technologies web que je n'avais pas eu l'occasion d'essayer jusqu'à lors. J'ai débuté ce stage en proposant plusieurs maquettes et logos, créés respectivement avec photoshop et illustrator, afin de donner une nouvelle identité visuelle à l'application. Lors de l'intégration, j'ai dû me familiariser avec le framework css Bootstrap, qui m'a permis de créer en un temps record la structure de base des pages de l'application, le tout en mobile-first. Vijump est une <abbr title=\"application web monopage ou single page application\">SPA</abbr> construite avec AngularJS, un framework JavaScript. La charte graphique se veut simple: du rouge du blanc et du gris.",
+            "descriptionProjetTrois":"La page d'accueil détaille l'utilisation du produit avec quelques informations succintes ainsi qu'un screencast que j'ai réalisé. J'étais également chargé de créer les pages de résultats de recherche, la page vidéo ainsi que de mettre au point l'interface vidéo du lecteur en me basant sur l'interface pré-existante. Afin d'attirer l'attention du visiteur sur le fait que des vidéos soient cherchables ou bien qu'il existe déjà des versions raccourcies des vidéos, j'ai inclus des icônes servant d'indicateurs dans les résultats de recherche.",
+            "descriptionProjetQuatre":"L'application est passée par plusieurs phases et a connu plusieurs interfaces. Le projet étant en constante évolution il peut être sujet à changement, encore aujourd'hui. Si l'interface actuelle n'est pas définitive, la direction prise l'est: faire gagner du temps aux internautes en leur proposant exactement ce qu'il recherchent. C'est un projet très intéressant et prometteur, n'hésitez pas à l'essayer!"
+    }],
+    "projetPHPim":[
+    {
+            "projectColorClass":"project-phpim",
+            "titre":"PHPim",
+            "imageMain":[{
+                "originale":"img/phpim/phpim-accueil@992.jpg",
+                "imagesSrcset":"img/phpim/phpim-accueil@480.jpg 480w,img/phpim/phpim-accueil@768.jpg 768w,img/phpim/phpim-accueil@992.jpg 992w,img/phpim/phpim-accueil@1170.jpg 1170w",
+                    "sizes":"(min-width: 1170px) 1170px,(min-width: 992px) 992px,(min-width: 768px) 768px,(min-width: 480px) 480px",
+                "optionalClass":"main-img"
+            }],
+            "imageAlt":"Projet ViJump page d'accueil",
+            "sousTitre":"Développement de l'application PHPim",
+            "texteIntro":"L'application PHPim permet une gestion poussée des base de données pour les les élèves de la formation Webforce3 Luxembourg, ainsi qu'un accès rapide aux quizs des cours. Elle a été réalisée dans le cadre du projet de fin de formation par une équipe de quatre. Ce projet démontre les compétences acquises au cours de quatre mois intensifs de développement web.",
+            "infos":{
+                "date" : "2016",
+                "duree" : "3 semaines",
+                "poste" : "Développeur, Intégrateur, Designer",
+                "langages" : "HTML5, CSS3, PHP, JavaScript",
+                "outils" : "Bootstrap, Framework W",
+                "lien" : "http://wf3.progweb.fr/",
+                "lien__texte":"Vers PHPim"
             },
             "imagesTexteUn":
             {

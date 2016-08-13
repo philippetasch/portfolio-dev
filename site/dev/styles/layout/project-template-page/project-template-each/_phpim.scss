@@ -1,0 +1,47 @@
+.project-phpim .bigSlice--project-card{
+
+	background-color: $phpim-info-bg;
+	border-color: $phpim-info-border;
+	color: #fff;
+}
+
+.project-phpim .card__title-info{
+
+	background-color: $phpim-info-infos;
+}
+
+.project-phpim .card__details{
+
+	&:before,
+	&:after{
+
+		background-color: $phpim-info-border;
+
+	}
+}
+
+.project-phpim .detail__icon{
+	background-color: $phpim-info-infos;
+}
+
+.project-phpim .card__link{
+
+	background-color: $phpim-info-border;
+	color: #fff
+}
+
+.project-phpim .h1.heading--description{
+
+	color: $phpim-info-border;
+}
+
+.project-phpim .first-letter::first-letter{
+
+	background-color: $phpim-info-border;
+	color: #fff;
+}
+
+.project-phpim .pagination__link{
+
+	background-color: $phpim-info-border;
+}

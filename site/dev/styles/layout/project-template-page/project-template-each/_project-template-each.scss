@@ -12,12 +12,13 @@
 @import 'codecats';
 @import 'site-perso';
 @import 'vijump';
+@import 'phpim';
 
 .project-codecats,
-.project-vijump{
+.project-vijump,
+.project-phpim{
 
 	background-color: $codecats-bg;
-
 }
 
 .project-codecats .main-img,

@@ -1,24 +1,23 @@
 {% extends "index-layout.html" %}
 
-{% block title %} Philippe Tasch | Codecats {% endblock %}
+{% block title %} Philippe Tasch | PHPim {% endblock %}
 
 {% block content %}
 
-	{% for projet in projetCodecats %}
+	{% for projet in projetPHPim %}
 
 		<section class="{{projet.projectColorClass}}">
 
 			{% import "macros/nav-macro.html" as topNav %}
-			{{topNav.active(currentPage="firstProject", linkNext="emmaus.html")}}
+			{{topNav.active(currentPage="lastProject", linkPrevious="vijump.html")}}
 
 			{% include "partials/project-tpl/project-base-tpl.html" %}
 
 			{% import "macros/pagination.html" as bottomNav %}
-			{{bottomNav.active(currentPage="firstProject", linkNext="emmaus.html", textNext="Emmaus Strasbourg")}}
+			{{bottomNav.active(currentPage="lastProject", linkPrevious="vijump.html", textPrevious="ViJump")}}
 
 		</section>
 
 	{% endfor %}
 
 {% endblock %}
-

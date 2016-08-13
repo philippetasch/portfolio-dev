@@ -19,23 +19,31 @@
 			<i class="fa fa-flask project-nav__icon"></i>
 			<span class="project-nav__text">Projets</span>
 		</a>
-		<a href="{{ linkPrevious }}" class="
-		{% if currentPage == 'firstProject' %} hidden {% elif currentPage == 'lastProject' %} project-nav__item--not-all project-nav__item previousWork
-		{% else %} project-nav__item project-nav__item--all previousWork
+		{% if currentPage == 'firstProject' %}
+
+		{% else %}
+			<a href="{{ linkPrevious }}" class="
+			{% if currentPage == 'lastProject' %} project-nav__item--not-all project-nav__item previousWork
+			{% else %} project-nav__item project-nav__item--all previousWork
+			{% endif %}
+			">
+				<i class="fa fa-arrow-left project-nav__icon"></i>
+				<span class="project-nav__text">Précédent</span>
+			</a>
 		{% endif %}
-		">
-			<i class="fa fa-arrow-left project-nav__icon"></i>
-			<span class="project-nav__text">Précédent</span>
-		</a>
-		<a href="{{ linkNext }}" class="
-		{% if currentPage == 'firstProject' %} project-nav__item--not-all project-nav__item nextWork
-		{% elif currentPage == 'lastProject' %} hidden
-		{% else %} project-nav__item project-nav__item--all nextWork
+
+		{% if currentPage == 'lastProject' %}
+
+		{% else %}
+			<a href="{{ linkNext }}" class="
+			{% if currentPage == 'firstProject' %} project-nav__item--not-all project-nav__item nextWork
+			{% else %} project-nav__item project-nav__item--all nextWork
+			{% endif %}
+			">
+				<span class="project-nav__text">Suivant</span>
+				<i class="fa fa-arrow-right project-nav__icon"></i>
+			</a>
 		{% endif %}
-		">
-			<span class="project-nav__text">Suivant</span>
-			<i class="fa fa-arrow-right project-nav__icon"></i>
-		</a>
 	</nav>
 </div>
 {% endmacro %}
