@@ -1,3 +1,76 @@
+.project-phpim{
+
+	.backHome{
+
+		.project-nav__icon{
+
+			color: $phpim-info-bg;
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $phpim-info-bg;
+			}
+		}
+	}
+
+	.backProjects{
+
+		.project-nav__icon{
+
+			color: $phpim-info-border;
+
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $phpim-info-border;
+			}
+		}
+
+	}
+
+	.previousWork{
+
+		.project-nav__icon{
+
+			color: $phpim-info-infos;
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $phpim-info-infos;
+			}
+		}
+
+	}
+
+	.nextWork{
+
+		.project-nav__icon{
+
+			color: $codecats-info-rond-langages;
+
+		}
+
+		@include snap(large){
+
+			&:hover .project-nav__text{
+
+				color: $codecats-info-rond-langages;
+			}
+		}
+
+	}
+
+}
+
 .project-phpim .bigSlice--project-card{
 
 	background-color: $phpim-info-bg;
@@ -8,6 +81,11 @@
 .project-phpim .card__title-info{
 
 	background-color: $phpim-info-infos;
+}
+
+.project-phpim .card__year,
+.project-phpim .card__duration{
+	color: $phpim-info-bg;
 }
 
 .project-phpim .card__details{
@@ -27,7 +105,14 @@
 .project-phpim .card__link{
 
 	background-color: $phpim-info-border;
-	color: #fff
+	color: #fff;
+
+	@include snap(tweak-large){
+
+			@include h-f-a{
+			background-color:  $phpim-info-infos;
+		}
+	}
 }
 
 .project-phpim .h1.heading--description{
@@ -44,4 +129,9 @@
 .project-phpim .pagination__link{
 
 	background-color: $phpim-info-border;
+
+	&:before{
+
+		background-color: $phpim-info-infos;
+	}
 }

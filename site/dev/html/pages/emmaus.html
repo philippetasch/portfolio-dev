@@ -9,12 +9,12 @@
 		<section class="{{projet.projectColorClass}}">
 
 			{% import "macros/nav-macro.html" as topNav %}
-			{{topNav.active(currentPage="emmaus", linkPrevious="codecats.html", linkNext="site-perso-v1.html")}}
+			{{topNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html")}}
 
 			{% include "partials/project-tpl/project-base-tpl.html" %}
 
 			{% import "macros/pagination.html" as bottomNav %}
-			{{bottomNav.active(currentPage="emmaus", linkPrevious="codecats.html", textPrevious="Codecats", linkNext="site-perso-v1.html", textNext="Portfolio")}}
+			{{bottomNav.active(currentPage="lastProject", linkPrevious="site-perso-v1.html", textPrevious="Portfolio")}}
 
 		</section>
 

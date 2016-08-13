@@ -11,7 +11,7 @@
                 <span class="retour__text">Accueil</span>
             </a>
 
-            {% for projet in projets %}
+            {% for projet in projets|sort(true, false, 'number') %}
                 <div class={% if loop.first %}" c-left project project--all"{% else %}" project project--all"{% endif %}>
                     <div class="ratio--rel ratio--rel__80 {{projet.image}} bg-img bg-project">
                         <div class="project__overlay">

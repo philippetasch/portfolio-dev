@@ -63,16 +63,8 @@
   ],
 
   "projets": [
-
     {
-
-        "lien":"codecats.html",
-        "lienExt" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
-        "nom": "Codecats",
-        "objet":"Projet universitaire Master 2",
-        "image":"mini-project"
-    },
-    {
+        "number":"1",
         "lien":"emmaus.html",
         "lienExt" : "",
         "nom": "Emmaüs Strasbourg",
@@ -80,6 +72,7 @@
         "image":"emmaus"
     },
     {
+        "number":"2",
         "lien":"site-perso-v1.html",
         "lienExt" : "https://www.blargh.byethost31.com",
         "nom":"Site Portfolio",
@@ -87,11 +80,28 @@
         "image":"portfolio"
     },
     {
+        "number":"3",
+        "lien":"codecats.html",
+        "lienExt" : "https://etudiants-caweb.u-strasbg.fr/1314/phil.t/Projet/",
+        "nom": "Codecats",
+        "objet":"Projet universitaire Master 2",
+        "image":"mini-project"
+    },
+    {
+        "number":"4",
         "lien":"vijump.html",
         "lienExt" : "https://www.vijump.com/#!/",
         "nom": "ViJump",
         "objet":"Refonte site et application ViJump",
         "image":"vijump"
+    },
+    {
+        "number":"5",
+        "lien":"phpim.html",
+        "lienExt" : "http://wf3.progweb.fr",
+        "nom": "PHPim",
+        "objet":"Développement application PHPim",
+        "image":"phpim"
     }
     ],
 
