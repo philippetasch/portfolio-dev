@@ -1,5 +1,4 @@
 
-#screenSize,
 .screenSize{
 
 	position: fixed;
@@ -7,9 +6,31 @@
 	left: 10px;
 	bottom: 10px;
 
-	background-color: lightgreen;
+	background-color: #202020;
+	color: #fff;
 	max-width: 200px;
 	padding: 10px;
 
 	text-align: center;
+	transition: all 0.15s linear;
+}
+
+/* uncss:ignore */
+.viewport-open{
+	transform: translateX(-95px);
+	left: 0%;
+}
+/* uncss:ignore */
+
+.screenSize:after{
+	content:"X";
+	display: inline-block;
+	padding: 0 5px 0 10px;
+}
+
+.screenSize.viewport-open:after{
+
+	content:">";
+	display: inline-block;
+	padding: 0 15px;
 }

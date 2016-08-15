@@ -14,15 +14,15 @@
 @import 'vijump';
 @import 'phpim';
 
-.project-codecats,
-.project-vijump,
-.project-phpim{
+.codecats,
+.vijump,
+.phpim{
 
 	background-color: $codecats-bg;
 }
 
-.project-codecats .main-img,
-.project-vijump .main-img{
+.codecats .main-img,
+.vijump .main-img{
 
 	box-shadow: 0px 0px 3px #ccc;
 }

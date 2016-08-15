@@ -1,11 +1,11 @@
-.project-codecats .bigSlice--project-card{
+.codecats .bigSlice--project-card{
 
 	background-color: $codecats-info-bg;
 	border-color: $codecats-info-border;
 	color: #fff;
 }
 
-.project-codecats{
+.codecats{
 
 	.backHome{
 
@@ -81,7 +81,7 @@
 
 }
 
-.project-codecats .card__details{
+.codecats .card__details{
 
 	&:after,
 	&:before{
@@ -90,14 +90,14 @@
 	}
 }
 
-.project-codecats .card__title-info,
-.project-codecats .card__link{
+.codecats .card__title-info,
+.codecats .card__link{
 
 	background-color: $codecats-info-border;
 	color: $codecats-info-infos;
 }
 
-.project-codecats .card__link{
+.codecats .card__link{
 
 	@include snap(large){
 		@include h-f-a{
@@ -113,7 +113,7 @@
 	}
 }
 
-.project-codecats .card__link span{
+.codecats .card__link span{
 
 	&:after{
 
@@ -121,7 +121,7 @@
 	}
 }
 
-.project-codecats .detail__icon{
+.codecats .detail__icon{
 
 	background-color: $codecats-info-infos;
 
@@ -132,7 +132,7 @@
 	}
 }
 
-.project-codecats .card__detail{
+.codecats .card__detail{
 
 	.poste{
 
@@ -152,18 +152,18 @@
 	}
 }
 
-.project-codecats .h1.heading--description{
+.codecats .h1.heading--description{
 
 	color: $codecats-info-border;
 }
 
-.project-codecats .first-letter::first-letter{
+.codecats .first-letter::first-letter{
 
 	background-color: $codecats-info-border;
 	color: $codecats-bg;
 }
 
-.project-codecats .pagination__link{
+.codecats .pagination__link{
 
 		background-color: $codecats-info-bg;
 

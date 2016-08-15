@@ -6,7 +6,7 @@
 
 	{% for projet in projetPerso %}
 
-		<section class="{{projet.projectColorClass}}">
+		<section class="{{projet.projectClass}}">
 
 			{% import "macros/nav-macro.html" as topNav %}
 			{{topNav.active(currentPage="portfolio", linkPrevious="codecats.html", linkNext="emmaus.html")}}

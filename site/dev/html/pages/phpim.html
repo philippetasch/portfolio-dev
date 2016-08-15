@@ -6,7 +6,7 @@
 
 	{% for projet in projetPHPim %}
 
-		<section class="{{projet.projectColorClass}}">
+		<section class="{{projet.projectClass}}">
 
 			{% import "macros/nav-macro.html" as topNav %}
 			{{topNav.active(currentPage="firstProject", linkNext="vijump.html")}}

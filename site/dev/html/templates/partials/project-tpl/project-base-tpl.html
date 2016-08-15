@@ -1,8 +1,14 @@
 <!-- Project main template -->
 <div class="maxWrapper slicePad--h">
 	{% for image in projet.imageMain %}
-		<img src="{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}}"
-		srcset="{{image.imagesSrcset}}"
+		<img src="img/{{projet.projectClass}}/{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}}"
+		srcset="{% for img in image.imagesSrcset -%}
+					{% if loop.last -%}
+						img/{{projet.projectClass}}/{{img.size}}
+					{%- else %}
+						img/{{projet.projectClass}}/{{img.size}},
+					{%- endif %}
+				{%- endfor %}"
 		sizes="{{image.sizes}}" />
 	{% endfor %}
 </div>

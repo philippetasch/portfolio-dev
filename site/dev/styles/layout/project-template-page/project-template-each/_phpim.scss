@@ -1,4 +1,4 @@
-.project-phpim{
+.phpim{
 
 	.backHome{
 
@@ -55,7 +55,7 @@
 
 		.project-nav__icon{
 
-			color: $codecats-info-rond-langages;
+			color: $phpim-info-infos;
 
 		}
 
@@ -63,7 +63,7 @@
 
 			&:hover .project-nav__text{
 
-				color: $codecats-info-rond-langages;
+				color: $phpim-info-infos;
 			}
 		}
 
@@ -71,24 +71,24 @@
 
 }
 
-.project-phpim .bigSlice--project-card{
+.phpim .bigSlice--project-card{
 
 	background-color: $phpim-info-bg;
 	border-color: $phpim-info-border;
 	color: #fff;
 }
 
-.project-phpim .card__title-info{
+.phpim .card__title-info{
 
 	background-color: $phpim-info-infos;
 }
 
-.project-phpim .card__year,
-.project-phpim .card__duration{
+.phpim .card__year,
+.phpim .card__duration{
 	color: $phpim-info-bg;
 }
 
-.project-phpim .card__details{
+.phpim .card__details{
 
 	&:before,
 	&:after{
@@ -98,11 +98,11 @@
 	}
 }
 
-.project-phpim .detail__icon{
+.phpim .detail__icon{
 	background-color: $phpim-info-infos;
 }
 
-.project-phpim .card__link{
+.phpim .card__link{
 
 	background-color: $phpim-info-border;
 	color: #fff;
@@ -115,18 +115,18 @@
 	}
 }
 
-.project-phpim .h1.heading--description{
+.phpim .h1.heading--description{
 
 	color: $phpim-info-border;
 }
 
-.project-phpim .first-letter::first-letter{
+.phpim .first-letter::first-letter{
 
 	background-color: $phpim-info-border;
 	color: #fff;
 }
 
-.project-phpim .pagination__link{
+.phpim .pagination__link{
 
 	background-color: $phpim-info-border;
 

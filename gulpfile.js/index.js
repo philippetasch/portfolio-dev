@@ -19,9 +19,6 @@ var scriptsPaths = {
   dest: path.join(config.root, config.base.dest, config.scriptsFolder.dest)
 }
 
-
-
-
 /* Tasks being watched */
 gulp.task('html', fetchTask('html-task'));
 gulp.task('scripts', fetchTask('scripts-task'));

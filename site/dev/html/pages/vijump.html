@@ -6,7 +6,7 @@
 
 	{% for projet in projetVijump %}
 
-		<section class="{{projet.projectColorClass}}">
+		<section class="{{projet.projectClass}}">
 
 			{% import "macros/nav-macro.html" as topNav %}
 			{{topNav.active(currentPage="vijump", linkPrevious="phpim.html", linkNext="codecats.html")}}

@@ -53,6 +53,11 @@
             var screenWidth = window.innerWidth;
             dimensBlock.textContent = screenWidth + " x " + screenHeight;
 
+            document.getElementById("screenSize").addEventListener("click", function(){
+
+                dimensBlock.classList.toggle("viewport-open");
+            })
+
             window.addEventListener("resize", function(){
 
                 var screenHeight = window.innerHeight;
@@ -76,24 +81,6 @@
         <script src="/scripts/waypoints/noframework.waypoints.js"></script>
 
         <!--endbuild-->
-
-        <script>
-
-            var introTitle = document.getElementById('card__title-wrapper');
-
-            var blob = new Waypoint({
-                element: introTitle,
-                handler: function() {
-                  console.log('title fell into place');
-                this.element.classList.add('waypoint-shown');
-                this.destroy()
-                },
-
-              offset: "40%",
-
-              })
-
-        </script>
 
     </body>
 

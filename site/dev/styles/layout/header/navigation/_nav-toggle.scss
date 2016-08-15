@@ -1,7 +1,9 @@
-#trigger{
+.trigger{
 
 	border: none;
 	border-radius: 0;
+	transition: transform 0.15s linear,
+				box-shadow 0.15s linear;
 
 	background-color: #222F3D;
 	position: relative;
@@ -44,6 +46,9 @@
 .trigger.active{
 
 	z-index: 5000;
+
+	box-shadow: 0px 0px rgba(#222F3D, 0);
+	transform: translate(-3px,3px);
 
 	.trigger__bar{
 

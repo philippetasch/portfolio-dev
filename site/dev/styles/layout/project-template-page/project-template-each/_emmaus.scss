@@ -1,10 +1,10 @@
-.project-emmaus{
+.emmaus{
 
 	background-color: $bigSlice--about;
 
 }
 
-.project-emmaus .bigSlice--project-card{
+.emmaus .bigSlice--project-card{
 
 	background-color: $standard-info-bg;
 	border-color: $standard-info-border;
@@ -12,15 +12,15 @@
 
 }
 
-.project-emmaus .card__title-info,
-.project-emmaus .card__link{
+.emmaus .card__title-info,
+.emmaus .card__link{
 
 	background-color: $standard-info-border;
 	color: $nav__link--2--bgc;
 
 }
 
-.project-emmaus .card__link{
+.emmaus .card__link{
 
 	@include snap(tweak-large){
 
@@ -37,7 +37,7 @@
 	}
 }
 
-.project-emmaus .card__details{
+.emmaus .card__details{
 
 	&:before,
 	&:after{
@@ -47,7 +47,7 @@
 	}
 }
 
-.project-emmaus .detail__icon{
+.emmaus .detail__icon{
 
 	background-color: $nav__link--2--bgc;
 
@@ -59,7 +59,7 @@
 
 
 
-.project-emmaus .pagination__link{
+.emmaus .pagination__link{
 
 	background-color: $standard-info-border;
 }
