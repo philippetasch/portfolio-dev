@@ -88,7 +88,7 @@
 	background-color: rgba($nav__link--3--bgc, .9);
 	color:#fff;
 	z-index:10;
-	transition: all .35s ease-in-out;
+	transition: all .30s ease-out;
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -197,7 +197,7 @@
 
 		.project:hover &{
 
-			animation: slideInBottom .55s ease-in forwards;
+			animation: slideInBottom .50s ease-in forwards;
 		}
 
 

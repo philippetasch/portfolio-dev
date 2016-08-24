@@ -3,8 +3,8 @@ var config               = require('../config.json');
 
 var vinylPaths           = require('vinyl-paths');
 var del                  = require('del');
-var filter               = require('gulp-filter');
 var environments         = require('gulp-environments');
+var addsrc               = require('gulp-add-src');
 
 var development          = environments.development;
 var production           = environments.production;
@@ -18,22 +18,21 @@ var scriptsPaths = {
 //var delp = [scriptsPaths.dest + '/**/*','!' + scriptsPaths.dest + '/main.min.js'];
 
 module.exports = function (gulp, plugins) {
-return function() {
+  return function() {
 
-var f = filter('./site/dev/scripts/js/options.js', {restore: true, dot:true});
-gulp.src(scriptsPaths.src)
-       .pipe(plugins.plumber())
-      // .pipe(f)
-       .pipe(environments.production(plugins.concat('main.js')))
-      // .pipe(f.restore)
-       .pipe(plugins.jshint())
-       .pipe(environments.production(plugins.uglify()))
-       .pipe(environments.production(plugins.rename({suffix : '.min'})))
-       .pipe(gulp.dest(scriptsPaths.dest))
-       .pipe(plugins.size({
-            showFiles : true,
-            title : 'mini-concat JS'
-        }))
-       .pipe(plugins.notify({message: 'Scripts : OK!'}));
-};
+  var addOpts = './site/dev/scripts/js/options.js';
+  gulp.src([scriptsPaths.src,'!'+addOpts])
+         .pipe(plugins.plumber())
+         .pipe(production(plugins.concat('main.js')))
+         .pipe(plugins.jshint())
+         .pipe(production(plugins.addSrc(addOpts)))
+         .pipe(production(plugins.uglify()))
+         .pipe(production(plugins.rename({suffix : '.min'})))
+         .pipe(gulp.dest(scriptsPaths.dest))
+         .pipe(plugins.size({
+              showFiles : true,
+              title : 'mini-concat JS'
+          }))
+         .pipe(plugins.notify({message: 'Scripts : OK!'}));
+  };
 };

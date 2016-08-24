@@ -1,23 +1,32 @@
-/*abbr:after{
+abbr:after{
 
   content:attr(title);
   visibility: hidden;
   opacity: 0;
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
   bottom: 0px;
   z-index: 15;
   background-color: #000;
-  width: 100%;
   padding: 25px 0;
   transition: opacity .3s ease,
               transform .2s ease;
   color: #fff;
   text-align: center;
 }
+abbr[title]{
 
-@media screen and (max-width: 500px){
+	border-bottom: 4px double #000;
+	text-decoration: none;
+}
+
+abbr:hover{
+
+	cursor: help;
+}
+
+@media screen and (max-width: 1000px){
 
   abbr:hover:after,
   abbr:focus:after,
@@ -26,11 +35,11 @@
 
     visibility: visible;
     opacity: 1;
-   // transform: translateY(-15px);
+
   }
 
 }
-*/
+
 .hidden{
 
 	display: none;

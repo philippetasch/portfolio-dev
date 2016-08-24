@@ -19,7 +19,10 @@
                                 <h3 class="h3 h3--overlay">{{projet.nom}}</h3>
                                 <p class="h4 h4--overlay">{{projet.objet}}</p>
                                 <a href="{{projet.lien}}" class="project__btn">Voir plus</a>
+                            {% if projet.lienExt %}
                                 <a href="{{projet.lienExt}}" class="project__btn">Lien Site</a>
+                            {% else %}
+                            {% endif %}
                             </div>
                         </div>
                     </div>
