@@ -1,7 +1,7 @@
 <!-- Project main template -->
-<div class="maxWrapper slicePad--h">
+<div class="maxWrapper maxWrapper--single-project__img slicePad--h">
 	{% for image in projet.imageMain %}
-		<img src="img/{{projet.projectClass}}/{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}}"
+		<img src="img/{{projet.projectClass}}/{{image.originale}}" alt="{{projet.imageAlt}}" class="img--resp img--projet center {{image.optionalClass}} hidden-image"
 		srcset="{% for img in image.imagesSrcset -%}
 					{% if loop.last -%}
 						img/{{projet.projectClass}}/{{img.size}}
@@ -13,7 +13,7 @@
 	{% endfor %}
 </div>
 <section class="bigSlice bigSlice--project-card slicePad--v--top">
-	<div class="maxWrapper maxWrapper--single-project gridClear slicePad--v--top slicePad--h">
+	<div class="maxWrapper gridClear slicePad--v--top slicePad--h">
 		<header class="card__title-wrapper" id="card__title-wrapper">
 			<div class="card__title-info">
 				<span class="card__year">
@@ -28,17 +28,17 @@
 		<article class="card__details">
 			<div class="card__detail gridClear">
 				<span class="detail__icon poste"></span>
-				<p class="detail__title ">Poste</p>
+				<h3 class="detail__title ">Poste</h3>
 				<p class="detail__text">{{projet.infos.poste}}</p>
 			</div>
 			<div class="card__detail gridClear">
 				<span class="detail__icon langages"></span>
-				<p class="detail__title ">Langages</p>
+				<h3 class="detail__title ">Langages</h3>
 				<p class="detail__text">{{projet.infos.langages}}</p>
 			</div>
 			<div class="card__detail gridClear">
 				<span class="detail__icon outils"></span>
-				<p class="detail__title">Outils</p>
+				<h3 class="detail__title">Outils</h3>
 				<p class="detail__text">{{projet.infos.outils}}</p>
 			</div>
 		</article>

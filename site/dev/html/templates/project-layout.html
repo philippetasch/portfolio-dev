@@ -5,6 +5,14 @@
 	   	{% block content %}
 
 	   	{% endblock %}
-
+	 <script>
+            var meTitle = document.querySelector('.img--projet');
+            function deferAnim (){
+                meTitle.classList.add('slideInBottom');
+            };
+            window.onload = deferAnim();
+        </script>
 	{% endblock %}
+
+
 

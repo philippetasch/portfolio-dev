@@ -7,7 +7,6 @@
 *
 *
 */
-@import 'each-variables';
 @import 'emmaus';
 @import 'codecats';
 @import 'site-perso';
@@ -26,3 +25,10 @@
 
 	box-shadow: 0px 0px 3px #ccc;
 }
+
+.emmaus .card__detail:before,
+.site-perso .card__detail:before{
+
+	background-color: $standard-info-border;
+}
+

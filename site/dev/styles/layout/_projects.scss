@@ -197,7 +197,7 @@
 
 		.project:hover &{
 
-			animation: slideInBottom .50s ease-in forwards;
+			animation: slideInLeftSkew .50s ease-in forwards;
 		}
 
 
@@ -210,7 +210,7 @@
 	display: none;
 }
 
-@keyframes slideInBottom{
+@keyframes slideInLeftSkew{
 
 	0%{
 		transform: translateX(-300%) skew(-25deg);

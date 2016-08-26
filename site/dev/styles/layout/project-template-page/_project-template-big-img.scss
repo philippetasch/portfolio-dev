@@ -1,3 +1,8 @@
+.maxWrapper--single-project__img{
+
+	overflow: hidden; /* prevent image from overlapping content below */
+}
+
 .img--projet{
 
 	@include snap(small){
@@ -10,4 +15,46 @@
 		max-width: 100%;
 	}
 
+}
+
+
+ .classlist .hidden-image{
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* uncss:ignore */
+.slideInBottom{
+
+	animation: slideInBottom .35s ease-out forwards;
+}
+
+@keyframes slideInBottom{
+
+	0%{
+		transform: translateY(110%);
+		opacity: 0;
+	}
+
+	40%{
+
+		opacity: 0.3;
+	}
+
+	70%{
+
+		opacity: 0.55;
+	}
+
+	80%{
+
+		opacity: 0.75;
+	}
+
+	100%{
+		transform:translateX(0%);
+		opacity: 1;
+		visibility: visible;
+	}
 }

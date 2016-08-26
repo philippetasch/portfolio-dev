@@ -2,7 +2,7 @@
 
 		border-top: 7px solid;
 
-		@include snap(tweak-large){
+		@include snap(veryLarge){
 
 			overflow: hidden;
 		}
@@ -14,7 +14,7 @@
 	font-weight: 500;
 	@include rem2px(margin-bottom, 3);
 
-	@include snap(tweak-large){
+	@include snap(veryLarge){
 
 		text-align: right;
 		float: left;
@@ -46,7 +46,7 @@
 			content:"\f073";
 		}
 
-		@include snap(tweak-large){
+		@include snap(veryLarge){
 
 			display: block;
 			@include rem2px(padding, 0.5, 0);
@@ -69,7 +69,7 @@
 /*
 	.fadeFromLeft{
 
-		@include snap(tweak-large){
+		@include snap(veryLarge){
 
 			animation: fadeFromLeft 0.7s linear;
 
@@ -97,10 +97,18 @@
 	.card__title{
 
 		margin: 0;
+		max-width: 750px;
+		margin: auto;
+		line-height: 1.4;
 
-		@include snap(tweak-large){
+		@include snap(small){
+			@include rem2px(padding, 0, 1.5);
+		}
+		@include snap(veryLarge){
 
 			animation: fadeFromBottom 0.7s linear;
+			@include rem2px(padding, 0);
+
 		}
 	}
 /*
@@ -123,11 +131,13 @@
 */
 .card__details{
 
-	font-family: Roboto Slab;
 	@include rem2px(padding, 2, 0, 2, 0);
-	@include rem2px(margin, 0, 0, 3, 0);
+	@include rem2px(margin-bottom, 3);
+	margin-left: auto;
+	margin-right: auto;
 	overflow: hidden;
 	position: relative;
+	max-width: 750px;
 
 	&:before,
 	&:after{
@@ -145,13 +155,12 @@
 		top:0px;
 	}
 
-
 	&:after{
 
 		bottom:0px;
 	}
 
-	@include snap(tweak-large){
+	@include snap(veryLarge){
 
 		width: 26%;
 		float: right;
@@ -192,9 +201,9 @@
 */
 	.card__detail{
 
-		padding-bottom: 10px;
 		text-align: center;
 		@include rem2px(margin-top, 2);
+		@include rem2px(padding, 0, 1, 1, 1);
 
 		@media screen and (min-width: 450px){
 
@@ -202,13 +211,38 @@
 			float: left;
 		}
 
-		@include snap(tweak-large){
+		@include snap(veryLarge){
 
 			text-align: left;
 			width: 100%;
 			margin: 0;
-		}
+			float: none;
+			position: relative;
 
+			@include rem2px(margin-bottom, 1.5);
+			@include rem2px(padding, 0, 0, 1.5, 0);
+
+			&:before{
+
+				content:"";
+				position: absolute;
+				left: 75px;
+				bottom: 0;
+				width: 26%;
+				height: 3px;
+
+			}
+
+			&:last-child{
+
+				margin: 0;
+
+				&:before{
+
+					content:none;
+				}
+			}
+		}
 	}
 
 	.detail__icon{
@@ -222,7 +256,7 @@
 
 		@include rem2px(margin-bottom, 1);
 
-		@include snap(tweak-large){
+		@include snap(veryLarge){
 
 			float: left;
 			margin-right: 15px;
@@ -250,9 +284,23 @@
 		margin: 0;
 	}
 
+	.detail__title{
+
+		font-family: Roboto Slab;
+		text-transform: uppercase;
+		font-size: 90%;
+		margin: 0.5rem 0 0.5rem 0;
+
+		@include snap(veryLarge){
+
+			margin: 0;
+		}
+	}
+
 	.detail__text{
 
 		color: lightgray;
+		overflow: hidden; /* prevent text from wrapping */
 	}
 
 	.poste:before{
@@ -281,7 +329,7 @@
 		text-align: center;
 	}
 
-	@include snap(tweak-large){
+	@include snap(veryLarge){
 
 		max-width: none;
 		overflow: hidden;
@@ -335,7 +383,7 @@
 		letter-spacing: 1px;
 	}
 
-	@include snap(tweak-large){
+	@include snap(veryLarge){
 
 		@include rem2px(margin-top, 6);
 

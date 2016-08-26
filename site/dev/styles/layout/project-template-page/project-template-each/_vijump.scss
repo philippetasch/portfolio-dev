@@ -1,3 +1,4 @@
+/*uncss:ignore*/
 .vijump .bigSlice--project-card{
 
 	background-color: $vijump-info-bg;
@@ -91,6 +92,25 @@
 	}
 }
 
+.vijump .card__detail{
+
+	&:before{
+
+		background-color: $vijump-info-border;
+	}
+}
+
+.vijump .detail__icon{
+
+	background-color: $vijump-info-infos;
+
+	&:before{
+
+			color: $vijump-bg;
+
+	}
+}
+
 .vijump .card__title-info,
 .vijump .card__link{
 
@@ -127,16 +147,6 @@
 	}
 }
 
-.vijump .detail__icon{
-
-	background-color: $vijump-info-infos;
-
-	&:before{
-
-			color: $vijump-bg;
-
-	}
-}
 
 .vijump .h1.heading--description{
 
