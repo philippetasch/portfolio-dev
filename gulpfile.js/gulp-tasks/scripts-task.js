@@ -21,11 +21,13 @@ module.exports = function (gulp, plugins) {
   return function() {
 
   var addOpts = './site/dev/scripts/js/options.js';
+  var modernizr = './site/dev/scripts/js/modernizr.js';
   gulp.src([scriptsPaths.src,'!'+addOpts])
          .pipe(plugins.plumber())
          .pipe(production(plugins.concat('main.js')))
          .pipe(plugins.jshint())
          .pipe(production(plugins.addSrc(addOpts)))
+         .pipe(production(plugins.addSrc(modernizr)))
          .pipe(production(plugins.uglify()))
          .pipe(production(plugins.rename({suffix : '.min'})))
          .pipe(gulp.dest(scriptsPaths.dest))

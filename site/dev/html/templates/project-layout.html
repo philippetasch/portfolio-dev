@@ -5,10 +5,11 @@
 	   	{% block content %}
 
 	   	{% endblock %}
-	 <script>
-            var meTitle = document.querySelector('.img--projet');
+        <script src="/scripts/modernizr.min.js"></script>
+	 	<script>
+            var projImg = document.querySelector('.img--projet');
             function deferAnim (){
-                meTitle.classList.add('slideInBottom');
+                projImg.classList.add('slideInBottom');
             };
             window.onload = deferAnim();
         </script>

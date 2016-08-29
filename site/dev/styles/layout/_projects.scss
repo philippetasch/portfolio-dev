@@ -70,7 +70,6 @@
 
 		&:hover .project__overlay{
 
-			visibility: visible;
 			opacity: 1;
 			transform: scale(1);
 
@@ -98,7 +97,6 @@
 	@include snap(large){
 
 		background-color: $nav__link--3--bgc;
-		visibility: hidden;
 		opacity: 0;
 		transform: scale(3);
 		top: 0px;
