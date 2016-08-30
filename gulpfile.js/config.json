@@ -1,7 +1,7 @@
 {
 
       "root":"./site",
-      "push":"../gh-pages/dist",
+      "push":"../gh-pages/",
 
       "base":{
 

@@ -42,8 +42,8 @@ return function () {
     .pipe(environments.production(plugins.htmlReplace({
 
       "vanish":"",
-      "js":"/scripts/main.min.js",
-      "jsOpts":"/scripts/options.min.js",
+      "js":"scripts/main.min.js",
+      "jsOpts":"scripts/options.min.js",
       "css":"css/styles.min.css",
 
       "keepUnassigned": false
